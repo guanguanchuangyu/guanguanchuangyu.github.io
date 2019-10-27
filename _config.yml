@@ -4,16 +4,16 @@
 
 # Site
 title: GGCY
-subtitle: guanguan's blog
-description: every day is nice
-keywords: guanguan
+subtitle: code changes life
+description: love life,love code
+keywords: ggcy
 author: guanguan
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: /
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -35,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -53,6 +53,12 @@ index_generator:
   per_page: 10
   order_by: -date
   
+# Automatically Excerpt. Not recommand.
+# Please use <!-- more --> in the post to control excerpt accurately.
+auto_excerpt:
+  enable: true
+  length: 150
+
 # Category & Tag
 default_category: uncategorized
 category_map:
