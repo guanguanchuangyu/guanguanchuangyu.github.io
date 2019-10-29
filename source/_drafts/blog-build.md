@@ -1,6 +1,7 @@
 ---
 title: Hexo + Next Theme + Github 的个人托管博客搭建
 tags: Hexo
+typora-root-url: ..\_posts\blog-build
 ---
 作为一名码农，从校园开始就希望有一个独属于自己的博客站点，有想法不行动，拖拖拖，折腾来折腾去，无意间发现了`Hexo`，惊鸿一瞥，就走不动路了，心心念念开始了入坑之路
 
