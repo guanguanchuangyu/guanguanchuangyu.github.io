@@ -8,7 +8,7 @@ tags: Hexo
 
 ##   安装Hexo的环境要求
 
-**git+node.js** 以下为基于`windows`系统的操作，安装过程请执行百度
+**git+node.js** 以下为基于`windows`系统的操作，安装过程请自行百度
 
 [git和ssh key 生成 ]( https://www.jianshu.com/p/a3b4f61d4747)
 
