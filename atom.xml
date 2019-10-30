@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>GGCY</title>
+  <icon>/icon.png</icon>
+  <subtitle>code changes life</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2019-10-30T15:45:08.057Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>guanguan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C#中string.Format转义大括号的方式</title>
+    <link href="/2019/10/30/blog-string-Format/"/>
+    <id>/2019/10/30/blog-string-Format/</id>
+    <published>2019-10-30T13:12:35.000Z</published>
+    <updated>2019-10-30T15:45:08.057Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;string.format&lt;/code&gt;中保留&lt;code&gt;{}&lt;/code&gt;的使用方式，如果仅仅是以常规方式添加&lt;code&gt;\&lt;/code&gt;会出转义失败，无法达到转义效果&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
+    
+    
+      <category term="C#" scheme="/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo + Next Theme + Github 的个人托管博客搭建</title>
+    <link href="/2019/10/27/blog-build/"/>
+    <id>/2019/10/27/blog-build/</id>
+    <published>2019-10-27T13:36:25.000Z</published>
+    <updated>2019-10-30T15:48:09.329Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作为一名码农，从校园开始就希望有一个独属于自己的博客站点，有想法不行动，拖拖拖，折腾来折腾去，无意间发现了&lt;code&gt;Hexo&lt;/code&gt;，惊鸿一瞥，就走不动路了，心心念念开始了入坑之路&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="唐门暗器" scheme="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"/>
+    
+    
+      <category term="Hexo" scheme="/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Love Life</title>
+    <link href="/2019/10/27/Home/"/>
+    <id>/2019/10/27/Home/</id>
+    <published>2019-10-27T10:20:08.000Z</published>
+    <updated>2019-10-30T15:44:39.771Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如果说，生活充满挑战，那看似的轻而易举，也许就是混世中的举重若轻，生活多煎熬，我有你，做梦都会笑，爱生活，拥抱此刻，憧憬下一刻&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="生活杂记" scheme="/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/"/>
+    
+    
+      <category term="Life" scheme="/tags/Life/"/>
+    
+  </entry>
+  
+</feed>
