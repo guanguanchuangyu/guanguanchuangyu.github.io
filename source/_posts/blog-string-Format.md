@@ -1,6 +1,7 @@
 ---
 title: 'C#中string.Format转义大括号的方式'
 tags: 'C#'
+categories: ['知识补丁']
 date: 2019-10-30 21:12:35
 ---
 

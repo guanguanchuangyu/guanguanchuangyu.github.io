@@ -1,6 +1,7 @@
 ---
 title: Hexo + Next Theme + Github 的个人托管博客搭建
 tags: Hexo
+categories: ['唐门暗器']
 date: 2019-10-27 21:36:25
 typora-root-url: .\blog-build
 ---
