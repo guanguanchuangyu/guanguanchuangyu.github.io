@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-10-30T15:45:08.057Z</updated>
+  <updated>2019-11-02T17:32:28.710Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C#关于字符串转简单运算表达式的相关方法记录</title>
+    <link href="/2019/11/03/blog-string-Arith/"/>
+    <id>/2019/11/03/blog-string-Arith/</id>
+    <published>2019-11-02T17:32:28.000Z</published>
+    <updated>2019-11-02T17:32:28.710Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;遇到一个需求，将存储在数据库中的计算表达式字符串，如“(2+4+5)/5*100.0” 转换为可以在代码中执行的计算公式，呀，以前没做过，怎么办？还能怎么办，打开浏览器，输入“C#字符串转运算符计算公式”，然后一条条筛选，&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="唐门暗器" scheme="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"/>
+    
+    
+      <category term="C#" scheme="/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>C#中string.Format转义大括号的方式</title>
