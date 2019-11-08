@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-11-02T17:32:28.710Z</updated>
+  <updated>2019-11-08T14:03:06.753Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深化学习之程序集</title>
+    <link href="/2019/11/08/blog-shared-assembly/"/>
+    <id>/2019/11/08/blog-shared-assembly/</id>
+    <published>2019-11-08T14:03:06.000Z</published>
+    <updated>2019-11-08T14:03:06.753Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;开始看&lt;code&gt;.NET&lt;/code&gt;技术的底层原理，不让自己显得那么肤浅，浮于言表，为自己添一砖加一瓦，戳戳这看似高深的段位和晦涩的理论，自我沉淀，心如止水&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="心如止水" scheme="/categories/%E5%BF%83%E5%A6%82%E6%AD%A2%E6%B0%B4/"/>
+    
+    
+      <category term="C#" scheme="/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>C#关于字符串转简单运算表达式的相关方法记录</title>
