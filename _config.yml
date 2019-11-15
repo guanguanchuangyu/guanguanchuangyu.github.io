@@ -103,3 +103,9 @@ deploy:
   type: git
   repo: https://github.com/guanguanchuangyu/guanguanchuangyu.github.io.git
   branch: master
+# Post wordcount display settings
+# Dependencies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  wordcount: true
+  min2read: true

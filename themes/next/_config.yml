@@ -143,7 +143,7 @@ exturl: false
 #baidu_site_verification:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: false
+baidu_push: true
 
 
 # ---------------------------------------------------------------
@@ -1208,6 +1208,9 @@ vendors:
   disqusjs_js:
   disqusjs_css:
 
+  # 文章末尾添加“本文结束”标记
+  passage_end_tag:
+  enabled: true
 # Assets
 css: css
 js: js

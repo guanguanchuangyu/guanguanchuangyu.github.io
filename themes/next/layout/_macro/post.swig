@@ -201,6 +201,7 @@
                 <span class="post-meta-item-text">{{ __('post.views') + __('symbol.colon') }}</span>
               {% endif %}
                 <span class="leancloud-visitors-count"></span>
+				<span>℃</span>
             </span>
           {% endif %}
 
@@ -359,6 +360,12 @@
       </div>
     {% endif %}
 
+	<div>
+	{% if not is_index %}
+		{% include 'passage-end-tag.swig' %}
+	{% endif %}
+	</div>
+	
     <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}
         {% if theme.tag_icon %}
@@ -368,7 +375,7 @@
         {% endif %}
         <div class="post-tags">
           {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag">{{ tag_indicate }} {{ tag.name }}</a>
+            <a href="{{ url_for(tag.path) }}" rel="tag">{{ tag_indicate }} {{ tag.name }} </a>
           {% endfor %}
         </div>
       {% endif %}
