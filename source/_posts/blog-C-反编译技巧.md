@@ -1,7 +1,7 @@
 ---
 title: 'C#-查看微软内置程序集技巧'
 tags: 'C#'
-cateloges:
+categories: 
   - 相见恨晚
 typora-root-url: blog-C-反编译技巧
 date: 2019-11-24 22:35:28
