@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-11-24T14:35:28.400Z</updated>
+  <updated>2019-11-24T15:36:37.181Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/2019/11/24/blog-C-%E5%8F%8D%E7%BC%96%E8%AF%91%E6%8A%80%E5%B7%A7/"/>
     <id>/2019/11/24/blog-C-反编译技巧/</id>
     <published>2019-11-24T14:35:28.000Z</published>
-    <updated>2019-11-24T14:35:28.400Z</updated>
+    <updated>2019-11-24T15:36:37.181Z</updated>
     
     <summary type="html">
     
@@ -29,6 +29,8 @@
     
     </summary>
     
+    
+      <category term="相见恨晚" scheme="/categories/%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A/"/>
     
     
       <category term="C#" scheme="/tags/C/"/>
