@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="string.format中保留{}的使用方式，如果仅仅是以常规方式添加\会出转义失败，无法达到转义效果">
-<meta name="keywords" content="C#">
+  <meta name="description" content="生活中难免因事因人牵动思绪，最近这段时间，又开始自我反思，一方面是在工作中遭遇到的问题，通过问题推导自己的不足以及对这段时间中自己的状态的分析，问题带来迷茫困扰，同时也伴随着个人的内心成长，我哪错了,我改,不断试错,不断纠错">
+<meta name="keywords" content="Life">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C#中string.Format转义大括号的方式">
-<meta property="og:url" content="/2019/10/30/blog-string-Format/index.html">
+<meta property="og:title" content="技术学习的思考">
+<meta property="og:url" content="/2019/12/08/blog-learning-think/index.html">
 <meta property="og:site_name" content="GGCY">
-<meta property="og:description" content="string.format中保留{}的使用方式，如果仅仅是以常规方式添加\会出转义失败，无法达到转义效果">
+<meta property="og:description" content="生活中难免因事因人牵动思绪，最近这段时间，又开始自我反思，一方面是在工作中遭遇到的问题，通过问题推导自己的不足以及对这段时间中自己的状态的分析，问题带来迷茫困扰，同时也伴随着个人的内心成长，我哪错了,我改,不断试错,不断纠错">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-30T15:45:08.057Z">
+<meta property="og:updated_time" content="2019-12-09T16:33:43.995Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C#中string.Format转义大括号的方式">
-<meta name="twitter:description" content="string.format中保留{}的使用方式，如果仅仅是以常规方式添加\会出转义失败，无法达到转义效果">
+<meta name="twitter:title" content="技术学习的思考">
+<meta name="twitter:description" content="生活中难免因事因人牵动思绪，最近这段时间，又开始自我反思，一方面是在工作中遭遇到的问题，通过问题推导自己的不足以及对这段时间中自己的状态的分析，问题带来迷茫困扰，同时也伴随着个人的内心成长，我哪错了,我改,不断试错,不断纠错">
 
 
 
@@ -117,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="/2019/10/30/blog-string-Format/">
+  <link rel="canonical" href="/2019/12/08/blog-learning-think/">
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>C#中string.Format转义大括号的方式 | GGCY</title>
+  <title>技术学习的思考 | GGCY</title>
   
 
 
@@ -339,7 +339,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/2019/10/30/blog-string-Format/">
+    <link itemprop="mainEntityOfPage" href="/2019/12/08/blog-learning-think/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="guanguan">
@@ -356,7 +356,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C#中string.Format转义大括号的方式
+          <h1 class="post-title" itemprop="name headline">技术学习的思考
 
               
             
@@ -382,12 +382,24 @@
                 
               
 
-              <time title="创建时间：2019-10-30 21:12:35 / 修改时间：23:45:08" itemprop="dateCreated datePublished" datetime="2019-10-30T21:12:35+08:00">2019-10-30</time>
+              <time title="创建时间：2019-12-08 22:48:40" itemprop="dateCreated datePublished" datetime="2019-12-08T22:48:40+08:00">2019-12-08</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-10 00:33:43" itemprop="dateModified" datetime="2019-12-10T00:33:43+08:00">2019-12-10</time>
               
             
           </span>
@@ -404,7 +416,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/知识补丁/" itemprop="url" rel="index"><span itemprop="name">知识补丁</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活杂记/" itemprop="url" rel="index"><span itemprop="name">生活杂记</span></a></span>
 
                 
                 
@@ -446,30 +458,25 @@
       
 
       
-        <p><code>string.format</code>中保留<code>{}</code>的使用方式，如果仅仅是以常规方式添加<code>\</code>会出转义失败，无法达到转义效果</p>
+        <p>生活中难免因事因人牵动思绪，最近这段时间，又开始自我反思，一方面是在工作中遭遇到的问题，通过问题推导自己的不足以及对这段时间中自己的状态的分析，问题带来迷茫困扰，同时也伴随着个人的内心成长，<code>我哪错了,我改,不断试错,不断纠错</code></p>
 <a id="more"></a>
 
-<h3 id="错误方式："><a href="#错误方式：" class="headerlink" title="错误方式："></a>错误方式：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.Format(&quot;&#123;&#123;0&#125;&#125;&quot;,value);</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;0&#125;</span><br></pre></td></tr></table></figure>
-
-<p>此时，函数不会识别<code>{</code>的嵌套方式，通过该格式执行后，本身的函数功能也失效，但不抛出异常。</p>
-<h3 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h3><h4 id="常用方式"><a href="#常用方式" class="headerlink" title="常用方式"></a>常用方式</h4><p>通过拼接字符串去解决，得到想要的输出结果</p>
-<p>如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&#123;&quot;+string.Format(&quot;&#123;0&#125;&quot;,value)+&quot;&#125;&quot;;</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;value&#125;</span><br></pre></td></tr></table></figure>
-
-<p>该方式治标不治本，本身并没有解决<code>string.Format</code>面临的解析问题，只是能够达到输出<code>{}</code>的目的</p>
-<h4 id="标准方式"><a href="#标准方式" class="headerlink" title="标准方式"></a>标准方式</h4><p>使用双<code>{</code>方式，在<code>string.Format</code>中识别为<code>{</code>，同理保留<code>}</code>也是使用双<code>}</code>去处理，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.Format(&quot;&#123;&#123;&#123;0&#125;&#125;&#125;&quot;,value);</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;value&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这样，代码看着就清爽多了</p>
+<h2 id="思索"><a href="#思索" class="headerlink" title="思索"></a>思索</h2><p>离开校园已经两年有余，最初的一个半年头，独立学习在工作中使用的技术，框架，业余弄弄自己感兴趣的技术，比如WPF、.NET Core、Node.Js、微服务等方面，每天早出晚归，白天是属于公司，晚上属于自己，几点一线的生活</p>
+<p>工作了，忙碌日常和校园相差甚大，也渐渐感触校园时光短暂，同时也为自己并未过于蹉跎那些日子我暗自窃喜，自己学的东西很杂，往往是自己知识树的横向过度拓展，然而每天的精力是有限的，好钢用在刀刃上，时间亦是如此，碎片化时间带来的往往是谁片化的知识记忆，一直在学，一直在遗忘，学的慢忘得反而更快，嘴上说<code>温故而知新</code>，又有多少能够做到，做技术的要耐得住寂寞，思索时才会寂寞，残酷的是，工作中没有那个时间留给自己去思索，时间是公平的，不会给任何人开小灶，鸡汤再多也挡不住时间和现实的摧残</p>
+<p>自己到底在做什么?</p>
+<p>自己做过啥?</p>
+<p>接下来做什么?</p>
+<p>天啦噜！惹不起这些抛问</p>
+<p>忘记了过往的成就，看不清前路，受困于现状—应用技术和技术原理，如果将技术问题比作是<code>疾病</code>的话，<strong>应用技术</strong>在我看来是<code>特效药</code>,能够快速解决病症，<strong>技术原理</strong>则是调和五行阴阳，治疗病根的<code>药方</code></p>
+<p>如果自己还是初出茅庐时候，断然不会考虑这些问题，毕竟毕业有份合适的工作，工作中的问题，当然是考虑能够解决问题的应用技术，大众路线，先用能解决问题的技术，技术本身存在着怎么样的技术细节，直接靠工作时间怼，用到啥学啥，能解决问题的办法都是好办法，必要时，当自己不在满足于现状，希望自己有一个更好的变化时，二者之间往往需要进行权衡，找到更适合自己的方向</p>
+<h2 id="选型"><a href="#选型" class="headerlink" title="选型"></a>选型</h2><p><strong>应用技术</strong></p>
+<p>刚开始学习一门技术，一门语言时，跟着教程或者书籍，开头一句：“Hello World”，于是哒哒哒，键盘打的飞快，每每解决一个问题，都满满成就感，对这个字节的世界充满好奇，学以致用，对技术的应用体现的淋漓精致，也不是说应用技术不好，它能在必要时候解决问题的途径，只是学的多了，学的范围大了，越会觉得大海的浩渺，自己仅仅是一块入海的绵，吸收终有到极限的一天，海里随波逐流，自己浮于浅表的位置在变化，学到的东西<code>杂而不精</code>，为了解决问题而使用一门技术，这确实没有什么问题，毕竟，在公司，能够按时按量的完成工作，为公司带来产值，至少自己是一个合格的员工，工作初期，这不会有什么问题，学会解决问题的技巧，可以很快的通过网络手段把自己的时间安排下去，框架，架构，热门技术，新兴技术，现在被人所熟知的技术，也不能一味的追捧，自己学的东拼西凑的碎片技术知识，往往像是缺零件的机械一般，难以正常运作，需要花时间整合，将应用技术整合成为自己的知识结构树，各个点之间建立关联，这就是一套个人知识体系</p>
+<p><strong>底层原理</strong></p>
+<p>那反过来问，底层原理又是什么？对我来说，底层原理是设计模式，架构实现原理，以及语言技术本身的实现细节，其实这些在平时的使用中可能就是微观上的实现和宏观上的概括，微观上，出栈入栈，装箱拆箱，各类特性函数的实现细节，宏观上，一些体系上的实现思路，类库的功能构建等，看似和实际工作中没有多大关系，实则这些一直都存在着关联，只是或早或晚的被注意到，当面对不知道如何查找需要解决的问题方案时，也许就是开始正视底层原理的时候，从底层往上找问题虽然很痛苦，但是往往能够刷新自己的认知，从根本上解决问题同时给自己一种豁然开朗的感受，原来这个是这样，之前这地方的书写方式不符合底层运行的规则等等，良药苦口，能治病</p>
+<h2 id="取舍"><a href="#取舍" class="headerlink" title="取舍"></a>取舍</h2><p>应用技术和底层原理，各有各的好处与不足，应用技术能很快投产，给自己的付出很快带来收益，对于这个快节奏的工作来说，是非常合适的，但久而久之 却会使人过于在意技术使用手段，小问题能很快解决，面对错综复杂的问题，可能就会有些力不从心了</p>
+<p>底层原理，更多的是给人指导解决问题的方向和提前规避错误实现上带来的问题，越是复杂的问题，可能就是一些简单的底层细节或者简单的核心实现思路，看不懂，看不明白，往往是没有寻找到问题本身，只是学习和理解的过程往往是应用技术的数倍，过程也许是一种长时间的煎熬，需要去沉淀和思考</p>
+<p>两者互补，需要有时间去根据自己的个人情况进行合理的分析，针对现有的时间进行合理的规划，满目的新技术新框架，诱惑者求知者的心，学习原理和学习技术本身就存在着反差，对我来说，原理得学，技术也不能放过，毕竟得养活自己，满足口食之欲，见效慢也得一步步去尝试和积累必要的知识，业余时间如果分为五分，需要考虑拿出三份进行底层的了解和学习，写下此篇文章也是对自我的一种思维的梳理，自我反省的一种方式</p>
+<p>愿做河底基石，不愿做水面浮萍</p>
 
       
     </div>
@@ -504,7 +511,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="/2019/10/30/blog-string-Format/" title="C#中string.Format转义大括号的方式">/2019/10/30/blog-string-Format/</a>
+    <a href="/2019/12/08/blog-learning-think/" title="技术学习的思考">/2019/12/08/blog-learning-think/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -530,7 +537,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C# </a>
+            <a href="/tags/Life/" rel="tag"><i class="fa fa-tag"></i> Life </a>
           
         </div>
       
@@ -543,8 +550,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/27/blog-build/" rel="next" title="Hexo + Next Theme + Github 的个人托管博客搭建">
-                <i class="fa fa-chevron-left"></i> Hexo + Next Theme + Github 的个人托管博客搭建
+              <a href="/2019/12/02/blog-wpf-layout/" rel="next" title="WPF基础容器与布局">
+                <i class="fa fa-chevron-left"></i> WPF基础容器与布局
               </a>
             
           </div>
@@ -552,10 +559,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/03/blog-string-Arith/" rel="prev" title="C#关于字符串转简单运算表达式的相关方法记录">
-                C#关于字符串转简单运算表达式的相关方法记录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -624,7 +627,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -676,7 +679,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -731,7 +734,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#错误方式："><span class="nav-number">1.</span> <span class="nav-text">错误方式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案："><span class="nav-number">2.</span> <span class="nav-text">解决方案：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用方式"><span class="nav-number">2.1.</span> <span class="nav-text">常用方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准方式"><span class="nav-number">2.2.</span> <span class="nav-text">标准方式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思索"><span class="nav-number">1.</span> <span class="nav-text">思索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选型"><span class="nav-number">2.</span> <span class="nav-text">选型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取舍"><span class="nav-number">3.</span> <span class="nav-text">取舍</span></a></li></ol></div>
             
 
           </div>
@@ -779,7 +782,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共6.9k字</span>
+  <span class="post-count">博客全站共7.7k字</span>
 </div>
 
         

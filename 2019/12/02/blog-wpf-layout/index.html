@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="string.format中保留{}的使用方式，如果仅仅是以常规方式添加\会出转义失败，无法达到转义效果">
-<meta name="keywords" content="C#">
+  <meta name="description" content="WPF的xaml中进行布局设定时，少不了和布局容器打交道，合理的使用和搭配这些容器，能够让页面美观的同时，可维护性和可拓展性更高">
+<meta name="keywords" content="WPF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C#中string.Format转义大括号的方式">
-<meta property="og:url" content="/2019/10/30/blog-string-Format/index.html">
+<meta property="og:title" content="WPF基础容器与布局">
+<meta property="og:url" content="/2019/12/02/blog-wpf-layout/index.html">
 <meta property="og:site_name" content="GGCY">
-<meta property="og:description" content="string.format中保留{}的使用方式，如果仅仅是以常规方式添加\会出转义失败，无法达到转义效果">
+<meta property="og:description" content="WPF的xaml中进行布局设定时，少不了和布局容器打交道，合理的使用和搭配这些容器，能够让页面美观的同时，可维护性和可拓展性更高">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-30T15:45:08.057Z">
+<meta property="og:updated_time" content="2019-12-04T16:15:57.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C#中string.Format转义大括号的方式">
-<meta name="twitter:description" content="string.format中保留{}的使用方式，如果仅仅是以常规方式添加\会出转义失败，无法达到转义效果">
+<meta name="twitter:title" content="WPF基础容器与布局">
+<meta name="twitter:description" content="WPF的xaml中进行布局设定时，少不了和布局容器打交道，合理的使用和搭配这些容器，能够让页面美观的同时，可维护性和可拓展性更高">
 
 
 
@@ -117,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="/2019/10/30/blog-string-Format/">
+  <link rel="canonical" href="/2019/12/02/blog-wpf-layout/">
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>C#中string.Format转义大括号的方式 | GGCY</title>
+  <title>WPF基础容器与布局 | GGCY</title>
   
 
 
@@ -339,7 +339,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/2019/10/30/blog-string-Format/">
+    <link itemprop="mainEntityOfPage" href="/2019/12/02/blog-wpf-layout/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="guanguan">
@@ -356,7 +356,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C#中string.Format转义大括号的方式
+          <h1 class="post-title" itemprop="name headline">WPF基础容器与布局
 
               
             
@@ -382,12 +382,24 @@
                 
               
 
-              <time title="创建时间：2019-10-30 21:12:35 / 修改时间：23:45:08" itemprop="dateCreated datePublished" datetime="2019-10-30T21:12:35+08:00">2019-10-30</time>
+              <time title="创建时间：2019-12-02 23:35:20" itemprop="dateCreated datePublished" datetime="2019-12-02T23:35:20+08:00">2019-12-02</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-05 00:15:57" itemprop="dateModified" datetime="2019-12-05T00:15:57+08:00">2019-12-05</time>
               
             
           </span>
@@ -446,31 +458,52 @@
       
 
       
-        <p><code>string.format</code>中保留<code>{}</code>的使用方式，如果仅仅是以常规方式添加<code>\</code>会出转义失败，无法达到转义效果</p>
+        <p><code>WPF</code>的<code>xaml</code>中进行布局设定时，少不了和布局容器打交道，合理的使用和搭配这些容器，能够让页面美观的同时，可维护性和可拓展性更高</p>
 <a id="more"></a>
 
-<h3 id="错误方式："><a href="#错误方式：" class="headerlink" title="错误方式："></a>错误方式：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.Format(&quot;&#123;&#123;0&#125;&#125;&quot;,value);</span><br></pre></td></tr></table></figure>
+<h1 id="布局容器（面板控件）归类"><a href="#布局容器（面板控件）归类" class="headerlink" title="布局容器（面板控件）归类"></a>布局容器（面板控件）归类</h1><p>容器中的控件（子元素）理论上是建议不显式指定尺寸，不使用屏幕坐标设定控件自身的位置</p>
+<p>常见容器如下：</p>
+<table>
+<thead>
+<tr>
+<th>控件名称</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DockPanel</td>
+<td>子级元素依靠在容器边缘，分为 顶部、底部、左侧、右侧，用于实现靠近边缘的工具栏、表单提交按钮等布局，通过在子元素中使用附加属性DockPanel.Dock进行控制，同时需要注意是否需要考虑设定LastChildFill控制容器的最后一个元素是否填充剩余空间，顶部和底部优先级高于左侧和右侧</td>
+</tr>
+<tr>
+<td>WrapPanel</td>
+<td>将每个子元素水平（默认）或垂直方向定位到另一个子元素的旁边，水平或垂直方向不满足当前元素的宽度或者高度时，元素自动换行或换列</td>
+</tr>
+<tr>
+<td>StackPanel</td>
+<td>子元素在某一方向（水平/垂直）相互之间有序靠近，子元素控件的高度或宽度决定了子元素的填充范围，操作子元素自身并不会换行或者换列</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>自带面板中最复杂的，网格布局风格，通过设定行列数以及Grid.Column、Row以及跨行跨列数附加型依赖属性，能够灵活的控制子元素的布局，几乎能够实现其他常用布局容器的大部分功能</td>
+</tr>
+<tr>
+<td>UniformGrid</td>
+<td>等比网格，比起grid使用上更简单，不需要为子元素设定位子，相邻元素一次排列，通过显式或者默认的行列数量，决定行列均匀分布的网格布局</td>
+</tr>
+<tr>
+<td>Canvas</td>
+<td>不会默认做任何事，而是允许你把控件放在它的内部，然后显式地给这些控件定位，用于绘制图案，作为画布使用，同时内部控件使用相对位置定位，Canvas.Top、Canvas.Left、Canvas.Right、Canvas.Bottom控制子元素的位置，其中Z轴决定多个图层间的上下层排列顺序</td>
+</tr>
+<tr>
+<td>InkCanvas</td>
+<td>手写板，用于进行三方笔触手写，不同模式拥有不同的手写或者操作功能，能够实现粘贴复制等功能</td>
+</tr>
+</tbody></table>
+<h2 id="容器嵌套"><a href="#容器嵌套" class="headerlink" title="容器嵌套"></a>容器嵌套</h2><h2 id="网格拆分器"><a href="#网格拆分器" class="headerlink" title="网格拆分器"></a>网格拆分器</h2><p><code>GridSplitter</code>能够允许用户手动调整单元格行或者列的尺寸大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;Grid&gt;</span><br><span class="line">    &lt;Grid.ColumnDefinitions&gt;</span><br><span class="line">        &lt;ColumnDefinition Width=&quot;*&quot;&gt;&lt;/ColumnDefinition&gt;</span><br><span class="line">        &lt;ColumnDefinition Width=&quot;Auto&quot;&gt;&lt;/ColumnDefinition&gt;</span><br><span class="line">        &lt;ColumnDefinition Width=&quot;*&quot;&gt;&lt;/ColumnDefinition&gt;</span><br><span class="line">    &lt;/Grid.ColumnDefinitions&gt;</span><br><span class="line">    &lt;Button Content=&quot;左侧&quot;&gt;&lt;/Button&gt;</span><br><span class="line">    &lt;GridSplitter Grid.Column=&quot;1&quot; Width=&quot;1&quot; HorizontalAlignment=&quot;Stretch&quot;&gt;&lt;/GridSplitter&gt;</span><br><span class="line">    &lt;Button Content=&quot;右侧&quot; Grid.Column=&quot;2&quot;&gt;&lt;/Button&gt;</span><br><span class="line">&lt;/Grid&gt;</span><br></pre></td></tr></table></figure>
 
-<p>输出：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;0&#125;</span><br></pre></td></tr></table></figure>
-
-<p>此时，函数不会识别<code>{</code>的嵌套方式，通过该格式执行后，本身的函数功能也失效，但不抛出异常。</p>
-<h3 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h3><h4 id="常用方式"><a href="#常用方式" class="headerlink" title="常用方式"></a>常用方式</h4><p>通过拼接字符串去解决，得到想要的输出结果</p>
-<p>如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&#123;&quot;+string.Format(&quot;&#123;0&#125;&quot;,value)+&quot;&#125;&quot;;</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;value&#125;</span><br></pre></td></tr></table></figure>
-
-<p>该方式治标不治本，本身并没有解决<code>string.Format</code>面临的解析问题，只是能够达到输出<code>{}</code>的目的</p>
-<h4 id="标准方式"><a href="#标准方式" class="headerlink" title="标准方式"></a>标准方式</h4><p>使用双<code>{</code>方式，在<code>string.Format</code>中识别为<code>{</code>，同理保留<code>}</code>也是使用双<code>}</code>去处理，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.Format(&quot;&#123;&#123;&#123;0&#125;&#125;&#125;&quot;,value);</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;value&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这样，代码看着就清爽多了</p>
-
+<p><strong>ResizeDirection</strong>  行列模式</p>
+<h2 id="布局舍入"><a href="#布局舍入" class="headerlink" title="布局舍入"></a>布局舍入</h2><h1 id="容器“共享”可用空间"><a href="#容器“共享”可用空间" class="headerlink" title="容器“共享”可用空间"></a>容器“共享”可用空间</h1><h1 id="自定义布局容器"><a href="#自定义布局容器" class="headerlink" title="自定义布局容器"></a>自定义布局容器</h1>
       
     </div>
 
@@ -504,7 +537,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="/2019/10/30/blog-string-Format/" title="C#中string.Format转义大括号的方式">/2019/10/30/blog-string-Format/</a>
+    <a href="/2019/12/02/blog-wpf-layout/" title="WPF基础容器与布局">/2019/12/02/blog-wpf-layout/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -530,7 +563,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C# </a>
+            <a href="/tags/WPF/" rel="tag"><i class="fa fa-tag"></i> WPF </a>
           
         </div>
       
@@ -543,8 +576,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/27/blog-build/" rel="next" title="Hexo + Next Theme + Github 的个人托管博客搭建">
-                <i class="fa fa-chevron-left"></i> Hexo + Next Theme + Github 的个人托管博客搭建
+              <a href="/2019/12/02/blog-dependenct/" rel="next" title="依赖属性知识巩固">
+                <i class="fa fa-chevron-left"></i> 依赖属性知识巩固
               </a>
             
           </div>
@@ -553,8 +586,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/03/blog-string-Arith/" rel="prev" title="C#关于字符串转简单运算表达式的相关方法记录">
-                C#关于字符串转简单运算表达式的相关方法记录 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/08/blog-learning-think/" rel="prev" title="技术学习的思考">
+                技术学习的思考 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -624,7 +657,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -676,7 +709,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -731,7 +764,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#错误方式："><span class="nav-number">1.</span> <span class="nav-text">错误方式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案："><span class="nav-number">2.</span> <span class="nav-text">解决方案：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用方式"><span class="nav-number">2.1.</span> <span class="nav-text">常用方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准方式"><span class="nav-number">2.2.</span> <span class="nav-text">标准方式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#布局容器（面板控件）归类"><span class="nav-number">1.</span> <span class="nav-text">布局容器（面板控件）归类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#容器嵌套"><span class="nav-number">1.1.</span> <span class="nav-text">容器嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网格拆分器"><span class="nav-number">1.2.</span> <span class="nav-text">网格拆分器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局舍入"><span class="nav-number">1.3.</span> <span class="nav-text">布局舍入</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#容器“共享”可用空间"><span class="nav-number">2.</span> <span class="nav-text">容器“共享”可用空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义布局容器"><span class="nav-number">3.</span> <span class="nav-text">自定义布局容器</span></a></li></ol></div>
             
 
           </div>
@@ -779,7 +812,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共6.9k字</span>
+  <span class="post-count">博客全站共7.7k字</span>
 </div>
 
         

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-11-24T15:36:37.181Z</updated>
+  <updated>2019-12-09T16:40:21.160Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>技术学习的思考</title>
+    <link href="/2019/12/10/blog-learning-think/"/>
+    <id>/2019/12/10/blog-learning-think/</id>
+    <published>2019-12-09T16:40:21.000Z</published>
+    <updated>2019-12-09T16:40:21.160Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;生活中难免因事因人牵动思绪，最近这段时间，又开始自我反思，一方面是在工作中遭遇到的问题，通过问题推导自己的不足以及对这段时间中自己的状态的分析，问题带来迷茫困扰，同时也伴随着个人的内心成长，&lt;code&gt;我哪错了,我改,不断试错,不断纠错&lt;/code&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="生活杂记" scheme="/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/"/>
+    
+    
+      <category term="Life" scheme="/tags/Life/"/>
+    
+  </entry>
   
   <entry>
     <title>C#-查看微软内置程序集技巧</title>
