@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-12-09T16:40:21.160Z</updated>
+  <updated>2019-12-19T15:18:17.860Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WPF基础容器与布局</title>
+    <link href="/2019/12/19/blog-wpf-layout/"/>
+    <id>/2019/12/19/blog-wpf-layout/</id>
+    <published>2019-12-19T15:18:17.000Z</published>
+    <updated>2019-12-19T15:18:17.860Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;WPF&lt;/code&gt;的&lt;code&gt;xaml&lt;/code&gt;中进行布局设定时，少不了和布局容器打交道，合理的使用和搭配这些容器，能够让页面美观的同时，可维护性和可拓展性更高&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
+    
+    
+      <category term="WPF" scheme="/tags/WPF/"/>
+    
+  </entry>
   
   <entry>
     <title>技术学习的思考</title>
