@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-12-19T15:18:17.860Z</updated>
+  <updated>2019-12-28T16:35:25.556Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>依赖属性基础巩固</title>
+    <link href="/2019/12/29/blog-dependenct/"/>
+    <id>/2019/12/29/blog-dependenct/</id>
+    <published>2019-12-28T16:35:25.000Z</published>
+    <updated>2019-12-28T16:35:25.556Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;依赖属性是何物？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的&lt;a href=&quot;https://docs.microsoft.com/zh-cn/dotnet/standard/base-types/common-type-system#Properties&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;属性&lt;/a&gt;的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
+    
+    
+      <category term="WPF" scheme="/tags/WPF/"/>
+    
+  </entry>
   
   <entry>
     <title>WPF基础容器与布局</title>

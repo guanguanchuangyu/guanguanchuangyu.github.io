@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="依赖属性是何物？  Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的属性的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性">
+<meta name="keywords" content="WPF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="依赖属性基础巩固">
+<meta property="og:url" content="/2019/12/29/blog-dependenct/index.html">
+<meta property="og:site_name" content="GGCY">
+<meta property="og:description" content="依赖属性是何物？  Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的属性的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-28T16:35:25.556Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="依赖属性基础巩固">
+<meta name="twitter:description" content="依赖属性是何物？  Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的属性的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="GGCY" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="/2019/12/29/blog-dependenct/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>依赖属性基础巩固 | GGCY</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GGCY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">code changes life</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/guanguanchuangyu" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="/2019/12/29/blog-dependenct/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="guanguan">
+      <meta itemprop="description" content="love life,love code">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGCY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">依赖属性基础巩固
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-29 00:35:25" itemprop="dateCreated datePublished" datetime="2019-12-29T00:35:25+08:00">2019-12-29</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/知识补丁/" itemprop="url" rel="index"><span itemprop="name">知识补丁</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>依赖属性是何物？</p>
+<blockquote>
+<p>Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的<a href="https://docs.microsoft.com/zh-cn/dotnet/standard/base-types/common-type-system#Properties" target="_blank" rel="noopener">属性</a>的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性</p>
+</blockquote>
+<a id="more"></a>
+
+<p>简单的来说就是在<code>WPF</code>中有别于面向对象中普通属性是其专属属性，依赖于<code>WPF属性系统</code>，对于依赖属性，并不像普通类类型属性那般进行实例化操作，而是依靠<code>DependencyProperty</code>进行类型函数建立静态实例，这样又可以说依赖属性为<code>DependencyProperty</code>支持的属性，依赖属性的自定义过程如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// 依赖属性案例类</span><br><span class="line">/// 创建依赖对象</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">public class DependencyCase:DependencyObject</span><br><span class="line">&#123;</span><br><span class="line">    //声明静态只读属性</span><br><span class="line">    public static readonly DependencyProperty CaseProperty;</span><br><span class="line"></span><br><span class="line">    //注册依赖属性</span><br><span class="line">    static DependencyCase()</span><br><span class="line">    &#123;</span><br><span class="line">        //创建属性元数据-可选</span><br><span class="line">        PropertyMetadata metadata = new PropertyMetadata(0);</span><br><span class="line">        ////也可以进行创建框架属性元数据</span><br><span class="line">        //FrameworkPropertyMetadata metadata = new FrameworkPropertyMetadata(default(int));</span><br><span class="line">        CaseProperty =</span><br><span class="line">            DependencyProperty.Register(&quot;Case&quot;, typeof(int), typeof(DependencyCase), metadata);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //构建属性封装器</span><br><span class="line">    public int Case</span><br><span class="line">    &#123;</span><br><span class="line">        get &#123; return (int)GetValue(CaseProperty); &#125;</span><br><span class="line">        set &#123; SetValue(CaseProperty, value); &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>具体解析如下：</strong></p>
+<ol>
+<li><p>创建依赖对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public class DependencyCase:DependencyObject</span><br><span class="line">&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>必须为<code>DependencyObject</code>的子类，对于依赖属性来说，这是必须的，构建依赖属性时，对依赖属性读取和设置属性值时，使用到的<code>SetValue</code>和<code>GetValue</code>来源于<code>DependencyObject</code></p>
+</li>
+<li><p>声明静态只读属性名称</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//声明静态只读属性</span><br><span class="line">public static readonly DependencyProperty CaseProperty;</span><br></pre></td></tr></table></figure>
+
+<p>属性的类型为<code>DependencyProperty</code>，名称为<code>XXX</code>加<code>Property</code>（作为约定俗成的规则，并不是强制要求），作为普通属性和依赖属性的命名规则区分</p>
+</li>
+<li><p>进行依赖属性注册</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//创建属性元数据-可选</span><br><span class="line">PropertyMetadata metadata = new PropertyMetadata(0);</span><br><span class="line">////也可以进行创建框架属性元数据</span><br><span class="line">//FrameworkPropertyMetadata metadata = new FrameworkPropertyMetadata(default(int));</span><br><span class="line">CaseProperty =</span><br><span class="line">DependencyProperty.Register(&quot;Case&quot;, typeof(int), typeof(DependencyCase), metadata);</span><br></pre></td></tr></table></figure>
+
+<p>注册使用的是<code>DependencyProperty</code>中的函数<code>Register</code>，依据参数主要负责提供如下功能：</p>
+<ul>
+<li><p>设定依赖属性对应的属性名称，此处为<code>Case</code></p>
+</li>
+<li><p>设定属性的类型，<code>CaseProperty</code>为<code>int</code>类型</p>
+</li>
+<li><p>设定拥有该属性的类，<code>DenpendencyCase</code>类</p>
+</li>
+<li><p><code>PropertyMetadata</code>用于设定依赖属性能够支持的什么类型服务（动画，数据绑定以及日志等）</p>
+<p>属于可选项，同时如果需要处理依赖属性的数据变化以及相关行为操作，<code>PropertyMetadata</code>就变得必须，可使用<code>FrameworkPropertyMetadata</code>进行细化处理</p>
+</li>
+</ul>
+</li>
+<li><p>构建依赖属性封装器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//构建属性封装器</span><br><span class="line">public int Case</span><br><span class="line">&#123;</span><br><span class="line">    get &#123; return (int)GetValue(CaseProperty); &#125;</span><br><span class="line">    set &#123; SetValue(CaseProperty, value); &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>依赖属性的属性封装和对普通字段的封装并无太大区别，主要用于在属性对外进行实例化后，普通属性能够实现的功能，依赖属性也就能够实现，属性名称就是依赖属性的注册时名称，属性可以直接在<code>xaml</code>中使用，同时也可以直接在代码中使用</p>
+<p><code>xaml</code>中使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;Window x:Class=&quot;Blog.AttachProperty.MainWindow&quot;</span><br><span class="line">        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</span><br><span class="line">        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</span><br><span class="line">        xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;</span><br><span class="line">        xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;</span><br><span class="line">        xmlns:local=&quot;clr-namespace:Blog.AttachProperty&quot;</span><br><span class="line">        mc:Ignorable=&quot;d&quot;</span><br><span class="line">        Title=&quot;MainWindow&quot; Height=&quot;450&quot; Width=&quot;800&quot;&gt;</span><br><span class="line">    &lt;!--使用时引入对应依赖属性所在命名空间</span><br><span class="line">此处代码仅仅为演示依赖属性能够在xaml中使用，代码本身无其他意义--&gt;</span><br><span class="line">    &lt;local:DependencyCase Case=&quot;12&quot;&gt;&lt;/local:DependencyCase&gt;</span><br><span class="line">&lt;/Window&gt;</span><br></pre></td></tr></table></figure>
+
+<p>代码中使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DependencyCase dependencyCase = new DependencyCase();</span><br><span class="line">dependencyCase.Case = 12;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="依赖属性提供的功能"><a href="#依赖属性提供的功能" class="headerlink" title="依赖属性提供的功能"></a>依赖属性提供的功能</h1><ul>
+<li>资源</li>
+<li>数据绑定</li>
+<li>样式</li>
+<li>动画</li>
+<li>元数据重写</li>
+<li>属性值继承</li>
+<li><code>WPF</code>设计器集成</li>
+</ul>
+<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><blockquote>
+<p>依赖属性能够通过引用资源进行设置，资源一般是在目标根元素的<code>Resources</code>属性值中。</p>
+</blockquote>
+<p>资源定义如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Window.Resources&gt;</span><br><span class="line">	&lt;SolidColorBrush x:Key=&quot;comBg&quot; Color=&quot;Red&quot;&gt;&lt;/SolidColorBrush&gt;</span><br><span class="line">&lt;/Window.Resources&gt;</span><br></pre></td></tr></table></figure>
+
+<p>控件中<code>Background</code>为控件的依赖属性，可通过使用标记拓展（如：<code>DynamicResource</code>、<code>StaticResource</code>）进行资源引用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;StackPanel&gt;</span><br><span class="line">	&lt;TextBlock Background=&quot;&#123;DynamicResource comBg&#125;&quot; Text=&quot;测试依赖属性引用资源&quot;&gt;&lt;/TextBlock&gt;</span><br><span class="line">&lt;/StackPanel&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其中需要注意的是，如资源引用使用的标记扩展为<code>DynamicResource</code>时，属性必须设置为依赖属性，资源被视为本地值，需要考虑当出现多个本地值时，依赖属性值作用优先级</p>
+<h2 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h2><blockquote>
+<p>依赖属性可以通过数据绑定来引用值。数据绑定通过特定标记扩展（<code>xaml</code>中）或<code>Binding</code>对象（代码中）起作用。使用数据绑定，最终属性值得确定将延迟到运行时，在运行时，从数据源获取属性值。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;TextBlock Text=&quot;&#123;Binding Name&#125;&quot;&gt;&lt;/TextBlock&gt;</span><br></pre></td></tr></table></figure>
+
+<p>绑定视为本地值，需要考虑依赖属性值的作用优先级</p>
+<h2 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h2><p>样式和模板是使用依赖属性的两个主要激发方向，在<code>xaml</code>中，资源通常作为样式资源定义在<code>Resources</code>中。</p>
+<p>资源：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Style x:Key=&quot;txtblock&quot; TargetType=&quot;TextBlock&quot;&gt;</span><br><span class="line">	&lt;Setter Property=&quot;Background&quot; Value=&quot;YellowGreen&quot;&gt;&lt;/Setter&gt;</span><br><span class="line">	&lt;Setter Property=&quot;Foreground&quot; Value=&quot;White&quot;&gt;&lt;/Setter&gt;</span><br><span class="line">&lt;/Style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;TextBlock Style=&quot;&#123;StaticResource txtblock&#125;&quot; Text=&quot;测试依赖属性引用样式&quot;&gt;&lt;/TextBlock&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><blockquote>
+<p>可以对依赖属性进行动画处理。在应用和运动动画时，经过动画处理的值得操作优先级高于该属性以及其他方式具有的任何值（如本地值）</p>
+</blockquote>
+<p>此处案例为，通过设定鼠标进入时，动画变更<code>TextBlock</code>的背景色</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;TextBlock Text=&quot;测试依赖属性作用于动画&quot; Style=&quot;&#123;StaticResource txtblock&#125;&quot;&gt;</span><br><span class="line">            &lt;TextBlock.Background&gt;</span><br><span class="line">                &lt;SolidColorBrush x:Name=&quot;bg&quot; Color=&quot;YellowGreen&quot;&gt;&lt;/SolidColorBrush&gt;</span><br><span class="line">            &lt;/TextBlock.Background&gt;</span><br><span class="line">            &lt;TextBlock.Triggers&gt;</span><br><span class="line">                &lt;EventTrigger RoutedEvent=&quot;MouseEnter&quot;&gt;</span><br><span class="line">                    &lt;BeginStoryboard&gt;</span><br><span class="line">                        &lt;Storyboard&gt;</span><br><span class="line">                            &lt;ColorAnimation AutoReverse=&quot;True&quot; RepeatBehavior=&quot;Forever&quot;</span><br><span class="line">                                    Storyboard.TargetName=&quot;bg&quot; Storyboard.TargetProperty=&quot;(SolidColorBrush.Color)&quot;</span><br><span class="line">                                    To=&quot;Red&quot; Duration=&quot;0:0:3&quot;&gt;&lt;/ColorAnimation&gt;</span><br><span class="line">                        &lt;/Storyboard&gt;</span><br><span class="line">                    &lt;/BeginStoryboard&gt;</span><br><span class="line">                &lt;/EventTrigger&gt;</span><br><span class="line">            &lt;/TextBlock.Triggers&gt;</span><br><span class="line">        &lt;/TextBlock&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="元数据重写"><a href="#元数据重写" class="headerlink" title="元数据重写"></a>元数据重写</h2><p>依赖属性能够被派生类继承，可以通过重写依赖属性元数据更改该属性的某些行为。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// 依赖对象子类继承依赖对象</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">public class ChildCase:DependencyCase</span><br><span class="line">&#123;</span><br><span class="line">    static ChildCase()</span><br><span class="line">    &#123;</span><br><span class="line">        CaseProperty.OverrideMetadata(typeof(ChildCase), new FrameworkPropertyMetadata(12));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="属性值继承"><a href="#属性值继承" class="headerlink" title="属性值继承"></a>属性值继承</h2><blockquote>
+<p>元素可以从其在对象树中的父级继承依赖属性的值</p>
+</blockquote>
+<p>当时对于元素来说，并不是所有的依赖属性都启用了相关配置，仅仅是需要用到的特定方案的依赖属性值才对属性进行启用，例如<code>DataContext</code>，使用<code>FrameworkPropertyMetadata</code>设定该依赖属性是否被子级元素继承</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataContextProperty = DependencyProperty.Register(&quot;DataContext&quot;, typeof(object), _typeofThis, new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.Inherits, OnDataContextChanged));</span><br></pre></td></tr></table></figure>
+
+<p>自定义时，无特殊需要，基本上不需要进行特定的启用处理，本身继承带来的计算时间会给系统性能带来一定的影响。</p>
+<p><code>WPF</code>设计器集成</p>
+<blockquote>
+<p>具有作为依赖属性实现的属性，自定义控件将接收适用于Visual Studio支持的相应<code>WPF</code>设计器。一个示例就是能够在“属性”窗口中编辑直接依赖属性和附加依赖属性。</p>
+</blockquote>
+<h1 id="依赖属性优先级"><a href="#依赖属性优先级" class="headerlink" title="依赖属性优先级"></a>依赖属性优先级</h1><blockquote>
+<p>获取依赖属性值时，获得的值可能是通过参与<code>WPF</code>属性系统的其他任一基于属性的输入而在该属性上设置的。由于存在依赖属性的优先级，是的属性获取值的方式的各种方案得以按可预测的方式进行交互</p>
+</blockquote>
+<p>意思就是，存在优先级能够更好把控住依赖属性中属性值的不同时期的数据状态（动画和强制设定除外），了解优先级有助于避免不必要的属性设置，避免混淆，排查某些影响或者预测依赖属性值的最终尝试结果没有得到预期的原因</p>
+<p>以下为分配依赖属性的运行时值时所使用的最终顺序，由高到低：</p>
+<h2 id="属性系统强制"><a href="#属性系统强制" class="headerlink" title="属性系统强制"></a>属性系统强制</h2><h2 id="活动动画或者Hold行为的动画"><a href="#活动动画或者Hold行为的动画" class="headerlink" title="活动动画或者Hold行为的动画"></a>活动动画或者Hold行为的动画</h2><h2 id="本地值"><a href="#本地值" class="headerlink" title="本地值"></a>本地值</h2><p>其中可能包含<code>StaticeSource</code>、<code>Binding</code>、<code>DynamicSource</code>等标记拓展引用的依赖属性值</p>
+<h2 id="TemplateParent模板属性"><a href="#TemplateParent模板属性" class="headerlink" title="TemplateParent模板属性"></a><code>TemplateParent</code>模板属性</h2><p>a.模板中的触发器</p>
+<p>b.模板中的属性集</p>
+<p>该优先级项不直接声明元素的任何属性，仅仅对于应用模板而产生的可视化树中的元素项而言有效，当使用TemplateParent的依赖属性会在模板中进行搜索，优先级低于本地值</p>
+<h2 id="隐式样式（style）"><a href="#隐式样式（style）" class="headerlink" title="隐式样式（style）"></a>隐式样式（style）</h2><p>不需要直接设置<code>Style</code>样式，在某一范围内，定义的元素<code>Style</code>，自动作用其对应类型子元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;StackPanel&gt;</span><br><span class="line">        &lt;StackPanel.Resources&gt;</span><br><span class="line">            &lt;Style TargetType=&quot;Button&quot;&gt;</span><br><span class="line">                &lt;Setter Property=&quot;Foreground&quot; Value=&quot;White&quot;/&gt;</span><br><span class="line">            &lt;/Style&gt;</span><br><span class="line">        &lt;/StackPanel.Resources&gt;</span><br><span class="line">        &lt;Button Content=&quot;隐式样式&quot;&gt;</span><br><span class="line">            &lt;Button.Resources&gt;</span><br><span class="line">                &lt;Style TargetType=&quot;Button&quot;&gt;</span><br><span class="line">                    &lt;Setter Property=&quot;Foreground&quot; Value=&quot;YellowGreen&quot;/&gt;</span><br><span class="line">                &lt;/Style&gt;</span><br><span class="line">            &lt;/Button.Resources&gt;</span><br><span class="line">        &lt;/Button&gt;</span><br><span class="line">&lt;/StackPanel&gt;</span><br></pre></td></tr></table></figure>
+
+<p>隐式样式定义越是接近元素，优先级越高</p>
+<h2 id="样式触发器（style）"><a href="#样式触发器（style）" class="headerlink" title="样式触发器（style）"></a>样式触发器（style）</h2><p>该项在<code>Style</code>中<code>Triggers</code>中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;Button Content=&quot;样式触发器&quot;&gt;</span><br><span class="line">    &lt;Button.Resources&gt;</span><br><span class="line">        &lt;Style TargetType=&quot;Button&quot;&gt;</span><br><span class="line">            &lt;Setter Property=&quot;Foreground&quot; Value=&quot;Red&quot;/&gt;</span><br><span class="line">            &lt;Style.Triggers&gt;</span><br><span class="line">                &lt;Trigger Property=&quot;IsMouseOver&quot; Value=&quot;True&quot;&gt;</span><br><span class="line">                    &lt;Setter Property=&quot;Foreground&quot; Value=&quot;Blue&quot;/&gt;</span><br><span class="line">                &lt;/Trigger&gt;</span><br><span class="line">            &lt;/Style.Triggers&gt;</span><br><span class="line">        &lt;/Style&gt;</span><br><span class="line">    &lt;/Button.Resources&gt;</span><br><span class="line">&lt;/Button&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="模板触发器（style）"><a href="#模板触发器（style）" class="headerlink" title="模板触发器（style）"></a>模板触发器（style）</h2><p>该项在<code>Style</code>中<code>ControlTemplate</code>或者<code>DataTemplate</code>中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;Button Content=&quot;模板触发器&quot;&gt;</span><br><span class="line">            &lt;Button.Resources&gt;</span><br><span class="line">                &lt;Style TargetType=&quot;Button&quot;&gt;</span><br><span class="line">                    &lt;Setter Property=&quot;Foreground&quot; Value=&quot;YellowGreen&quot;/&gt;</span><br><span class="line">                    &lt;Setter Property=&quot;Template&quot;&gt;</span><br><span class="line">                        &lt;Setter.Value&gt;</span><br><span class="line">                            &lt;ControlTemplate TargetType=&quot;Button&quot;&gt;</span><br><span class="line">                                &lt;ContentPresenter Content=&quot;&#123;TemplateBinding Content&#125;&quot;&gt;&lt;/ContentPresenter&gt;</span><br><span class="line">                                &lt;ControlTemplate.Triggers&gt;</span><br><span class="line">                                    &lt;Trigger Property=&quot;IsMouseOver&quot; Value=&quot;True&quot;&gt;</span><br><span class="line">                                        &lt;Setter Property=&quot;Foreground&quot; Value=&quot;Blue&quot;/&gt;</span><br><span class="line">                                    &lt;/Trigger&gt;</span><br><span class="line">                                &lt;/ControlTemplate.Triggers&gt;</span><br><span class="line">                            &lt;/ControlTemplate&gt;</span><br><span class="line">                        &lt;/Setter.Value&gt;</span><br><span class="line">                    &lt;/Setter&gt;</span><br><span class="line">                    &lt;Style.Triggers&gt;</span><br><span class="line">                        &lt;Trigger Property=&quot;IsMouseOver&quot; Value=&quot;True&quot;&gt;</span><br><span class="line">                            &lt;Setter Property=&quot;Foreground&quot; Value=&quot;Orange&quot;/&gt;</span><br><span class="line">                        &lt;/Trigger&gt;</span><br><span class="line">                    &lt;/Style.Triggers&gt;</span><br><span class="line">                &lt;/Style&gt;</span><br><span class="line">            &lt;/Button.Resources&gt;</span><br><span class="line">        &lt;/Button&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="样式资源库（style）"><a href="#样式资源库（style）" class="headerlink" title="样式资源库（style）"></a>样式资源库（style）</h2><p>来自页面或应用程序的样式中的<code>Setter</code>的值</p>
+<h2 id="默认（主题）样式（DefaultStyleKey）"><a href="#默认（主题）样式（DefaultStyleKey）" class="headerlink" title="默认（主题）样式（DefaultStyleKey）"></a>默认（主题）样式（<code>DefaultStyleKey</code>）</h2><p>每个控件附带的一个默认样式，默认样式可能因主题而存在，故而叫主题样式</p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>依赖属性从父元素向子元素继承值，而不需要每个子元素上都设置该属性</p>
+<h2 id="来自依赖属性元数据默认值"><a href="#来自依赖属性元数据默认值" class="headerlink" title="来自依赖属性元数据默认值"></a>来自依赖属性元数据默认值</h2><p>任何给定的依赖属性都有可能有一个默认值，由该特定的属性系统注册确定</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>guanguan</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="/2019/12/29/blog-dependenct/" title="依赖属性基础巩固">/2019/12/29/blog-dependenct/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+	<div>
+	
+		﻿<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+	
+	</div>
+	
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/WPF/" rel="tag"><i class="fa fa-tag"></i> WPF </a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/19/blog-wpf-layout/" rel="next" title="WPF基础容器与布局">
+                <i class="fa fa-chevron-left"></i> WPF基础容器与布局
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">guanguan</p>
+              <div class="site-description motion-element" itemprop="description">love life,love code</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#依赖属性提供的功能"><span class="nav-number">1.</span> <span class="nav-text">依赖属性提供的功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#资源"><span class="nav-number">1.1.</span> <span class="nav-text">资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据绑定"><span class="nav-number">1.2.</span> <span class="nav-text">数据绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样式"><span class="nav-number">1.3.</span> <span class="nav-text">样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动画"><span class="nav-number">1.4.</span> <span class="nav-text">动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元数据重写"><span class="nav-number">1.5.</span> <span class="nav-text">元数据重写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性值继承"><span class="nav-number">1.6.</span> <span class="nav-text">属性值继承</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#依赖属性优先级"><span class="nav-number">2.</span> <span class="nav-text">依赖属性优先级</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#属性系统强制"><span class="nav-number">2.1.</span> <span class="nav-text">属性系统强制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#活动动画或者Hold行为的动画"><span class="nav-number">2.2.</span> <span class="nav-text">活动动画或者Hold行为的动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地值"><span class="nav-number">2.3.</span> <span class="nav-text">本地值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TemplateParent模板属性"><span class="nav-number">2.4.</span> <span class="nav-text">TemplateParent模板属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐式样式（style）"><span class="nav-number">2.5.</span> <span class="nav-text">隐式样式（style）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样式触发器（style）"><span class="nav-number">2.6.</span> <span class="nav-text">样式触发器（style）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板触发器（style）"><span class="nav-number">2.7.</span> <span class="nav-text">模板触发器（style）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样式资源库（style）"><span class="nav-number">2.8.</span> <span class="nav-text">样式资源库（style）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#默认（主题）样式（DefaultStyleKey）"><span class="nav-number">2.9.</span> <span class="nav-text">默认（主题）样式（DefaultStyleKey）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#继承"><span class="nav-number">2.10.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#来自依赖属性元数据默认值"><span class="nav-number">2.11.</span> <span class="nav-text">来自依赖属性元数据默认值</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">guanguan</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.2</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共11.4k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
