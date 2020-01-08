@@ -13,6 +13,9 @@ date: 2019-12-29 00:35:25
 
 <!--more-->
 
+https://ggcy-static-01.oss-cn-hangzhou.aliyuncs.com/ggcyblog/blog-dependenct/DependencyProperty.png
+
+
 简单的来说就是在`WPF`中有别于面向对象中普通属性是其专属属性，依赖于`WPF属性系统`，对于依赖属性，并不像普通类类型属性那般进行实例化操作，而是依靠`DependencyProperty`进行类型函数建立静态实例，这样又可以说依赖属性为`DependencyProperty`支持的属性，依赖属性的自定义过程如下：
 
 ```c#
