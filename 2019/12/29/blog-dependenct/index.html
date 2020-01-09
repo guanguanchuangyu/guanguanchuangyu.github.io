@@ -104,10 +104,12 @@
 <meta property="og:site_name" content="GGCY">
 <meta property="og:description" content="依赖属性是何物？  Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的属性的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-28T16:35:25.556Z">
+<meta property="og:image" content="https://ggcy-static-01.oss-cn-hangzhou.aliyuncs.com/ggcyblog/blog-dependenct/DependencyProperty.png">
+<meta property="og:updated_time" content="2020-01-08T12:22:04.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="依赖属性基础巩固">
 <meta name="twitter:description" content="依赖属性是何物？  Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的属性的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性">
+<meta name="twitter:image" content="https://ggcy-static-01.oss-cn-hangzhou.aliyuncs.com/ggcyblog/blog-dependenct/DependencyProperty.png">
 
 
 
@@ -386,6 +388,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-01-08 20:22:04" itemprop="dateModified" datetime="2020-01-08T20:22:04+08:00">2020-01-08</time>
+              
+            
           </span>
 
           
@@ -448,6 +466,7 @@
 </blockquote>
 <a id="more"></a>
 
+<p><img src="https://ggcy-static-01.oss-cn-hangzhou.aliyuncs.com/ggcyblog/blog-dependenct/DependencyProperty.png" alt="DependencyProperty"></p>
 <p>简单的来说就是在<code>WPF</code>中有别于面向对象中普通属性是其专属属性，依赖于<code>WPF属性系统</code>，对于依赖属性，并不像普通类类型属性那般进行实例化操作，而是依靠<code>DependencyProperty</code>进行类型函数建立静态实例，这样又可以说依赖属性为<code>DependencyProperty</code>支持的属性，依赖属性的自定义过程如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// 依赖属性案例类</span><br><span class="line">/// 创建依赖对象</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">public class DependencyCase:DependencyObject</span><br><span class="line">&#123;</span><br><span class="line">    //声明静态只读属性</span><br><span class="line">    public static readonly DependencyProperty CaseProperty;</span><br><span class="line"></span><br><span class="line">    //注册依赖属性</span><br><span class="line">    static DependencyCase()</span><br><span class="line">    &#123;</span><br><span class="line">        //创建属性元数据-可选</span><br><span class="line">        PropertyMetadata metadata = new PropertyMetadata(0);</span><br><span class="line">        ////也可以进行创建框架属性元数据</span><br><span class="line">        //FrameworkPropertyMetadata metadata = new FrameworkPropertyMetadata(default(int));</span><br><span class="line">        CaseProperty =</span><br><span class="line">            DependencyProperty.Register(&quot;Case&quot;, typeof(int), typeof(DependencyCase), metadata);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //构建属性封装器</span><br><span class="line">    public int Case</span><br><span class="line">    &#123;</span><br><span class="line">        get &#123; return (int)GetValue(CaseProperty); &#125;</span><br><span class="line">        set &#123; SetValue(CaseProperty, value); &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -768,6 +787,8 @@
                     
                       
                     
+                      
+                    
                     <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
@@ -844,7 +865,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
