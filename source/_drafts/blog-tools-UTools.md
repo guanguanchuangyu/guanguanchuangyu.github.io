@@ -14,6 +14,8 @@ categories: ['相见恨晚']
 
 <!----more---->
 
+# 造作
+
 于是，秉着好奇心，我安装了，很快就安装完成，默认快捷键为`Alt+空格`，界面非常符合个人的极简审美
 
 ![blog-tools-UTools-Head](https://file.budbud.cn/ggcyblog/blog-tools-UTools/blog-tools-UTools-Head.png)
@@ -26,7 +28,26 @@ categories: ['相见恨晚']
 
 ![blog-tools-UTools-Content](https://file.budbud.cn/ggcyblog/blog-tools-UTools/blog-tools-UTools-Content.png)
 
-通过下载使用其中的内网穿透插件，我成功被安利了，通过这些功能，能够减少部分鼠标的使用，例如通过快捷键进行本地应用程序的查找和启动
+通过下载使用其中的内网穿透插件，我成功被安利了，通过这些功能，能够减少部分鼠标的使用，例如通过快捷键显示出搜索框进行本地应用程序的查找和启动
 
 ![blog-tools-UTools-Search](https://file.budbud.cn/ggcyblog/blog-tools-UTools/blog-tools-UTools-Search.png)
 
+# 部分插件
+
+## 内网穿透
+
+![blog-tools-UTools-Nat](https://file.budbud.cn/ggcyblog/blog-tools-UTools/blog-tools-UTools-Nat.png)
+
+## Todo
+
+![blog-tools-UTools-Todo](https://file.budbud.cn/ggcyblog/blog-tools-UTools/blog-tools-UTools-Todo.png)
+
+## 在线文档
+
+![blog-tools-UTools-Book](https://file.budbud.cn/ggcyblog/blog-tools-UTools/blog-tools-UTools-Book.png)
+
+## 人生进度条
+
+![blog-tools-UTools-life](https://file.budbud.cn/ggcyblog/blog-tools-UTools/blog-tools-UTools-life.png)
+
+更多的插件功能不再一一展示
