@@ -2,6 +2,7 @@
 title: WPF常见问题及解决方案
 tags: ['WPF']
 categories: ['知识补丁']
+typora-root-url: ./
 ---
 
 # HandyControlAnswer
@@ -30,7 +31,7 @@ categories: ['知识补丁']
 
 效果：
 
-![bugthink-xamlIcon](E:\Sources\guanguanchuangyu.github.io\source\_drafts\blog-wpf-bugthink\bugthink-xamlIcon.png)
+![bugthink-xamlIcon](blog-wpf-bugthink\bugthink-xamlIcon.png)
 
 在`.cs`文件中通过代码设定字体图标，需要将`&#xe8ac;`中的`&#x`替换为`\u`以及去掉尾部`;`：
 
@@ -54,7 +55,7 @@ public string StrIcon
 }
 ```
 
-`xaml`文件中使用对应的属性
+`xaml`文件中使用对应的属性：
 
 ```xml
 <!--忽略重复代码--> 
@@ -67,7 +68,7 @@ VerticalAlignment="Center"></TextBlock>
 
 效果：
 
-![bugthink-codeIcon](E:\Sources\guanguanchuangyu.github.io\source\_drafts\blog-wpf-bugthink\bugthink-codeIcon.png)
+![bugthink-codeIcon](blog-wpf-bugthink\bugthink-codeIcon.png)
 
 前端`xaml`中支持使用的是`&#+Unicode码;`字体对应的字符实体，而在`.cs`中则是使用的是对应的`\u+Unicode码`十六进制结果，具体可查阅资料[WPF中显示UniCode字符](https://www.bbsmax.com/A/xl561Zo9Jr/)
 
@@ -89,25 +90,27 @@ VerticalAlignment="Center"></TextBlock>
 
 文件路径：
 
-![bugthink-packpath](E:\Sources\guanguanchuangyu.github.io\source\_drafts\blog-wpf-bugthink\bugthink-packpath.png)
+![bugthink-packpath](blog-wpf-bugthink\bugthink-packpath.png)
 
 效果：
 
 原图：
 
-![bugthink-packuri](E:\Sources\guanguanchuangyu.github.io\source\_drafts\blog-wpf-bugthink\bugthink-packuri.png)
+![bugthink-packuri](blog-wpf-bugthink\bugthink-packuri.png)
 
 替换后：
 
-![bugthink-packpath-new](E:\Sources\guanguanchuangyu.github.io\source\_drafts\blog-wpf-bugthink\bugthink-packpath-new.png)
+![bugthink-packpath-new](blog-wpf-bugthink\bugthink-packpath-new.png)
 
-![bugthink-packuri-new](E:\Sources\guanguanchuangyu.github.io\source\_drafts\blog-wpf-bugthink\bugthink-packuri-new.png)
+![bugthink-packuri-new](blog-wpf-bugthink\bugthink-packuri-new.png)
 
-**`Popup`、`Contextmenu` 绑定失效**
+**`Popup`、`Contextmenu` 绑定资源为`ElementName`失效**
 
 
 
 **`Converter`返回内置画刷页面失效**
+
+
 
 ###### `HandyControl`使用技巧
 
