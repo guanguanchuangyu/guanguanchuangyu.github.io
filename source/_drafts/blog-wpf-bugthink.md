@@ -20,7 +20,7 @@ typora-root-url: ./
     <StackPanel.Resources>
         <!--仅仅用于演示-->
         <!--引入字体库,路径#字体库名称-->
-        <FontFamily x:Key="iconfont">Resources/#iconfont</FontFamily>
+        <FontFamily x:Key="iconfont">pack://application,,,/所在命程序集名称;Component/Resources/#iconfont</FontFamily>
     </StackPanel.Resources>
         <TextBlock Text="&#xe8ac;           &#xe8ab;" FontSize="30" Margin="10" 
                FontFamily="{StaticResource iconfont}" 
@@ -31,7 +31,7 @@ typora-root-url: ./
 
 效果：
 
-![bugthink-xamlIcon](blog-wpf-bugthink\bugthink-xamlIcon.png)
+![bugthink-xamlIcon](https://file.budbud.cn/ggcyblog/bugthink/bugthink-xamlIcon.png)
 
 在`.cs`文件中通过代码设定字体图标，需要将`&#xe8ac;`中的`&#x`替换为`\u`以及去掉尾部`;`：
 
@@ -68,7 +68,7 @@ VerticalAlignment="Center"></TextBlock>
 
 效果：
 
-![bugthink-codeIcon](blog-wpf-bugthink\bugthink-codeIcon.png)
+![bugthink-codeIcon](https://file.budbud.cn/ggcyblog/bugthink/bugthink-codeIcon.png)
 
 前端`xaml`中支持使用的是`&#+Unicode码;`字体对应的字符实体，而在`.cs`中则是使用的是对应的`\u+Unicode码`十六进制结果，具体可查阅资料[WPF中显示UniCode字符](https://www.bbsmax.com/A/xl561Zo9Jr/)
 
@@ -90,19 +90,19 @@ VerticalAlignment="Center"></TextBlock>
 
 文件路径：
 
-![bugthink-packpath](blog-wpf-bugthink\bugthink-packpath.png)
+![bugthink-packpath](https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath.png)
 
 效果：
 
 原图：
 
-![bugthink-packuri](blog-wpf-bugthink\bugthink-packuri.png)
+![bugthink-packuri](https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri.png)
 
 替换后：
 
-![bugthink-packpath-new](blog-wpf-bugthink\bugthink-packpath-new.png)
+![bugthink-packpath-new](https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath-new.png)
 
-![bugthink-packuri-new](blog-wpf-bugthink\bugthink-packuri-new.png)
+![bugthink-packuri-new](https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri-new.png)
 
 **`Popup`、`Contextmenu` 绑定资源为`ElementName`失效**
 
@@ -112,7 +112,9 @@ VerticalAlignment="Center"></TextBlock>
 
 
 
-**`List<T>`和`ObservableCollection`**
+**`List<T>`和`ObservableCollection<T>`**
+
+时常会遇到，作为实体集合，希望对数据集合子项的操作响应到页面的`TreeView`的节点上，例如：希望通过删除数据集合中的某一项，数据变更能够通知到`UI`中的`TreeView`的对应节点，实现移除。`List<T>`对应的数据子项操作无法通知到`TreeView`，而`ObservableCollection<T>`可行，案例如下：
 
 
 
