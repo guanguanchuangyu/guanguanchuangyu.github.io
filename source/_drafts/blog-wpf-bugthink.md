@@ -112,6 +112,10 @@ VerticalAlignment="Center"></TextBlock>
 
 
 
+**`List<T>`和`ObservableCollection`**
+
+
+
 ###### `HandyControl`使用技巧
 
 `HC`自定义Window非用户区域操作无效
