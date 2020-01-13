@@ -6,6 +6,8 @@ categories: ['知识补丁']
 
 如何`引入字体图标`不再赘述，可参考：[WPF引入字体图标](https://blog.csdn.net/songyi160/article/details/54894233)，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接[WPF使用阿里巴巴字体库](https://www.iconfont.cn/)
 
+<!--more-->
+
 `xaml`中使用如下：
 
 ```xml
