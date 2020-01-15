@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-01-13T16:12:02.907Z</updated>
+  <updated>2020-01-15T14:24:56.463Z</updated>
   <id>/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="/2020/01/14/blog-wpf-packUri/"/>
     <id>/2020/01/14/blog-wpf-packUri/</id>
     <published>2020-01-13T16:04:53.824Z</published>
-    <updated>2020-01-13T16:12:02.907Z</updated>
+    <updated>2020-01-15T14:24:56.463Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;在&lt;code&gt;WPF&lt;/code&gt;项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在&lt;code&gt;xaml&lt;/code&gt;中使用又不希望资源嵌入，而是希望随时能过替换应用程序所在目录下的外部资源文件如何去处理？&lt;/p&gt;
+      &lt;p&gt;在&lt;code&gt;WPF&lt;/code&gt;项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在&lt;code&gt;xaml&lt;/code&gt;中使用又不希望资源嵌入，而是希望随时能够替换应用程序所在目录下的外部资源文件如何去处理？&lt;/p&gt;
     
     </summary>
     
