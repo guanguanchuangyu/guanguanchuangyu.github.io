@@ -20,7 +20,7 @@ categories: ['知识补丁']
 </Border>
 ```
 
-文件路径：
+文件路径，图片资源与应用程序同级：
 
 ![bugthink-packpath](https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath.png)
 
@@ -35,3 +35,6 @@ categories: ['知识补丁']
 ![bugthink-packpath-new](https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath-new.png)
 
 ![bugthink-packuri-new](https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri-new.png)
+
+但是需要注意的是，此类资源的是为独占类型，也就是说，当前应用程序使用时，不能允许操作对应的资源，包括修改、重命名以及替换，如果需要考虑资源的重复使用，可考虑将文件资源通过附加属性进行处理，缓存一份数据流到内存中，处理数据流
+
