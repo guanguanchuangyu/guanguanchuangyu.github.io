@@ -108,7 +108,7 @@ VerticalAlignment="Center"></TextBlock>
 
 
 
-**`Converter`返回内置画刷页面失效**
+**`GeometryDrawing`中`Brush`使用`StaticResource`或者`DynamicResource`资源失效**
 
 
 
@@ -121,6 +121,17 @@ VerticalAlignment="Center"></TextBlock>
 ###### `HandyControl`使用技巧
 
 `HC`自定义Window非用户区域操作无效
+
+```xml
+NonClientAreaHeight = "0"
+ShowNonClientArea = "false"
+```
+
+标准化和最小化频繁切换，不显示非用户区，顶部控件不可点击
+
+```xml
+WindowChrome.IsHitTestVisibleInChrome="True"
+```
 
 ###### `HandyControl`与兼容
 
