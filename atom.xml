@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-01-15T14:24:56.463Z</updated>
+  <updated>2020-02-08T11:40:43.569Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2.0.0.1011升级为2.0.0.1014数据导入操作</title>
+    <link href="/2020/02/08/marker-2-0-0-1014/"/>
+    <id>/2020/02/08/marker-2-0-0-1014/</id>
+    <published>2020-02-08T10:54:34.000Z</published>
+    <updated>2020-02-08T11:40:43.569Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于&lt;code&gt;Marker&lt;/code&gt;动态壁纸桌面&lt;code&gt;2.x&lt;/code&gt;版本处于持续迭代中，故不定期会进行版本的升级，此处为试用版本&lt;code&gt;2.0.0.1011&lt;/code&gt;变更到&lt;code&gt;2.0.0.1014&lt;/code&gt;的操作&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="江湖秘籍" scheme="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"/>
+    
+    
+      <category term="Tools" scheme="/tags/Tools/"/>
+    
+  </entry>
   
   <entry>
     <title>外部资源的引入</title>
