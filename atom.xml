@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-02-08T11:40:43.569Z</updated>
+  <updated>2020-02-19T16:55:00.720Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WPF实现高仿统计标题卡</title>
+    <link href="/2020/02/20/blog-wpf-titleCard/"/>
+    <id>/2020/02/20/blog-wpf-titleCard/</id>
+    <published>2020-02-19T16:51:23.000Z</published>
+    <updated>2020-02-19T16:55:00.720Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;飘哇&lt;del&gt;~&lt;/del&gt;，在家数瓜子仁儿，闲来无事，看东看西，也找点儿，最近正在看看WPF动画，光看也是不行，需要带着目的去学习，整合知识碎片，恰巧，看到&lt;code&gt;Github&lt;/code&gt;中一个基于&lt;code&gt;Ant Designer&lt;/code&gt;设计风格的&lt;a href=&quot;https://github.com/liuguanhua/react-antd-admin&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;后台管理系统&lt;/a&gt;，看到统计标题卡，就它了，于是就开始造作&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://file.budbud.cn/ggcyblog/blog-wpf-titleCard/wpf-titleCard.png&quot; alt=&quot;image-20200219203826827&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="唐门暗器" scheme="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"/>
+    
+    
+      <category term="WPF" scheme="/tags/WPF/"/>
+    
+      <category term="Components" scheme="/tags/Components/"/>
+    
+  </entry>
   
   <entry>
     <title>2.0.0.1011升级为2.0.0.1014数据导入操作</title>
