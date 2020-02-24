@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-02-19T16:55:00.720Z</updated>
+  <updated>2020-02-24T10:52:56.855Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>自定义面板优化统计标题卡</title>
+    <link href="/2020/02/24/blog-wpf-BootStrapPanel/"/>
+    <id>/2020/02/24/blog-wpf-BootStrapPanel/</id>
+    <published>2020-02-24T10:52:56.000Z</published>
+    <updated>2020-02-24T10:52:56.855Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上篇文章&lt;a href=&quot;https://github.budbud.cn/2020/02/20/blog-wpf-titleCard&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WPF实现高仿统计标题卡&lt;/a&gt;中，实现了依据自己喜欢的统计卡片组件样式，实现过程中，发现，现有的&lt;code&gt;WPF&lt;/code&gt;默认自带面板&lt;code&gt;Grid&lt;/code&gt;、&lt;code&gt;UniformGrid&lt;/code&gt;、&lt;code&gt;StackPanel&lt;/code&gt;、&lt;code&gt;DockPanel&lt;/code&gt;、&lt;code&gt;WrapPanel&lt;/code&gt;以及&lt;code&gt;Canvas&lt;/code&gt;等暂时没有满足条件的面板容器，接下来就是一个简单的容器面板我称之为&lt;code&gt;BootstrapPanel&lt;/code&gt;，参考容器面板&lt;code&gt;UniformGrid&lt;/code&gt;和&lt;code&gt;WrapPanel&lt;/code&gt;两个容器的功能，&lt;strong&gt;项目仍然为上篇文章使用的项目为例&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://file.budbud.cn/ggcyblog/blog-wpf-BootStrapPanel/blog-wpf-panel.png&quot; alt=&quot;blog-wpf-panel&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="唐门暗器" scheme="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"/>
+    
+    
+      <category term="WPF" scheme="/tags/WPF/"/>
+    
+      <category term="Components" scheme="/tags/Components/"/>
+    
+  </entry>
+  
+  <entry>
     <title>WPF实现高仿统计标题卡</title>
     <link href="/2020/02/20/blog-wpf-titleCard/"/>
     <id>/2020/02/20/blog-wpf-titleCard/</id>
     <published>2020-02-19T16:51:23.000Z</published>
-    <updated>2020-02-19T16:55:00.720Z</updated>
+    <updated>2020-02-24T10:28:36.966Z</updated>
     
     <summary type="html">
     
