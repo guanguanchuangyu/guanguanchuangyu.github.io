@@ -110,7 +110,7 @@
 <meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-wpf-BootStrapPanel/blog-wpf-protect.png">
 <meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-wpf-BootStrapPanel/blog-wpf-BootstrapPanel.gif">
 <meta property="og:image" content="https://file.budbud.cn/ggcyblog/images/WXGZ.jpg">
-<meta property="og:updated_time" content="2020-02-24T10:52:56.855Z">
+<meta property="og:updated_time" content="2020-02-24T11:54:54.347Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自定义面板优化统计标题卡">
 <meta name="twitter:description" content="上篇文章WPF实现高仿统计标题卡中，实现了依据自己喜欢的统计卡片组件样式，实现过程中，发现，现有的WPF默认自带面板Grid、UniformGrid、StackPanel、DockPanel、WrapPanel以及Canvas等暂时没有满足条件的面板容器，接下来就是一个简单的容器面板我称之为BootstrapPanel，参考容器面板UniformGrid和WrapPanel两个容器的功能，项目仍然">
@@ -389,9 +389,13 @@
                 
               
 
-              <time title="创建时间：2020-02-24 18:52:56" itemprop="dateCreated datePublished" datetime="2020-02-24T18:52:56+08:00">2020-02-24</time>
+              <time title="创建时间：2020-02-24 18:52:56 / 修改时间：19:54:54" itemprop="dateCreated datePublished" datetime="2020-02-24T18:52:56+08:00">2020-02-24</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -478,7 +482,7 @@
 <p><img src="https://file.budbud.cn/ggcyblog/blog-wpf-BootStrapPanel/blog-wpf-panel.png" alt="blog-wpf-panel"></p>
 <a id="more"></a>
 
-<h1 id="基础面板分析"><a href="#基础面板分析" class="headerlink" title="基础面板分析"></a>基础面板分析</h1><h2 id="UniformGrid"><a href="#UniformGrid" class="headerlink" title="UniformGrid"></a><code>UniformGrid</code></h2><h3 id="提供功能"><a href="#提供功能" class="headerlink" title="提供功能"></a>提供功能</h3><p>该容器面板能够依据内部的可视子级数量，在未设置<code>Rows</code>、<code>Columns</code>、<code>FirstColumn</code>输习惯的条件下，进行自动填充均分容器面板的各区域</p>
+<h1 id="基础面板分析"><a href="#基础面板分析" class="headerlink" title="基础面板分析"></a>基础面板分析</h1><h2 id="UniformGrid"><a href="#UniformGrid" class="headerlink" title="UniformGrid"></a><code>UniformGrid</code></h2><h3 id="提供功能"><a href="#提供功能" class="headerlink" title="提供功能"></a>提供功能</h3><p>该容器面板能够依据内部的可视子级数量，在未设置<code>Rows</code>、<code>Columns</code>、<code>FirstColumn</code>等属性的条件下，进行自动填充均分容器面板的各区域</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ItemsControl</span> <span class="attr">ItemsSource</span>=<span class="string">"&#123;Binding Path=Data&#125;"</span> <span class="attr">FocusVisualStyle</span>=<span class="string">"&#123;x:Null&#125;"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">ItemsControl.ItemsPanel</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">ItemsPanelTemplate</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">UniformGrid</span>&gt;</span><span class="tag">&lt;/<span class="name">UniformGrid</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">ItemsPanelTemplate</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">ItemsControl.ItemsPanel</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ItemsControl</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://file.budbud.cn/ggcyblog/blog-wpf-BootStrapPanel/blog-wpf-UniformGrid.gif" alt="blog-wpf-UniformGrid"></p>
