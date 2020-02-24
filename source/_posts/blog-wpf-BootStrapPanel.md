@@ -21,7 +21,7 @@ date: 2020-02-24 18:52:56
 
 ### 提供功能
 
-该容器面板能够依据内部的可视子级数量，在未设置`Rows`、`Columns`、`FirstColumn`输习惯的条件下，进行自动填充均分容器面板的各区域
+该容器面板能够依据内部的可视子级数量，在未设置`Rows`、`Columns`、`FirstColumn`等属性的条件下，进行自动填充均分容器面板的各区域
 
 ```xml
 <ItemsControl ItemsSource="{Binding Path=Data}" FocusVisualStyle="{x:Null}">
