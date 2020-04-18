@@ -96,20 +96,28 @@
 
 
 
-  <meta name="description" content="如果说，生活充满挑战，那看似的轻而易举，也许就是混世中的举重若轻，生活多煎熬，我有你，做梦都会笑，爱生活，拥抱此刻，憧憬下一刻。">
-<meta name="keywords" content="Life">
+  <meta name="description" content="遇到一个在Windows Server2012 R2系统，IIS服务器启动问题，无论如何尝试启动IIS，始终提示“当文件已存在时，无法创建该文件”，一个令人懵比的问题，文件已存在，哪里存在了？不知道，就只能够盲人摸象，一步步排查，开始填坑，此处以Win10作为问题复现环境">
+<meta name="keywords" content="IIS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Love Life">
-<meta property="og:url" content="/2019/10/27/Home/index.html">
+<meta property="og:title" content="IIS服务启动提示当文件已存在时，无法创建该文件，183">
+<meta property="og:url" content="/2020/04/18/blog-iis-intelsrv/index.html">
 <meta property="og:site_name" content="GGCY">
-<meta property="og:description" content="如果说，生活充满挑战，那看似的轻而易举，也许就是混世中的举重若轻，生活多煎熬，我有你，做梦都会笑，爱生活，拥抱此刻，憧憬下一刻。">
+<meta property="og:description" content="遇到一个在Windows Server2012 R2系统，IIS服务器启动问题，无论如何尝试启动IIS，始终提示“当文件已存在时，无法创建该文件”，一个令人懵比的问题，文件已存在，哪里存在了？不知道，就只能够盲人摸象，一步步排查，开始填坑，此处以Win10作为问题复现环境">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="/2019/10/27/Home/ggcy.png">
-<meta property="og:updated_time" content="2019-11-10T08:13:39.512Z">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-filelist-info.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-error-info.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-service-stop.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-service-reset.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-service-info.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-was-reset.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-copy-delete.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-service-right.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/images/WXGZ.jpg">
+<meta property="og:updated_time" content="2020-04-18T04:11:40.298Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Love Life">
-<meta name="twitter:description" content="如果说，生活充满挑战，那看似的轻而易举，也许就是混世中的举重若轻，生活多煎熬，我有你，做梦都会笑，爱生活，拥抱此刻，憧憬下一刻。">
-<meta name="twitter:image" content="/2019/10/27/Home/ggcy.png">
+<meta name="twitter:title" content="IIS服务启动提示当文件已存在时，无法创建该文件，183">
+<meta name="twitter:description" content="遇到一个在Windows Server2012 R2系统，IIS服务器启动问题，无论如何尝试启动IIS，始终提示“当文件已存在时，无法创建该文件”，一个令人懵比的问题，文件已存在，哪里存在了？不知道，就只能够盲人摸象，一步步排查，开始填坑，此处以Win10作为问题复现环境">
+<meta name="twitter:image" content="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-filelist-info.png">
 
 
 
@@ -119,7 +127,7 @@
 
   
   
-  <link rel="canonical" href="/2019/10/27/Home/">
+  <link rel="canonical" href="/2020/04/18/blog-iis-intelsrv/">
 
 
 
@@ -129,7 +137,7 @@
   };
 </script>
 
-  <title>Love Life | GGCY</title>
+  <title>IIS服务启动提示当文件已存在时，无法创建该文件，183 | GGCY</title>
   
 
 
@@ -341,7 +349,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/2019/10/27/Home/">
+    <link itemprop="mainEntityOfPage" href="/2020/04/18/blog-iis-intelsrv/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="guanguan">
@@ -358,7 +366,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Love Life
+          <h1 class="post-title" itemprop="name headline">IIS服务启动提示当文件已存在时，无法创建该文件，183
 
               
             
@@ -384,25 +392,9 @@
                 
               
 
-              <time title="创建时间：2019-10-27 18:20:08" itemprop="dateCreated datePublished" datetime="2019-10-27T18:20:08+08:00">2019-10-27</time>
+              <time title="创建时间：2020-04-18 12:11:40" itemprop="dateCreated datePublished" datetime="2020-04-18T12:11:40+08:00">2020-04-18</time>
             
 
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-11-10 16:13:39" itemprop="dateModified" datetime="2019-11-10T16:13:39+08:00">2019-11-10</time>
-              
             
           </span>
 
@@ -418,7 +410,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活杂记/" itemprop="url" rel="index"><span itemprop="name">生活杂记</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/江湖秘籍/" itemprop="url" rel="index"><span itemprop="name">江湖秘籍</span></a></span>
 
                 
                 
@@ -437,8 +429,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/10/27/Home/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/27/Home/" itemprop="commentCount"></span>
+                <a href="/2020/04/18/blog-iis-intelsrv/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/18/blog-iis-intelsrv/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -446,7 +438,7 @@
 
           
           
-            <span id="/2019/10/27/Home/" class="leancloud_visitors" data-flag-title="Love Life">
+            <span id="/2020/04/18/blog-iis-intelsrv/" class="leancloud_visitors" data-flag-title="IIS服务启动提示当文件已存在时，无法创建该文件，183">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -485,14 +477,30 @@
       
 
       
-        <p>如果说，生活充满挑战，那看似的轻而易举，也许就是混世中的举重若轻，生活多煎熬，我有你，做梦都会笑，爱生活，拥抱此刻，憧憬下一刻。</p>
+        <p>遇到一个在<code>Windows Server2012 R2</code>系统，<code>IIS</code>服务器启动问题，无论如何尝试启动<code>IIS</code>，始终提示“当文件已存在时，无法创建该文件”，一个令人懵比的问题，文件已存在，哪里存在了？不知道，就只能够盲人摸象，一步步排查，开始填坑，此处以<code>Win10</code>作为问题复现环境</p>
 <a id="more"></a>
 
-<p><img src="ggcy.png" alt="ggcy"></p>
-<p>人心需要面向阳光，感受温暖，不麻木，同时时刻的提醒自己，不要忘记初心，内心的自我成长往往伴随着承受外界的鞭挞。</p>
-<p>风雨中，有人冒雨前行，有人暂定脚跟，在路上寻找躲雨的地点，谁也说不上对错，谁也没有高人一等，有的都是在风雨中的苦苦挣扎和寻觅。</p>
-<p>这是第一篇文章，本不应该如此消极沉闷，奈何胸中言语，不吐不快。</p>
-<p>因达不到所以才会有希望，渴望把握机会，去看看梦那边的天，有没有如头顶一般存在着北极星的指引。</p>
+<h1 id="填坑记录"><a href="#填坑记录" class="headerlink" title="填坑记录"></a>填坑记录</h1><h2 id="作死流程"><a href="#作死流程" class="headerlink" title="作死流程"></a>作死流程</h2><p>系统中安装好<code>IIS</code>，在未做任何修改之前，<code>IIS</code>能够正常启动和访问，因为个人需要对<code>C:\Windows\System32\inetsrv\config\schema\IIS_schema.xml</code>文件进行部分修改配置，由于涉及到系统，所有，一般在修改前会习惯性的对文件保留一个副本，于是出现如下结构目录</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-filelist-info.png" alt="blog-filelist-info"></p>
+<h2 id="意外出现"><a href="#意外出现" class="headerlink" title="意外出现"></a>意外出现</h2><p>关闭<code>IIS</code>后，再次启动，出现如下错误：</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-error-info.png" alt="blog-error-info"></p>
+<p>这是啥问题？于是将之前修改过的变更，进行还原，<code>万能重启</code>，还是不行，<code>IIS</code>这就崩了？心中无数头羊驼，在奔腾~，又不想重装系统，喝口热茶，缓解一下紧张气氛，接着找问题</p>
+<h2 id="问题排查"><a href="#问题排查" class="headerlink" title="问题排查"></a>问题排查</h2><p>通过查阅网上资料可以知道，<code>IIS</code>正常启动依托至少两个服务，一个是<code>W3SVC</code>也就是<code>World Wide Web Publishing Service</code>，一个是<code>WAS</code>也就是<code>Windows Process Activation Service</code>，查找到这两个服务，发现当前两个服务都未能启动，先尝试<code>W3SVC</code>，启动提示“服务依赖或者工作组异常”，查看服务属性，其中的依赖，一个个核对</p>
+<h3 id="服务停止"><a href="#服务停止" class="headerlink" title="服务停止"></a>服务停止</h3><p><img src="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-service-stop.png" alt="blog-service-stop"></p>
+<h3 id="启动提示"><a href="#启动提示" class="headerlink" title="启动提示"></a>启动提示</h3><p>启动<code>W3SVC</code>服务出现<code>依赖服务或组无法启动</code>，修改之前<code>IIS</code>是能够正常使用的，说明组件是完整的，需要查看服务的依赖服务或者相关组是否启动</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-service-reset.png" alt="blog-service-reset"></p>
+<h3 id="查看依赖"><a href="#查看依赖" class="headerlink" title="查看依赖"></a>查看依赖</h3><p>打开本地服务，在服务列表中找到<code>World Wide Web Publishing Service</code>，查看对应的属性信息，具体信息如下：</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-service-info.png" alt="blog-service-info"></p>
+<p>发现<code>W3SVC</code>的依赖项其中之一是<code>WAS</code>，其余依赖性都已经启动，唯独<code>WAS</code>未启动，因而，异常问题定位到<code>WAS</code>服务未启动上，尝试启动，提示信息与启动<code>IIS</code>启动时保持一致</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-was-reset.png" alt="blog-was-reset"></p>
+<h1 id="原因与总结"><a href="#原因与总结" class="headerlink" title="原因与总结"></a>原因与总结</h1><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>将对应的服务名称和错误信息，进行浏览器搜索，得到一个解决方案，此处为传送门<a href="https://zhidao.baidu.com/question/1175774999664015139.html" target="_blank" rel="noopener">Windows Process Activation Service无法启动，错误183</a>，虽然是描述较少，好在问题和本人的问题是一模一样，网友自问自答，也是很好的，在<code>inetsrv\config\schema</code>文件夹下，所有文件不能存在备份文件，之前为了保留原有文件，进行文件副本的保留，造成服务启动过程中，运行异常，而<code>WAS</code>又是<code>W3SVC</code>的依赖服务，故而，两个服务都无法启动运行，删除掉<code>C:\Windows\System32\inetsrv\config\schema\IIS_schema-副本.xml</code>文件</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-copy-delete.png" alt="blog-copy-delete"></p>
+<p>依次启动<code>WAS</code>和<code>W3SVC</code>服务，能够正常启动</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-iis-intelsrv/blog-service-right.png" alt="blog-service-right"></p>
+<p>再次启动<code>IIS</code>就能够正常使用了，免于系统的重装，当然，环境也保住了</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>因为自己保留原有文件的处理措施，给自己带来了两个小时的排错排查，实属填坑，没有想到<code>IIS</code>的相关服务会出现这样的问题，同时对服务依赖的异常排查有了一个更加深入的了解，积累成为接触疑难杂症的经验</p>
+<p>如果你也是技术爱好者，可以关注一波~~</p>
+<p><img src="https://file.budbud.cn/ggcyblog/images/WXGZ.jpg" alt="WXGZ"></p>
 
       
     </div>
@@ -527,7 +535,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="/2019/10/27/Home/" title="Love Life">/2019/10/27/Home/</a>
+    <a href="/2020/04/18/blog-iis-intelsrv/" title="IIS服务启动提示当文件已存在时，无法创建该文件，183">/2020/04/18/blog-iis-intelsrv/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -553,7 +561,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Life/" rel="tag"><i class="fa fa-tag"></i> Life </a>
+            <a href="/tags/IIS/" rel="tag"><i class="fa fa-tag"></i> IIS </a>
           
         </div>
       
@@ -566,15 +574,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/02/24/blog-wpf-BootStrapPanel/" rel="next" title="自定义面板优化统计标题卡">
+                <i class="fa fa-chevron-left"></i> 自定义面板优化统计标题卡
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/27/blog-build/" rel="prev" title="Hexo + Next Theme + Github 的个人托管博客搭建">
-                Hexo + Next Theme + Github 的个人托管博客搭建 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -622,8 +630,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -742,6 +759,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#填坑记录"><span class="nav-number">1.</span> <span class="nav-text">填坑记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#作死流程"><span class="nav-number">1.1.</span> <span class="nav-text">作死流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#意外出现"><span class="nav-number">1.2.</span> <span class="nav-text">意外出现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题排查"><span class="nav-number">1.3.</span> <span class="nav-text">问题排查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务停止"><span class="nav-number">1.3.1.</span> <span class="nav-text">服务停止</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动提示"><span class="nav-number">1.3.2.</span> <span class="nav-text">启动提示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看依赖"><span class="nav-number">1.3.3.</span> <span class="nav-text">查看依赖</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原因与总结"><span class="nav-number">2.</span> <span class="nav-text">原因与总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-number">2.1.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">2.2.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
