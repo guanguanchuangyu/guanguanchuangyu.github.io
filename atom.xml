@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-04-18T04:11:40.298Z</updated>
+  <updated>2020-04-18T13:29:48.421Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows中安装Davinci</title>
+    <link href="/2020/04/18/blog-davinci-setup/"/>
+    <id>/2020/04/18/blog-davinci-setup/</id>
+    <published>2020-04-18T13:29:48.000Z</published>
+    <updated>2020-04-18T13:29:48.421Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Davinci 是一个 DVaaS（Data Visualization as a Service）平台解决方案，面向业务人员/数据工程师/数据分析师/数据科学家，致力于提供一站式数据可视化解决方案。既可作为公有云/私有云独立部署使用，也可作为可视化插件集成到三方系统。用户只需在可视化 UI 上简单配置即可服务多种数据可视化应用，并支持高级交互/行业分析/模式探索/社交智能等可视化功能。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="江湖秘籍" scheme="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"/>
+    
+    
+      <category term="Tools" scheme="/tags/Tools/"/>
+    
+  </entry>
   
   <entry>
     <title>IIS服务启动提示当文件已存在时，无法创建该文件，183</title>

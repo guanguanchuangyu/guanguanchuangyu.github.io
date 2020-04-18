@@ -96,25 +96,33 @@
 
 
 
-  <meta name="description" content="HandyControlAnswerWPF细节问题字体图标的使用 如何引入字体图标不再赘述，可参考：WPF引入字体图标，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接WPF使用阿里巴巴字体库 xaml中使用如下： 1234567891011&amp;lt;StackPanel Orientation=&quot;Hor">
-<meta name="keywords" content="WPF">
+  <meta name="description" content="Davinci 是一个 DVaaS（Data Visualization as a Service）平台解决方案，面向业务人员/数据工程师/数据分析师/数据科学家，致力于提供一站式数据可视化解决方案。既可作为公有云/私有云独立部署使用，也可作为可视化插件集成到三方系统。用户只需在可视化 UI 上简单配置即可服务多种数据可视化应用，并支持高级交互/行业分析/模式探索/社交智能等可视化功能。">
+<meta name="keywords" content="Tools">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WPF常见问题及解决方案">
-<meta property="og:url" content="/2020/01/10/blog-wpf-bugthink/index.html">
+<meta property="og:title" content="Windows中安装Davinci">
+<meta property="og:url" content="/2020/04/18/blog-davinci-setup/index.html">
 <meta property="og:site_name" content="GGCY">
-<meta property="og:description" content="HandyControlAnswerWPF细节问题字体图标的使用 如何引入字体图标不再赘述，可参考：WPF引入字体图标，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接WPF使用阿里巴巴字体库 xaml中使用如下： 1234567891011&amp;lt;StackPanel Orientation=&quot;Hor">
+<meta property="og:description" content="Davinci 是一个 DVaaS（Data Visualization as a Service）平台解决方案，面向业务人员/数据工程师/数据分析师/数据科学家，致力于提供一站式数据可视化解决方案。既可作为公有云/私有云独立部署使用，也可作为可视化插件集成到三方系统。用户只需在可视化 UI 上简单配置即可服务多种数据可视化应用，并支持高级交互/行业分析/模式探索/社交智能等可视化功能。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-xamlIcon.png">
-<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-codeIcon.png">
-<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath.png">
-<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri.png">
-<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath-new.png">
-<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri-new.png">
-<meta property="og:updated_time" content="2020-02-20T14:06:51.178Z">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-unzip.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-mysql-adddb.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-mysql-service.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-initsql.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-mysql-initdb01.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-mysql-tables.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-config.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-run-bat.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-run-start.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-login.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-davinci-register.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-email-active.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-email-QQ.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-davinci-main.png">
+<meta property="og:updated_time" content="2020-04-18T13:29:48.421Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WPF常见问题及解决方案">
-<meta name="twitter:description" content="HandyControlAnswerWPF细节问题字体图标的使用 如何引入字体图标不再赘述，可参考：WPF引入字体图标，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接WPF使用阿里巴巴字体库 xaml中使用如下： 1234567891011&amp;lt;StackPanel Orientation=&quot;Hor">
-<meta name="twitter:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-xamlIcon.png">
+<meta name="twitter:title" content="Windows中安装Davinci">
+<meta name="twitter:description" content="Davinci 是一个 DVaaS（Data Visualization as a Service）平台解决方案，面向业务人员/数据工程师/数据分析师/数据科学家，致力于提供一站式数据可视化解决方案。既可作为公有云/私有云独立部署使用，也可作为可视化插件集成到三方系统。用户只需在可视化 UI 上简单配置即可服务多种数据可视化应用，并支持高级交互/行业分析/模式探索/社交智能等可视化功能。">
+<meta name="twitter:image" content="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-unzip.png">
 
 
 
@@ -124,7 +132,7 @@
 
   
   
-  <link rel="canonical" href="/2020/01/10/blog-wpf-bugthink/">
+  <link rel="canonical" href="/2020/04/18/blog-davinci-setup/">
 
 
 
@@ -134,7 +142,7 @@
   };
 </script>
 
-  <title>WPF常见问题及解决方案 | GGCY</title>
+  <title>Windows中安装Davinci | GGCY</title>
   
 
 
@@ -346,7 +354,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/2020/01/10/blog-wpf-bugthink/">
+    <link itemprop="mainEntityOfPage" href="/2020/04/18/blog-davinci-setup/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="guanguan">
@@ -363,7 +371,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">WPF常见问题及解决方案
+          <h1 class="post-title" itemprop="name headline">Windows中安装Davinci
 
               
             
@@ -389,25 +397,9 @@
                 
               
 
-              <time title="创建时间：2020-01-10 21:49:53" itemprop="dateCreated datePublished" datetime="2020-01-10T21:49:53+08:00">2020-01-10</time>
+              <time title="创建时间：2020-04-18 21:29:48" itemprop="dateCreated datePublished" datetime="2020-04-18T21:29:48+08:00">2020-04-18</time>
             
 
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-20 22:06:51" itemprop="dateModified" datetime="2020-02-20T22:06:51+08:00">2020-02-20</time>
-              
             
           </span>
 
@@ -423,7 +415,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/知识补丁/" itemprop="url" rel="index"><span itemprop="name">知识补丁</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/江湖秘籍/" itemprop="url" rel="index"><span itemprop="name">江湖秘籍</span></a></span>
 
                 
                 
@@ -442,8 +434,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2020/01/10/blog-wpf-bugthink/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/01/10/blog-wpf-bugthink/" itemprop="commentCount"></span>
+                <a href="/2020/04/18/blog-davinci-setup/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/18/blog-davinci-setup/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -451,7 +443,7 @@
 
           
           
-            <span id="/2020/01/10/blog-wpf-bugthink/" class="leancloud_visitors" data-flag-title="WPF常见问题及解决方案">
+            <span id="/2020/04/18/blog-davinci-setup/" class="leancloud_visitors" data-flag-title="Windows中安装Davinci">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -490,51 +482,64 @@
       
 
       
-        <h1 id="HandyControlAnswer"><a href="#HandyControlAnswer" class="headerlink" title="HandyControlAnswer"></a>HandyControlAnswer</h1><h6 id="WPF细节问题"><a href="#WPF细节问题" class="headerlink" title="WPF细节问题"></a><code>WPF</code>细节问题</h6><p><strong>字体图标的使用</strong></p>
-<p>如何<code>引入字体图标</code>不再赘述，可参考：<a href="https://blog.csdn.net/songyi160/article/details/54894233" target="_blank" rel="noopener">WPF引入字体图标</a>，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接<a href="https://www.iconfont.cn/" target="_blank" rel="noopener">WPF使用阿里巴巴字体库</a></p>
-<p><code>xaml</code>中使用如下：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">Orientation</span>=<span class="string">"Horizontal"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">StackPanel.Resources</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--仅仅用于演示--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--引入字体库,路径#字体库名称--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">FontFamily</span> <span class="attr">x:Key</span>=<span class="string">"iconfont"</span>&gt;</span>pack://application,,,/所在命程序集名称;Component/Resources/#iconfont<span class="tag">&lt;/<span class="name">FontFamily</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">StackPanel.Resources</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">"&amp;#xe8ac;           &amp;#xe8ab;"</span> <span class="attr">FontSize</span>=<span class="string">"30"</span> <span class="attr">Margin</span>=<span class="string">"10"</span> </span></span><br><span class="line"><span class="tag">               <span class="attr">FontFamily</span>=<span class="string">"&#123;StaticResource iconfont&#125;"</span> </span></span><br><span class="line"><span class="tag">               <span class="attr">HorizontalAlignment</span>=<span class="string">"Center"</span> </span></span><br><span class="line"><span class="tag">               <span class="attr">VerticalAlignment</span>=<span class="string">"Center"</span>&gt;</span><span class="tag">&lt;/<span class="name">TextBlock</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>Davinci 是一个 DVaaS（Data Visualization as a Service）平台解决方案，面向业务人员/数据工程师/数据分析师/数据科学家，致力于提供一站式数据可视化解决方案。既可作为公有云/私有云独立部署使用，也可作为可视化插件集成到三方系统。用户只需在可视化 UI 上简单配置即可服务多种数据可视化应用，并支持高级交互/行业分析/模式探索/社交智能等可视化功能。</p>
+</blockquote>
+<a id="more"></a>
 
-<p>效果：</p>
-<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-xamlIcon.png" alt="bugthink-xamlIcon"></p>
-<p>在<code>.cs</code>文件中通过代码设定字体图标，需要将<code>&amp;#xe8ac;</code>中的<code>&amp;#x</code>替换为<code>\u</code>以及去掉尾部<code>;</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">private string strIcon;</span><br><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// 页面中使用的属性</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">public string StrIcon</span><br><span class="line">&#123;</span><br><span class="line">    get</span><br><span class="line">    &#123;</span><br><span class="line">        //模拟后台给对应属性赋值</span><br><span class="line">        if (string.IsNullOrEmpty(strIcon))</span><br><span class="line">        &#123;</span><br><span class="line">            strIcon = &quot;\ue8ac           \ue8ab&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        return strIcon;</span><br><span class="line">    &#125;</span><br><span class="line">    set &#123; strIcon = value; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当前教程将介绍<code>Davinci</code>在<code>Windows</code>中的环境搭建操作步骤。</p>
+<h1 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h1><p><code>JDK≥1.8</code></p>
+<p><code>MySql≥5.5</code></p>
+<p><code>Mail Server 邮箱服务器</code></p>
+<p><code>Chrome</code>或<code>phantomjs</code>支持浏览器操作</p>
+<p>系统发布包（不是<code>SourceCode</code>）</p>
+<h1 id="解压软件"><a href="#解压软件" class="headerlink" title="解压软件"></a>解压软件</h1><p>在系统中，需要软件常用位置解压<code>Davinci</code>发布包，结构如下：</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-unzip.png" alt="blog-unzip"></p>
+<h1 id="数据库配置"><a href="#数据库配置" class="headerlink" title="数据库配置"></a>数据库配置</h1><p>数据库脚本为<code>bin</code>下的<code>davinci.sql</code></p>
+<h2 id="初始化数据库"><a href="#初始化数据库" class="headerlink" title="初始化数据库"></a>初始化数据库</h2><p>在<code>mysql</code>中添加名称为<code>davinci0.3</code>的数据库，用于后续执行<code>sql</code>脚本使用</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-mysql-adddb.png" alt="blog-mysql-adddb"></p>
+<h3 id="方式一【推荐】"><a href="#方式一【推荐】" class="headerlink" title="方式一【推荐】"></a>方式一【推荐】</h3><p>切换到<code>mysql</code>程序所在<code>bin</code>目录下，确保<code>mysql</code>服务是运行状态：</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-mysql-service.png" alt="blog-mysql-service"></p>
+<p>执行如下指令，对数据库进行初始化，<code>davinci.sql</code>在<code>Davinci</code>解压路径下的<code>bin</code>文件夹中，参考如下，其中<code>davinci0.3</code>为本地<code>mysql</code>中提前建立好的数据库名称：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -P 3306 -h localhost -u 用户名 -p密码 davinci0.3 &lt; 脚本所在绝对路径/bin/davinci.sql</span><br></pre></td></tr></table></figure>
 
-<p><code>xaml</code>文件中使用对应的属性：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--忽略重复代码--&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding StrIcon&#125;"</span> <span class="attr">FontSize</span>=<span class="string">"30"</span> <span class="attr">Margin</span>=<span class="string">"10"</span> <span class="attr">FontFamily</span>=<span class="string">"&#123;StaticResource iconfont&#125;"</span> </span></span><br><span class="line"><span class="tag"><span class="attr">Foreground</span>=<span class="string">"YellowGreen"</span></span></span><br><span class="line"><span class="tag"><span class="attr">HorizontalAlignment</span>=<span class="string">"Center"</span></span></span><br><span class="line"><span class="tag"><span class="attr">VerticalAlignment</span>=<span class="string">"Center"</span>&gt;</span><span class="tag">&lt;/<span class="name">TextBlock</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--忽略重复代码--&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-initsql.png" alt="blog-initsql"></p>
+<h4 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h4><p><code>cmd</code>中执行结构，除了以下提示信息外，无其他异常提示</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-mysql-initdb01.png" alt="blog-mysql-initdb01"></p>
+<p>数据库中生成对应表结构</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-mysql-tables.png" alt="blog-mysql-tables"></p>
+<h3 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h3><p>配置全局环境变量<code>MYSQL_HOME</code>对应<code>Mysql</code>的<code>bin</code>文件夹路径，配置全局环境<code>DAVINCI3_HOME</code>对应为<code>Davinci</code>项目解压路径中的<code>bin</code>文件夹</p>
+<p>配置好之后，执行<code>Davinci</code>解压路径下<code>bin</code>中的<code>initdn.bat</code>脚本</p>
+<h2 id="修改本地配置"><a href="#修改本地配置" class="headerlink" title="修改本地配置"></a>修改本地配置</h2><p>将<code>config</code>文件夹下的<code>application.yml.example</code>和<code>datasource_driver.yml.examply</code>尾缀<code>example</code>去除</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-config.png" alt="blog-config"></p>
+<p>其中<code>application.yml</code>中包含了，系统中基本的配置，如<code>web</code>访问<code>ip</code>地址以及端口号，项目的根目录等配置</p>
+<h2 id="配置数据库账户"><a href="#配置数据库账户" class="headerlink" title="配置数据库账户"></a>配置数据库账户</h2><p>打开<code>application.yml</code>，找到<code>datasource</code>节点，添加上<code>mysql</code>对应的访问账户以及密码，由于是<code>yml</code>文件，需要注意属性和属性值之间必须带有<code>至少一个空格</code></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">datasource:</span></span><br><span class="line"><span class="attr">  url:</span> <span class="attr">jdbc:mysql://localhost:3306/davinci0.3?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true</span></span><br><span class="line"><span class="attr">  username:</span> <span class="string">用户名</span></span><br><span class="line"><span class="attr">  password:</span> <span class="string">用户密码</span></span><br></pre></td></tr></table></figure>
 
-<p>效果：</p>
-<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-codeIcon.png" alt="bugthink-codeIcon"></p>
-<p>前端<code>xaml</code>中支持使用的是<code>&amp;#+Unicode码;</code>字体对应的字符实体，而在<code>.cs</code>中则是使用的是对应的<code>\u+Unicode码</code>十六进制结果，具体可查阅资料<a href="https://www.bbsmax.com/A/xl561Zo9Jr/" target="_blank" rel="noopener">WPF中显示UniCode字符</a></p>
-<p><strong>外部资源的引入</strong></p>
-<p>在<code>WPF</code>项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在<code>xaml</code>中使用又不希望资源嵌入，而是希望随时能过替换应用程序所在目录下的外部资源文件如何去处理？</p>
-<p>使用<code>Pack URI</code>中的外部方式<a href="https://docs.microsoft.com/zh-cn/dotnet/framework/wpf/app-development/pack-uris-in-wpf#site-of-origin-pack-uris" target="_blank" rel="noopener">源站点 Pack URI</a>，<code>pack://siteoforigin:,,,/XXXXXXXXX</code>，详情请查看链接，案例如下：</p>
-<p><code>xaml</code>中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Border Margin=&quot;10&quot;&gt;</span><br><span class="line">    &lt;Border.Background&gt;</span><br><span class="line">        &lt;ImageBrush ImageSource=&quot;pack://siteoforigin:,,,/bg.png&quot;&gt;&lt;/ImageBrush&gt;</span><br><span class="line">    &lt;/Border.Background&gt;</span><br><span class="line">&lt;/Border&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="配置邮箱服务器"><a href="#配置邮箱服务器" class="headerlink" title="配置邮箱服务器"></a>配置邮箱服务器</h2><p><code>Davinci</code>默认使用时，需要注册账户，需要邮箱激活，所以需要配置一个邮箱服务器对应的账户</p>
+<p>同样是在<code>application.yml</code>文件中配置，找到<code>mail</code>节点</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mail:</span></span><br><span class="line"><span class="attr">  host:</span> <span class="string">邮箱服务器</span></span><br><span class="line"><span class="attr">  port:</span> <span class="string">端口号</span></span><br><span class="line"><span class="attr">  username:</span> <span class="string">用户名</span></span><br><span class="line"><span class="attr">  fromAddress:</span> <span class="string">发送地址，一般和用户名一致</span></span><br><span class="line"><span class="attr">  password:</span> <span class="string">SMTP提供的客户端密钥</span></span><br><span class="line"><span class="attr">  nickname:</span> <span class="string">个人定义</span></span><br></pre></td></tr></table></figure>
 
-<p>文件路径：</p>
-<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath.png" alt="bugthink-packpath"></p>
-<p>效果：</p>
-<p>原图：</p>
-<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri.png" alt="bugthink-packuri"></p>
-<p>替换后：</p>
-<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath-new.png" alt="bugthink-packpath-new"></p>
-<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri-new.png" alt="bugthink-packuri-new"></p>
-<p><strong><code>Popup</code>、<code>Contextmenu</code> 绑定资源为<code>ElementName</code>失效</strong></p>
-<p><strong><code>GeometryDrawing</code>中<code>Brush</code>使用<code>StaticResource</code>或者<code>DynamicResource</code>资源失效</strong></p>
-<p><strong><code>List&lt;T&gt;</code>和<code>ObservableCollection&lt;T&gt;</code></strong></p>
-<p>时常会遇到，作为实体集合，希望对数据集合子项的操作响应到页面的<code>TreeView</code>的节点上，例如：希望通过删除数据集合中的某一项，数据变更能够通知到<code>UI</code>中的<code>TreeView</code>的对应节点，实现移除。<code>List&lt;T&gt;</code>对应的数据子项操作无法通知到<code>TreeView</code>，而<code>ObservableCollection&lt;T&gt;</code>可行，案例如下：</p>
-<h6 id="HandyControl使用技巧"><a href="#HandyControl使用技巧" class="headerlink" title="HandyControl使用技巧"></a><code>HandyControl</code>使用技巧</h6><p><code>HC</code>自定义Window非用户区域操作无效</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NonClientAreaHeight = "0"</span><br><span class="line">ShowNonClientArea = "false"</span><br></pre></td></tr></table></figure>
+<p>配置邮箱服务器详见，<a href="https://edp963.github.io/davinci/docs/zh/1.1-deployment#243-mail-配置" target="_blank" rel="noopener">mail配置</a></p>
+<h1 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h1><p>在<code>Davinci</code>解压文件路径下的<code>bin</code>文件夹中，存在着完整脚本执行文件<code>.sh</code>结尾为<code>shell</code>脚本，<code>.bat</code>为适用于<code>windows</code>的<code>bat</code>脚本，此处使用<code>bat</code>脚本</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-run-bat.png" alt="blog-run-bat"></p>
+<p>在<code>bin</code>文件夹下，执行<code>cmd</code>指令执行<code>run.bat</code>和<code>start.bat</code>脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run.bat start</span><br></pre></td></tr></table></figure>
 
-<p>标准化和最小化频繁切换，不显示非用户区，顶部控件不可点击</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WindowChrome.IsHitTestVisibleInChrome="True"</span><br></pre></td></tr></table></figure>
-
-<h6 id="HandyControl与兼容"><a href="#HandyControl与兼容" class="headerlink" title="HandyControl与兼容"></a><code>HandyControl</code>与兼容</h6><p><code>LiveCharts</code>和<code>HandyControl</code>关于<code>Path</code>的样式冲突</p>
-<h6 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h6><p>如何不被问题解决</p>
-<p>啥时候写完说明文档</p>
-<h1 id="高仿标题统计卡"><a href="#高仿标题统计卡" class="headerlink" title="高仿标题统计卡"></a>高仿标题统计卡</h1><p>参考链接</p>
-<p><a href="https://react-antd-admin.lhh.now.sh/#/" target="_blank" rel="noopener">https://react-antd-admin.lhh.now.sh/#/</a></p>
+<p>弹出系统运行窗，执行结果如下：</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-run-start.png" alt="blog-run-start"></p>
+<p>在浏览器中，输入<code>http://localhost:8080/</code>可显示登录页面，则代表服务启动成功</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-login.png" alt="blog-login"></p>
+<h1 id="注册账户"><a href="#注册账户" class="headerlink" title="注册账户"></a>注册账户</h1><p>开始【注册账户】</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-davinci-register.png" alt="blog-davinci-register"></p>
+<p>填写用户名、邮箱、密码，点击注册，出现激活提示页面</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-email-active.png" alt="blog-email-active"></p>
+<p>登录对应注册时填写的邮箱，进行邮箱的激活操作，此处以<code>QQ邮箱</code>为例</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-email-QQ.png" alt="blog-email-QQ"></p>
+<p>激活成功后，<code>Davinci</code>能够自动完成首次登录</p>
+<p><img src="https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-davinci-main.png" alt="blog-davinci-main"></p>
+<p>至此就可以开始，通过官方给定的用户文档进行，<code>Davinci</code>的操作了</p>
+<h1 id="用户使用文档"><a href="#用户使用文档" class="headerlink" title="用户使用文档"></a>用户使用文档</h1><p>对系统的基础使用，可以参考<a href="https://edp963.github.io/davinci/docs/zh/1.1-deployment" target="_blank" rel="noopener">官方使用文档</a></p>
 
       
     </div>
@@ -569,7 +574,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="/2020/01/10/blog-wpf-bugthink/" title="WPF常见问题及解决方案">/2020/01/10/blog-wpf-bugthink/</a>
+    <a href="/2020/04/18/blog-davinci-setup/" title="Windows中安装Davinci">/2020/04/18/blog-davinci-setup/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -595,7 +600,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/WPF/" rel="tag"><i class="fa fa-tag"></i> WPF </a>
+            <a href="/tags/Tools/" rel="tag"><i class="fa fa-tag"></i> Tools </a>
           
         </div>
       
@@ -608,8 +613,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/09/blog-tools-UTools/" rel="next" title="UTools工具">
-                <i class="fa fa-chevron-left"></i> UTools工具
+              <a href="/2020/04/18/blog-iis-intelsrv/" rel="next" title="IIS服务启动提示当文件已存在时，无法创建该文件，183">
+                <i class="fa fa-chevron-left"></i> IIS服务启动提示当文件已存在时，无法创建该文件，183
               </a>
             
           </div>
@@ -617,10 +622,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/01/14/blog-wpf-IconFont/" rel="prev" title="字体图标的使用">
-                字体图标的使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -693,7 +694,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -808,7 +809,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HandyControlAnswer"><span class="nav-number">1.</span> <span class="nav-text">HandyControlAnswer</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#WPF细节问题"><span class="nav-number">1.0.0.0.0.1.</span> <span class="nav-text">WPF细节问题</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#HandyControl使用技巧"><span class="nav-number">1.0.0.0.0.2.</span> <span class="nav-text">HandyControl使用技巧</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#HandyControl与兼容"><span class="nav-number">1.0.0.0.0.3.</span> <span class="nav-text">HandyControl与兼容</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#其他问题"><span class="nav-number">1.0.0.0.0.4.</span> <span class="nav-text">其他问题</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#高仿标题统计卡"><span class="nav-number">2.</span> <span class="nav-text">高仿标题统计卡</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#环境要求"><span class="nav-number">1.</span> <span class="nav-text">环境要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解压软件"><span class="nav-number">2.</span> <span class="nav-text">解压软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库配置"><span class="nav-number">3.</span> <span class="nav-text">数据库配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化数据库"><span class="nav-number">3.1.</span> <span class="nav-text">初始化数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式一【推荐】"><span class="nav-number">3.1.1.</span> <span class="nav-text">方式一【推荐】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#执行结果"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">执行结果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式二"><span class="nav-number">3.1.2.</span> <span class="nav-text">方式二</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改本地配置"><span class="nav-number">3.2.</span> <span class="nav-text">修改本地配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置数据库账户"><span class="nav-number">3.3.</span> <span class="nav-text">配置数据库账户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置邮箱服务器"><span class="nav-number">3.4.</span> <span class="nav-text">配置邮箱服务器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动项目"><span class="nav-number">4.</span> <span class="nav-text">启动项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注册账户"><span class="nav-number">5.</span> <span class="nav-text">注册账户</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用户使用文档"><span class="nav-number">6.</span> <span class="nav-text">用户使用文档</span></a></li></ol></div>
             
 
           </div>
@@ -856,7 +857,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共21.2k字</span>
+  <span class="post-count">博客全站共20.4k字</span>
 </div>
 
         
