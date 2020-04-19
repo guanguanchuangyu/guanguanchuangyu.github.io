@@ -115,7 +115,7 @@ mysql -P 3306 -h localhost -u 用户名 -p密码 davinci0.3 < 脚本所在绝对
 
 ![blog-run-bat](https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-run-bat.png)
 
-在`bin`文件夹下，执行`cmd`指令执行`run.bat`和`start.bat`脚本
+在`bin`文件夹下，`管理员权限`执行`cmd`指令，执行`run.bat`和`start.bat`脚本
 
 ```bash
 run.bat start
