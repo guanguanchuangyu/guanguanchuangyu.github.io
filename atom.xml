@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-04-19T07:43:20.257Z</updated>
+  <updated>2020-04-19T08:00:32.974Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>外部资源的引入</title>
+    <link href="/2020/04/19/blog-wpf-packUri/"/>
+    <id>/2020/04/19/blog-wpf-packUri/</id>
+    <published>2020-04-19T08:00:32.972Z</published>
+    <updated>2020-04-19T08:00:32.974Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在&lt;code&gt;WPF&lt;/code&gt;项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在&lt;code&gt;xaml&lt;/code&gt;中使用又不希望资源嵌入，而是希望随时能够替换应用程序所在目录下的外部资源文件如何去处理？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
+    
+    
+      <category term="WPF" scheme="/tags/WPF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字体图标的使用</title>
+    <link href="/2020/04/19/blog-wpf-IconFont/"/>
+    <id>/2020/04/19/blog-wpf-IconFont/</id>
+    <published>2020-04-19T08:00:32.856Z</published>
+    <updated>2020-04-19T08:00:32.857Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如何&lt;code&gt;引入字体图标&lt;/code&gt;不再赘述，可参考：&lt;a href=&quot;https://blog.csdn.net/songyi160/article/details/54894233&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WPF引入字体图标&lt;/a&gt;，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接&lt;a href=&quot;https://www.iconfont.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WPF使用阿里巴巴字体库&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
+    
+    
+      <category term="WPF" scheme="/tags/WPF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Windows中安装Davinci</title>
     <link href="/2020/04/18/blog-davinci-setup/"/>
     <id>/2020/04/18/blog-davinci-setup/</id>
     <published>2020-04-18T13:29:48.000Z</published>
-    <updated>2020-04-19T07:43:20.257Z</updated>
+    <updated>2020-04-19T09:35:18.191Z</updated>
     
     <summary type="html">
     
@@ -44,7 +86,7 @@
     <link href="/2020/04/18/blog-iis-intelsrv/"/>
     <id>/2020/04/18/blog-iis-intelsrv/</id>
     <published>2020-04-18T04:11:40.000Z</published>
-    <updated>2020-04-18T04:11:40.298Z</updated>
+    <updated>2020-04-19T08:00:32.414Z</updated>
     
     <summary type="html">
     
@@ -65,7 +107,7 @@
     <link href="/2020/02/24/blog-wpf-BootStrapPanel/"/>
     <id>/2020/02/24/blog-wpf-BootStrapPanel/</id>
     <published>2020-02-24T10:52:56.000Z</published>
-    <updated>2020-02-24T11:54:54.347Z</updated>
+    <updated>2020-04-19T08:00:32.746Z</updated>
     
     <summary type="html">
     
@@ -89,7 +131,7 @@
     <link href="/2020/02/20/blog-wpf-titleCard/"/>
     <id>/2020/02/20/blog-wpf-titleCard/</id>
     <published>2020-02-19T16:51:23.000Z</published>
-    <updated>2020-02-24T10:28:36.966Z</updated>
+    <updated>2020-04-19T08:00:33.004Z</updated>
     
     <summary type="html">
     
@@ -113,7 +155,7 @@
     <link href="/2020/02/08/marker-2-0-0-1014/"/>
     <id>/2020/02/08/marker-2-0-0-1014/</id>
     <published>2020-02-08T10:54:34.000Z</published>
-    <updated>2020-02-08T11:40:43.569Z</updated>
+    <updated>2020-04-19T08:00:33.100Z</updated>
     
     <summary type="html">
     
@@ -130,53 +172,11 @@
   </entry>
   
   <entry>
-    <title>外部资源的引入</title>
-    <link href="/2020/01/14/blog-wpf-packUri/"/>
-    <id>/2020/01/14/blog-wpf-packUri/</id>
-    <published>2020-01-13T16:04:53.824Z</published>
-    <updated>2020-01-15T14:24:56.463Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在&lt;code&gt;WPF&lt;/code&gt;项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在&lt;code&gt;xaml&lt;/code&gt;中使用又不希望资源嵌入，而是希望随时能够替换应用程序所在目录下的外部资源文件如何去处理？&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
-    
-    
-      <category term="WPF" scheme="/tags/WPF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>字体图标的使用</title>
-    <link href="/2020/01/14/blog-wpf-IconFont/"/>
-    <id>/2020/01/14/blog-wpf-IconFont/</id>
-    <published>2020-01-13T16:04:53.822Z</published>
-    <updated>2020-01-13T16:12:15.564Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;如何&lt;code&gt;引入字体图标&lt;/code&gt;不再赘述，可参考：&lt;a href=&quot;https://blog.csdn.net/songyi160/article/details/54894233&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WPF引入字体图标&lt;/a&gt;，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接&lt;a href=&quot;https://www.iconfont.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WPF使用阿里巴巴字体库&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
-    
-    
-      <category term="WPF" scheme="/tags/WPF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>UTools工具</title>
     <link href="/2020/01/09/blog-tools-UTools/"/>
     <id>/2020/01/09/blog-tools-UTools/</id>
     <published>2020-01-09T14:36:21.000Z</published>
-    <updated>2020-01-13T12:44:38.356Z</updated>
+    <updated>2020-04-19T08:00:32.624Z</updated>
     
     <summary type="html">
     
@@ -201,7 +201,7 @@
     <link href="/2019/12/29/blog-dependenct/"/>
     <id>/2019/12/29/blog-dependenct/</id>
     <published>2019-12-28T16:35:25.000Z</published>
-    <updated>2020-01-08T12:22:04.073Z</updated>
+    <updated>2020-04-19T08:00:32.386Z</updated>
     
     <summary type="html">
     
@@ -225,7 +225,7 @@
     <link href="/2019/12/19/blog-wpf-layout/"/>
     <id>/2019/12/19/blog-wpf-layout/</id>
     <published>2019-12-19T15:18:17.000Z</published>
-    <updated>2019-12-29T09:08:08.853Z</updated>
+    <updated>2020-04-19T08:00:32.900Z</updated>
     
     <summary type="html">
     
@@ -246,7 +246,7 @@
     <link href="/2019/12/10/blog-learning-think/"/>
     <id>/2019/12/10/blog-learning-think/</id>
     <published>2019-12-09T16:40:21.000Z</published>
-    <updated>2019-12-09T16:40:21.160Z</updated>
+    <updated>2020-04-19T08:00:32.466Z</updated>
     
     <summary type="html">
     
@@ -267,7 +267,7 @@
     <link href="/2019/11/24/blog-C-%E5%8F%8D%E7%BC%96%E8%AF%91%E6%8A%80%E5%B7%A7/"/>
     <id>/2019/11/24/blog-C-反编译技巧/</id>
     <published>2019-11-24T14:35:28.000Z</published>
-    <updated>2019-11-24T15:36:37.181Z</updated>
+    <updated>2020-04-19T08:00:32.213Z</updated>
     
     <summary type="html">
     
@@ -288,7 +288,7 @@
     <link href="/2019/11/08/blog-shared-assembly/"/>
     <id>/2019/11/08/blog-shared-assembly/</id>
     <published>2019-11-08T14:03:06.000Z</published>
-    <updated>2019-11-08T14:03:06.753Z</updated>
+    <updated>2020-04-19T08:00:32.484Z</updated>
     
     <summary type="html">
     
@@ -309,7 +309,7 @@
     <link href="/2019/11/03/blog-string-Arith/"/>
     <id>/2019/11/03/blog-string-Arith/</id>
     <published>2019-11-02T17:32:28.000Z</published>
-    <updated>2019-11-02T17:32:28.710Z</updated>
+    <updated>2020-04-19T08:00:32.536Z</updated>
     
     <summary type="html">
     
@@ -330,7 +330,7 @@
     <link href="/2019/10/30/blog-string-Format/"/>
     <id>/2019/10/30/blog-string-Format/</id>
     <published>2019-10-30T13:12:35.000Z</published>
-    <updated>2019-10-30T15:45:08.057Z</updated>
+    <updated>2020-04-19T08:00:32.607Z</updated>
     
     <summary type="html">
     
@@ -351,7 +351,7 @@
     <link href="/2019/10/27/blog-build/"/>
     <id>/2019/10/27/blog-build/</id>
     <published>2019-10-27T13:36:25.000Z</published>
-    <updated>2019-10-30T15:48:09.329Z</updated>
+    <updated>2020-04-19T08:00:32.256Z</updated>
     
     <summary type="html">
     
@@ -372,7 +372,7 @@
     <link href="/2019/10/27/Home/"/>
     <id>/2019/10/27/Home/</id>
     <published>2019-10-27T10:20:08.000Z</published>
-    <updated>2019-11-10T08:13:39.512Z</updated>
+    <updated>2020-04-19T08:00:32.167Z</updated>
     
     <summary type="html">
     

@@ -96,21 +96,23 @@
 
 
 
-  <meta name="description" content="如何引入字体图标不再赘述，可参考：WPF引入字体图标，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接WPF使用阿里巴巴字体库">
+  <meta name="description" content="在WPF项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在xaml中使用又不希望资源嵌入，而是希望随时能够替换应用程序所在目录下的外部资源文件如何去处理？">
 <meta name="keywords" content="WPF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="字体图标的使用">
-<meta property="og:url" content="/2020/01/14/blog-wpf-IconFont/index.html">
+<meta property="og:title" content="外部资源的引入">
+<meta property="og:url" content="/2020/04/19/blog-wpf-packUri/index.html">
 <meta property="og:site_name" content="GGCY">
-<meta property="og:description" content="如何引入字体图标不再赘述，可参考：WPF引入字体图标，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接WPF使用阿里巴巴字体库">
+<meta property="og:description" content="在WPF项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在xaml中使用又不希望资源嵌入，而是希望随时能够替换应用程序所在目录下的外部资源文件如何去处理？">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-xamlIcon.png">
-<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-codeIcon.png">
-<meta property="og:updated_time" content="2020-01-13T16:12:15.564Z">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath-new.png">
+<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri-new.png">
+<meta property="og:updated_time" content="2020-04-19T08:00:32.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="字体图标的使用">
-<meta name="twitter:description" content="如何引入字体图标不再赘述，可参考：WPF引入字体图标，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接WPF使用阿里巴巴字体库">
-<meta name="twitter:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-xamlIcon.png">
+<meta name="twitter:title" content="外部资源的引入">
+<meta name="twitter:description" content="在WPF项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在xaml中使用又不希望资源嵌入，而是希望随时能够替换应用程序所在目录下的外部资源文件如何去处理？">
+<meta name="twitter:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath.png">
 
 
 
@@ -120,7 +122,7 @@
 
   
   
-  <link rel="canonical" href="/2020/01/14/blog-wpf-IconFont/">
+  <link rel="canonical" href="/2020/04/19/blog-wpf-packUri/">
 
 
 
@@ -130,7 +132,7 @@
   };
 </script>
 
-  <title>字体图标的使用 | GGCY</title>
+  <title>外部资源的引入 | GGCY</title>
   
 
 
@@ -342,7 +344,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/2020/01/14/blog-wpf-IconFont/">
+    <link itemprop="mainEntityOfPage" href="/2020/04/19/blog-wpf-packUri/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="guanguan">
@@ -359,7 +361,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">字体图标的使用
+          <h1 class="post-title" itemprop="name headline">外部资源的引入
 
               
             
@@ -385,13 +387,9 @@
                 
               
 
-              <time title="创建时间：2020-01-14 00:04:53 / 修改时间：00:12:15" itemprop="dateCreated datePublished" datetime="2020-01-14T00:04:53+08:00">2020-01-14</time>
+              <time title="创建时间：2020-04-19 16:00:32" itemprop="dateCreated datePublished" datetime="2020-04-19T16:00:32+08:00">2020-04-19</time>
             
 
-            
-              
-
-              
             
           </span>
 
@@ -426,8 +424,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2020/01/14/blog-wpf-IconFont/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/01/14/blog-wpf-IconFont/" itemprop="commentCount"></span>
+                <a href="/2020/04/19/blog-wpf-packUri/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/19/blog-wpf-packUri/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -435,7 +433,7 @@
 
           
           
-            <span id="/2020/01/14/blog-wpf-IconFont/" class="leancloud_visitors" data-flag-title="字体图标的使用">
+            <span id="/2020/04/19/blog-wpf-packUri/" class="leancloud_visitors" data-flag-title="外部资源的引入">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -474,23 +472,22 @@
       
 
       
-        <p>如何<code>引入字体图标</code>不再赘述，可参考：<a href="https://blog.csdn.net/songyi160/article/details/54894233" target="_blank" rel="noopener">WPF引入字体图标</a>，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接<a href="https://www.iconfont.cn/" target="_blank" rel="noopener">WPF使用阿里巴巴字体库</a></p>
+        <p>在<code>WPF</code>项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在<code>xaml</code>中使用又不希望资源嵌入，而是希望随时能够替换应用程序所在目录下的外部资源文件如何去处理？</p>
 <a id="more"></a>
 
-<p><code>xaml</code>中使用如下：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">Orientation</span>=<span class="string">"Horizontal"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">StackPanel.Resources</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--仅仅用于演示--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--引入字体库,路径#字体库名称--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">FontFamily</span> <span class="attr">x:Key</span>=<span class="string">"iconfont"</span>&gt;</span>pack://application,,,/所在命程序集名称;Component/Resources/#iconfont<span class="tag">&lt;/<span class="name">FontFamily</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">StackPanel.Resources</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">"&amp;#xe8ac;           &amp;#xe8ab;"</span> <span class="attr">FontSize</span>=<span class="string">"30"</span> <span class="attr">Margin</span>=<span class="string">"10"</span> </span></span><br><span class="line"><span class="tag">               <span class="attr">FontFamily</span>=<span class="string">"&#123;StaticResource iconfont&#125;"</span> </span></span><br><span class="line"><span class="tag">               <span class="attr">HorizontalAlignment</span>=<span class="string">"Center"</span> </span></span><br><span class="line"><span class="tag">               <span class="attr">VerticalAlignment</span>=<span class="string">"Center"</span>&gt;</span><span class="tag">&lt;/<span class="name">TextBlock</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>使用<code>Pack URI</code>中的外部方式<a href="https://docs.microsoft.com/zh-cn/dotnet/framework/wpf/app-development/pack-uris-in-wpf#site-of-origin-pack-uris" target="_blank" rel="noopener">源站点 Pack URI</a>，<code>pack://siteoforigin:,,,/XXXXXXXXX</code>，详情请查看链接，案例如下：</p>
+<p><code>xaml</code>中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Border Margin=&quot;10&quot;&gt;</span><br><span class="line">    &lt;Border.Background&gt;</span><br><span class="line">        &lt;ImageBrush ImageSource=&quot;pack://siteoforigin:,,,/bg.png&quot;&gt;&lt;/ImageBrush&gt;</span><br><span class="line">    &lt;/Border.Background&gt;</span><br><span class="line">&lt;/Border&gt;</span><br></pre></td></tr></table></figure>
 
+<p>文件路径，图片资源与应用程序同级：</p>
+<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath.png" alt="bugthink-packpath"></p>
 <p>效果：</p>
-<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-xamlIcon.png" alt="bugthink-xamlIcon"></p>
-<p>在<code>.cs</code>文件中通过代码设定字体图标，需要将<code>&amp;#xe8ac;</code>中的<code>&amp;#x</code>替换为<code>\u</code>以及去掉尾部<code>;</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">private string strIcon;</span><br><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// 页面中使用的属性</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">public string StrIcon</span><br><span class="line">&#123;</span><br><span class="line">    get</span><br><span class="line">    &#123;</span><br><span class="line">        //模拟后台给对应属性赋值</span><br><span class="line">        if (string.IsNullOrEmpty(strIcon))</span><br><span class="line">        &#123;</span><br><span class="line">            strIcon = &quot;\ue8ac           \ue8ab&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        return strIcon;</span><br><span class="line">    &#125;</span><br><span class="line">    set &#123; strIcon = value; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>xaml</code>文件中使用对应的属性</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--忽略重复代码--&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding StrIcon&#125;"</span> <span class="attr">FontSize</span>=<span class="string">"30"</span> <span class="attr">Margin</span>=<span class="string">"10"</span> <span class="attr">FontFamily</span>=<span class="string">"&#123;StaticResource iconfont&#125;"</span> </span></span><br><span class="line"><span class="tag"><span class="attr">Foreground</span>=<span class="string">"YellowGreen"</span></span></span><br><span class="line"><span class="tag"><span class="attr">HorizontalAlignment</span>=<span class="string">"Center"</span></span></span><br><span class="line"><span class="tag"><span class="attr">VerticalAlignment</span>=<span class="string">"Center"</span>&gt;</span><span class="tag">&lt;/<span class="name">TextBlock</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--忽略重复代码--&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-codeIcon.png" alt="bugthink-codeIcon"></p>
-<p>前端<code>xaml</code>中支持使用的是<code>&amp;#+Unicode码;</code>字体对应的字符实体，而在<code>.cs</code>中则是使用的是对应的<code>\u+Unicode码</code>十六进制结果，具体可查阅资料<a href="https://www.bbsmax.com/A/xl561Zo9Jr/" target="_blank" rel="noopener">WPF中显示UniCode字符</a></p>
+<p>原图：</p>
+<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri.png" alt="bugthink-packuri"></p>
+<p>替换后：</p>
+<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath-new.png" alt="bugthink-packpath-new"></p>
+<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri-new.png" alt="bugthink-packuri-new"></p>
+<p>但是需要注意的是，此类资源的是为独占类型，也就是说，当前应用程序使用时，不能允许操作对应的资源，包括修改、重命名以及替换，如果需要考虑资源的重复使用，可考虑将文件资源通过附加属性进行处理，缓存一份数据流到内存中，处理数据流</p>
 
       
     </div>
@@ -525,7 +522,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="/2020/01/14/blog-wpf-IconFont/" title="字体图标的使用">/2020/01/14/blog-wpf-IconFont/</a>
+    <a href="/2020/04/19/blog-wpf-packUri/" title="外部资源的引入">/2020/04/19/blog-wpf-packUri/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -564,8 +561,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/09/blog-tools-UTools/" rel="next" title="UTools工具">
-                <i class="fa fa-chevron-left"></i> UTools工具
+              <a href="/2020/04/19/blog-wpf-IconFont/" rel="next" title="字体图标的使用">
+                <i class="fa fa-chevron-left"></i> 字体图标的使用
               </a>
             
           </div>
@@ -573,10 +570,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/01/14/blog-wpf-packUri/" rel="prev" title="外部资源的引入">
-                外部资源的引入 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
