@@ -42,6 +42,8 @@ date: 2020-04-18 21:29:48
 
 ![blog-mysql-adddb](https://file.budbud.cn/ggcyblog/blog-davinci-setup/blog-mysql-adddb.png)
 
+同时确保全局环境变量`JAVA_HOME`以及`Davinci`项目解压路径对应的全局环境变量`DAVINCI3_HOME`正确配置
+
 ### 方式一【推荐】
 
 切换到`mysql`程序所在`bin`目录下，确保`mysql`服务是运行状态：
