@@ -96,23 +96,18 @@
 
 
 
-  <meta name="description" content="在WPF项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在xaml中使用又不希望资源嵌入，而是希望随时能够替换应用程序所在目录下的外部资源文件如何去处理？">
-<meta name="keywords" content="WPF">
+  <meta name="description" content="找不到？看不到？有说明文档不？源码在哪里？从接触HandyControl（之后文章内容简称HC）开始，这些问题，是刚入组织时，最频繁问到的问题，针对这些重复问题写了这篇新手引导">
+<meta name="keywords" content="HandyControl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="外部资源的引入">
-<meta property="og:url" content="/2020/04/19/blog-wpf-packUri/index.html">
+<meta property="og:title" content="HandyControl新手引导">
+<meta property="og:url" content="/2020/07/05/blog-wpf-hc-user/index.html">
 <meta property="og:site_name" content="GGCY">
-<meta property="og:description" content="在WPF项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在xaml中使用又不希望资源嵌入，而是希望随时能够替换应用程序所在目录下的外部资源文件如何去处理？">
+<meta property="og:description" content="找不到？看不到？有说明文档不？源码在哪里？从接触HandyControl（之后文章内容简称HC）开始，这些问题，是刚入组织时，最频繁问到的问题，针对这些重复问题写了这篇新手引导">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath.png">
-<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri.png">
-<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath-new.png">
-<meta property="og:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri-new.png">
-<meta property="og:updated_time" content="2020-04-19T08:00:32.000Z">
+<meta property="og:updated_time" content="2020-07-05T04:19:41.025Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="外部资源的引入">
-<meta name="twitter:description" content="在WPF项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在xaml中使用又不希望资源嵌入，而是希望随时能够替换应用程序所在目录下的外部资源文件如何去处理？">
-<meta name="twitter:image" content="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath.png">
+<meta name="twitter:title" content="HandyControl新手引导">
+<meta name="twitter:description" content="找不到？看不到？有说明文档不？源码在哪里？从接触HandyControl（之后文章内容简称HC）开始，这些问题，是刚入组织时，最频繁问到的问题，针对这些重复问题写了这篇新手引导">
 
 
 
@@ -122,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="/2020/04/19/blog-wpf-packUri/">
+  <link rel="canonical" href="/2020/07/05/blog-wpf-hc-user/">
 
 
 
@@ -132,7 +127,7 @@
   };
 </script>
 
-  <title>外部资源的引入 | GGCY</title>
+  <title>HandyControl新手引导 | GGCY</title>
   
 
 
@@ -344,7 +339,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/2020/04/19/blog-wpf-packUri/">
+    <link itemprop="mainEntityOfPage" href="/2020/07/05/blog-wpf-hc-user/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="guanguan">
@@ -361,7 +356,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">外部资源的引入
+          <h1 class="post-title" itemprop="name headline">HandyControl新手引导
 
               
             
@@ -387,9 +382,13 @@
                 
               
 
-              <time title="创建时间：2020-04-19 16:00:32" itemprop="dateCreated datePublished" datetime="2020-04-19T16:00:32+08:00">2020-04-19</time>
+              <time title="创建时间：2020-07-05 12:19:40 / 修改时间：12:19:41" itemprop="dateCreated datePublished" datetime="2020-07-05T12:19:40+08:00">2020-07-05</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -405,7 +404,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/知识补丁/" itemprop="url" rel="index"><span itemprop="name">知识补丁</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/江湖秘籍/" itemprop="url" rel="index"><span itemprop="name">江湖秘籍</span></a></span>
 
                 
                 
@@ -424,8 +423,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2020/04/19/blog-wpf-packUri/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/19/blog-wpf-packUri/" itemprop="commentCount"></span>
+                <a href="/2020/07/05/blog-wpf-hc-user/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/05/blog-wpf-hc-user/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -433,7 +432,7 @@
 
           
           
-            <span id="/2020/04/19/blog-wpf-packUri/" class="leancloud_visitors" data-flag-title="外部资源的引入">
+            <span id="/2020/07/05/blog-wpf-hc-user/" class="leancloud_visitors" data-flag-title="HandyControl新手引导">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -465,22 +464,116 @@
       
 
       
-        <p>在<code>WPF</code>项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在<code>xaml</code>中使用又不希望资源嵌入，而是希望随时能够替换应用程序所在目录下的外部资源文件如何去处理？</p>
+        <p>找不到？看不到？有说明文档不？源码在哪里？从接触<code>HandyControl</code>（之后文章内容简称<code>HC</code>）开始，这些问题，是刚入组织时，最频繁问到的问题，针对这些重复问题写了这篇新手引导</p>
 <a id="more"></a>
 
-<p>使用<code>Pack URI</code>中的外部方式<a href="https://docs.microsoft.com/zh-cn/dotnet/framework/wpf/app-development/pack-uris-in-wpf#site-of-origin-pack-uris" target="_blank" rel="noopener">源站点 Pack URI</a>，<code>pack://siteoforigin:,,,/XXXXXXXXX</code>，详情请查看链接，案例如下：</p>
-<p><code>xaml</code>中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Border Margin=&quot;10&quot;&gt;</span><br><span class="line">    &lt;Border.Background&gt;</span><br><span class="line">        &lt;ImageBrush ImageSource=&quot;pack://siteoforigin:,,,/bg.png&quot;&gt;&lt;/ImageBrush&gt;</span><br><span class="line">    &lt;/Border.Background&gt;</span><br><span class="line">&lt;/Border&gt;</span><br></pre></td></tr></table></figure>
-
-<p>文件路径，图片资源与应用程序同级：</p>
-<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath.png" alt="bugthink-packpath"></p>
-<p>效果：</p>
-<p>原图：</p>
-<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri.png" alt="bugthink-packuri"></p>
-<p>替换后：</p>
-<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packpath-new.png" alt="bugthink-packpath-new"></p>
-<p><img src="https://file.budbud.cn/ggcyblog/bugthink/bugthink-packuri-new.png" alt="bugthink-packuri-new"></p>
-<p>但是需要注意的是，此类资源的是为独占类型，也就是说，当前应用程序使用时，不能允许操作对应的资源，包括修改、重命名以及替换，如果需要考虑资源的重复使用，可考虑将文件资源通过附加属性进行处理，缓存一份数据流到内存中，处理数据流</p>
+<h2 id="资源在哪里？"><a href="#资源在哪里？" class="headerlink" title="资源在哪里？"></a>资源在哪里？</h2><h3 id="源码及库包"><a href="#源码及库包" class="headerlink" title="源码及库包"></a>源码及库包</h3><p>源码包含目前最新的完整代码，编译运行</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>访问链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Github</td>
+<td>源码</td>
+<td><a href="https://github.com/HandyOrg/HandyControl" target="_blank" rel="noopener">https://github.com/HandyOrg/HandyControl</a></td>
+</tr>
+<tr>
+<td>Gitee</td>
+<td>源码</td>
+<td><a href="https://gitee.com/handyorg/HandyControl" target="_blank" rel="noopener">https://gitee.com/handyorg/HandyControl</a></td>
+</tr>
+<tr>
+<td>Nuget</td>
+<td>应用库</td>
+<td><a href="https://www.nuget.org/packages/HandyControl" target="_blank" rel="noopener">https://www.nuget.org/packages/HandyControl</a></td>
+</tr>
+</tbody></table>
+<h3 id="文档各款清单"><a href="#文档各款清单" class="headerlink" title="文档各款清单"></a>文档各款清单</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>版本</th>
+<th>访问地址</th>
+<th>涵盖内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>中文</td>
+<td>2.4</td>
+<td><a href="https://handyorg.github.io/" target="_blank" rel="noopener">https://handyorg.github.io/</a></td>
+<td>快速开始、基础xaml定义、附加属性、原生控件、扩展控件部分完成</td>
+</tr>
+<tr>
+<td>英语</td>
+<td>2.5.3</td>
+<td><a href="https://ghost1372.github.io/" target="_blank" rel="noopener">https://ghost1372.github.io/</a></td>
+<td>快速开始、基础xaml定义、附加属性、原生控件、扩展控件部分完成</td>
+</tr>
+<tr>
+<td>WIKI(英语)</td>
+<td>老版本</td>
+<td><a href="https://github.com/ghost1372/HandyControl/wiki" target="_blank" rel="noopener">https://github.com/ghost1372/HandyControl/wiki</a></td>
+<td>自行探索</td>
+</tr>
+<tr>
+<td>WIKI(法语)</td>
+<td>老版本</td>
+<td>暂时无法访问</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="交流途径"><a href="#交流途径" class="headerlink" title="交流途径"></a>交流途径</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>链接地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>QQ群01</td>
+<td><a href="https://shang.qq.com/wpa/qunwpa?idkey=a571e5553c9d41e49c4f22f3a8b2865451497a795ff281fedf3285def247efc1" target="_blank" rel="noopener">https://shang.qq.com/wpa/qunwpa?idkey=a571e5553c9d41e49c4f22f3a8b2865451497a795ff281fedf3285def247efc1</a></td>
+</tr>
+<tr>
+<td>QQ群02</td>
+<td><a href="https://shang.qq.com/wpa/qunwpa?idkey=5c18622a0f6ee07a6f33afa8cdb85b1f72ea50e878271dfcec919c76b55afee7" target="_blank" rel="noopener">https://shang.qq.com/wpa/qunwpa?idkey=5c18622a0f6ee07a6f33afa8cdb85b1f72ea50e878271dfcec919c76b55afee7</a></td>
+</tr>
+<tr>
+<td>Gitter</td>
+<td><a href="https://gitter.im/HandyControl/Lobby" target="_blank" rel="noopener">https://gitter.im/HandyControl/Lobby</a></td>
+</tr>
+<tr>
+<td>邮箱</td>
+<td><a href="mailto:handycontrol@qq.com" target="_blank" rel="noopener">handycontrol@qq.com</a></td>
+</tr>
+</tbody></table>
+<h3 id="网友分享"><a href="#网友分享" class="headerlink" title="网友分享"></a>网友分享</h3><table>
+<thead>
+<tr>
+<th>资源名称和连接</th>
+<th>收集时间</th>
+<th>更新时间</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://blog.csdn.net/qqwe13/article/details/85227311" target="_blank" rel="noopener">手把手教你如何使用HandyControl，一款开源WPF控件神器</a></td>
+<td>2020年7月5日</td>
+<td>暂无</td>
+<td>有效</td>
+</tr>
+<tr>
+<td><a href="https://www.cnblogs.com/wdw984/p/11049550.html" target="_blank" rel="noopener">WPF实现背景透明磨砂，并通过HandyControl组件实现弹出等待框</a></td>
+<td>2020年7月5日</td>
+<td>暂无</td>
+<td>有效</td>
+</tr>
+</tbody></table>
+<p>后面持续增加~</p>
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>以上是个人整理的相关用户初级引导列表，如有问题，记得留言或者评论</p>
 
       
     </div>
@@ -515,7 +608,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="/2020/04/19/blog-wpf-packUri/" title="外部资源的引入">/2020/04/19/blog-wpf-packUri/</a>
+    <a href="/2020/07/05/blog-wpf-hc-user/" title="HandyControl新手引导">/2020/07/05/blog-wpf-hc-user/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -541,7 +634,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/WPF/" rel="tag"><i class="fa fa-tag"></i> WPF </a>
+            <a href="/tags/HandyControl/" rel="tag"><i class="fa fa-tag"></i> HandyControl </a>
           
         </div>
       
@@ -554,8 +647,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/18/blog-davinci-setup/" rel="next" title="Windows中安装Davinci">
-                <i class="fa fa-chevron-left"></i> Windows中安装Davinci
+              <a href="/2020/04/19/blog-wpf-IconFont/" rel="next" title="字体图标的使用">
+                <i class="fa fa-chevron-left"></i> 字体图标的使用
               </a>
             
           </div>
@@ -563,10 +656,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/19/blog-wpf-IconFont/" rel="prev" title="字体图标的使用">
-                字体图标的使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -614,8 +703,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -736,6 +834,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#资源在哪里？"><span class="nav-number">1.</span> <span class="nav-text">资源在哪里？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#源码及库包"><span class="nav-number">1.1.</span> <span class="nav-text">源码及库包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档各款清单"><span class="nav-number">1.2.</span> <span class="nav-text">文档各款清单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#交流途径"><span class="nav-number">1.3.</span> <span class="nav-text">交流途径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网友分享"><span class="nav-number">1.4.</span> <span class="nav-text">网友分享</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提示"><span class="nav-number">2.</span> <span class="nav-text">提示</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
