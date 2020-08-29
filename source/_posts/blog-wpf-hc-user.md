@@ -12,6 +12,11 @@ date: 2020-07-05 12:19:40
 
 <!---more--->
 
+## 每月一问
+从`Nuget`中查找`HandyControl`时，出现两个选择，带s和不带s有什么区别？
+![Nuget](https://file.budbud.cn/handycontrol/user/hc-user-nuget.png)
+其实带s的是国际友人依据`HC`构建的包含额外控件的衍生库，不带s的才是`HC`实际官方库，国际友人版本的库更新更加频繁，在使用上，可能也会有少许区别，使用的时候，需要稍加留意
+
 ## 资源在哪里？
 
 ### 源码及库包
@@ -43,10 +48,11 @@ date: 2020-07-05 12:19:40
 | 邮箱   | handycontrol@qq.com                                          |
 
 ### 网友分享
-| 资源名称和连接                                               | 收集时间     | 更新时间 | 状态 |
-| ------------------------------------------------------------ | ------------ | -------- | ---- |
-| [手把手教你如何使用HandyControl，一款开源WPF控件神器](https://blog.csdn.net/qqwe13/article/details/85227311) | 2020年7月5日 | 暂无     | 有效 |
-| [WPF实现背景透明磨砂，并通过HandyControl组件实现弹出等待框](https://www.cnblogs.com/wdw984/p/11049550.html) | 2020年7月5日 | 暂无     | 有效 |
+| 资源名称和连接                                               | 收集时间      | 更新时间 | 状态 |
+| ------------------------------------------------------------ | ------------- | -------- | ---- |
+| [手把手教你如何使用HandyControl，一款开源WPF控件神器](https://blog.csdn.net/qqwe13/article/details/85227311) | 2020年7月5日  | 暂无     | 有效 |
+| [WPF实现背景透明磨砂，并通过HandyControl组件实现弹出等待框](https://www.cnblogs.com/wdw984/p/11049550.html) | 2020年7月5日  | 暂无     | 有效 |
+| [WPF开源框架HandyControl使用记录1-开始使用HandyControl](https://blog.csdn.net/gongjungo/article/details/90756167) | 2020年8月29日 | 暂无     | 有效 |
 
 后面持续增加~
 
