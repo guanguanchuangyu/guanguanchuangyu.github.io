@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-07-05T04:19:41.025Z</updated>
+  <updated>2020-07-05T04:59:08.228Z</updated>
   <id>/</id>
   
   <author>
@@ -17,53 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>HandyControl新手引导</title>
-    <link href="/2020/07/05/blog-wpf-hc-user/"/>
-    <id>/2020/07/05/blog-wpf-hc-user/</id>
-    <published>2020-07-05T04:19:40.000Z</published>
-    <updated>2020-07-05T04:19:41.025Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;找不到？看不到？有说明文档不？源码在哪里？从接触&lt;code&gt;HandyControl&lt;/code&gt;（之后文章内容简称&lt;code&gt;HC&lt;/code&gt;）开始，这些问题，是刚入组织时，最频繁问到的问题，针对这些重复问题写了这篇新手引导&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="江湖秘籍" scheme="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"/>
-    
-    
-      <category term="HandyControl" scheme="/tags/HandyControl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>字体图标的使用</title>
-    <link href="/2020/04/19/blog-wpf-IconFont/"/>
-    <id>/2020/04/19/blog-wpf-IconFont/</id>
-    <published>2020-04-19T08:00:32.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;如何&lt;code&gt;引入字体图标&lt;/code&gt;不再赘述，可参考：&lt;a href=&quot;https://blog.csdn.net/songyi160/article/details/54894233&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WPF引入字体图标&lt;/a&gt;，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接&lt;a href=&quot;https://www.iconfont.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WPF使用阿里巴巴字体库&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
-    
-    
-      <category term="WPF" scheme="/tags/WPF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>外部资源的引入</title>
-    <link href="/2020/04/19/blog-wpf-packUri/"/>
-    <id>/2020/04/19/blog-wpf-packUri/</id>
-    <published>2020-04-19T08:00:32.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <link href="/2020/07/05/blog-wpf-packUri/"/>
+    <id>/2020/07/05/blog-wpf-packUri/</id>
+    <published>2020-07-05T04:59:08.228Z</published>
+    <updated>2020-07-05T04:59:08.228Z</updated>
     
     <summary type="html">
     
@@ -80,11 +38,53 @@
   </entry>
   
   <entry>
+    <title>字体图标的使用</title>
+    <link href="/2020/07/05/blog-wpf-IconFont/"/>
+    <id>/2020/07/05/blog-wpf-IconFont/</id>
+    <published>2020-07-05T04:59:08.224Z</published>
+    <updated>2020-07-05T04:59:08.224Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如何&lt;code&gt;引入字体图标&lt;/code&gt;不再赘述，可参考：&lt;a href=&quot;https://blog.csdn.net/songyi160/article/details/54894233&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WPF引入字体图标&lt;/a&gt;，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接&lt;a href=&quot;https://www.iconfont.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WPF使用阿里巴巴字体库&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
+    
+    
+      <category term="WPF" scheme="/tags/WPF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HandyControl新手引导</title>
+    <link href="/2020/07/05/blog-wpf-hc-user/"/>
+    <id>/2020/07/05/blog-wpf-hc-user/</id>
+    <published>2020-07-05T04:19:40.000Z</published>
+    <updated>2020-08-29T05:35:51.132Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;找不到？看不到？有说明文档不？源码在哪里？从接触&lt;code&gt;HandyControl&lt;/code&gt;（之后文章内容简称&lt;code&gt;HC&lt;/code&gt;）开始，这些问题，是刚入组织时，最频繁问到的问题，针对这些重复问题写了这篇新手引导&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="江湖秘籍" scheme="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"/>
+    
+    
+      <category term="HandyControl" scheme="/tags/HandyControl/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Windows中安装Davinci</title>
     <link href="/2020/04/18/blog-davinci-setup/"/>
     <id>/2020/04/18/blog-davinci-setup/</id>
     <published>2020-04-18T13:29:48.000Z</published>
-    <updated>2020-04-19T14:37:34.000Z</updated>
+    <updated>2020-07-05T04:59:08.168Z</updated>
     
     <summary type="html">
     
@@ -107,7 +107,7 @@
     <link href="/2020/04/18/blog-iis-intelsrv/"/>
     <id>/2020/04/18/blog-iis-intelsrv/</id>
     <published>2020-04-18T04:11:40.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.176Z</updated>
     
     <summary type="html">
     
@@ -128,7 +128,7 @@
     <link href="/2020/02/24/blog-wpf-BootStrapPanel/"/>
     <id>/2020/02/24/blog-wpf-BootStrapPanel/</id>
     <published>2020-02-24T10:52:56.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.196Z</updated>
     
     <summary type="html">
     
@@ -152,7 +152,7 @@
     <link href="/2020/02/20/blog-wpf-titleCard/"/>
     <id>/2020/02/20/blog-wpf-titleCard/</id>
     <published>2020-02-19T16:51:23.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.228Z</updated>
     
     <summary type="html">
     
@@ -176,7 +176,7 @@
     <link href="/2020/02/08/marker-2-0-0-1014/"/>
     <id>/2020/02/08/marker-2-0-0-1014/</id>
     <published>2020-02-08T10:54:34.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.240Z</updated>
     
     <summary type="html">
     
@@ -197,7 +197,7 @@
     <link href="/2020/01/09/blog-tools-UTools/"/>
     <id>/2020/01/09/blog-tools-UTools/</id>
     <published>2020-01-09T14:36:21.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.188Z</updated>
     
     <summary type="html">
     
@@ -222,7 +222,7 @@
     <link href="/2019/12/29/blog-dependenct/"/>
     <id>/2019/12/29/blog-dependenct/</id>
     <published>2019-12-28T16:35:25.000Z</published>
-    <updated>2020-04-19T09:51:54.000Z</updated>
+    <updated>2020-07-05T04:59:08.176Z</updated>
     
     <summary type="html">
     
@@ -246,7 +246,7 @@
     <link href="/2019/12/19/blog-wpf-layout/"/>
     <id>/2019/12/19/blog-wpf-layout/</id>
     <published>2019-12-19T15:18:17.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.224Z</updated>
     
     <summary type="html">
     
@@ -267,7 +267,7 @@
     <link href="/2019/12/10/blog-learning-think/"/>
     <id>/2019/12/10/blog-learning-think/</id>
     <published>2019-12-09T16:40:21.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.180Z</updated>
     
     <summary type="html">
     
@@ -288,7 +288,7 @@
     <link href="/2019/11/24/blog-C-%E5%8F%8D%E7%BC%96%E8%AF%91%E6%8A%80%E5%B7%A7/"/>
     <id>/2019/11/24/blog-C-反编译技巧/</id>
     <published>2019-11-24T14:35:28.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.160Z</updated>
     
     <summary type="html">
     
@@ -309,7 +309,7 @@
     <link href="/2019/11/08/blog-shared-assembly/"/>
     <id>/2019/11/08/blog-shared-assembly/</id>
     <published>2019-11-08T14:03:06.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.180Z</updated>
     
     <summary type="html">
     
@@ -330,7 +330,7 @@
     <link href="/2019/11/03/blog-string-Arith/"/>
     <id>/2019/11/03/blog-string-Arith/</id>
     <published>2019-11-02T17:32:28.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.184Z</updated>
     
     <summary type="html">
     
@@ -351,7 +351,7 @@
     <link href="/2019/10/30/blog-string-Format/"/>
     <id>/2019/10/30/blog-string-Format/</id>
     <published>2019-10-30T13:12:35.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.188Z</updated>
     
     <summary type="html">
     
@@ -372,7 +372,7 @@
     <link href="/2019/10/27/blog-build/"/>
     <id>/2019/10/27/blog-build/</id>
     <published>2019-10-27T13:36:25.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.164Z</updated>
     
     <summary type="html">
     
@@ -393,7 +393,7 @@
     <link href="/2019/10/27/Home/"/>
     <id>/2019/10/27/Home/</id>
     <published>2019-10-27T10:20:08.000Z</published>
-    <updated>2020-04-19T08:00:32.000Z</updated>
+    <updated>2020-07-05T04:59:08.156Z</updated>
     
     <summary type="html">
     
