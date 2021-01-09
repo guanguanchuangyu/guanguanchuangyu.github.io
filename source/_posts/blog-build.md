@@ -179,7 +179,7 @@ ssh-keygen -t rsa -C "youremail"
 `Github`上操作成功后，执行如下git指令用于验证以上配置是否成功：
 
 ```
-git -T git@github.com
+ssh -T git@github.com
 ```
 
 执行结果如下：
