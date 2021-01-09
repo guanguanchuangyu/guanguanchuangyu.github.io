@@ -36,7 +36,8 @@ date: 2020-07-05 12:19:40
 | 中文       | 2.4    | https://handyorg.github.io/                    | 快速开始、基础xaml定义、附加属性、原生控件、扩展控件部分完成 |
 | 英语       | 2.5.3  | https://ghost1372.github.io/                   | 快速开始、基础xaml定义、附加属性、原生控件、扩展控件部分完成 |
 | WIKI(英语) | 老版本 | https://github.com/ghost1372/HandyControl/wiki | 自行探索                                                     |
-| WIKI(法语) | 老版本 | 暂时无法访问                                   |        |
+| WIKI(法语) | 老版本 | 暂时无法访问                                   |                                                              |
+| 离线文档   | 新版本 | https://github.com/HandyOrg/HandyDoc           | 包含线上对应版本说明文档                                     |
 
 ### 交流途径
 
@@ -48,11 +49,12 @@ date: 2020-07-05 12:19:40
 | 邮箱   | handycontrol@qq.com                                          |
 
 ### 网友分享
-| 资源名称和连接                                               | 收集时间      | 更新时间 | 状态 |
-| ------------------------------------------------------------ | ------------- | -------- | ---- |
-| [手把手教你如何使用HandyControl，一款开源WPF控件神器](https://blog.csdn.net/qqwe13/article/details/85227311) | 2020年7月5日  | 暂无     | 有效 |
-| [WPF实现背景透明磨砂，并通过HandyControl组件实现弹出等待框](https://www.cnblogs.com/wdw984/p/11049550.html) | 2020年7月5日  | 暂无     | 有效 |
-| [WPF开源框架HandyControl使用记录1-开始使用HandyControl](https://blog.csdn.net/gongjungo/article/details/90756167) | 2020年8月29日 | 暂无     | 有效 |
+| 资源名称和连接                                               | 收集时间       | 更新时间 | 状态 |
+| ------------------------------------------------------------ | -------------- | -------- | ---- |
+| [手把手教你如何使用HandyControl，一款开源WPF控件神器](https://blog.csdn.net/qqwe13/article/details/85227311) | 2020年7月5日   | 暂无     | 有效 |
+| [WPF实现背景透明磨砂，并通过HandyControl组件实现弹出等待框](https://www.cnblogs.com/wdw984/p/11049550.html) | 2020年7月5日   | 暂无     | 有效 |
+| [WPF开源框架HandyControl使用记录1-开始使用HandyControl](https://blog.csdn.net/gongjungo/article/details/90756167) | 2020年8月29日  | 暂无     | 有效 |
+| [离线文档](https://github.com/HandyOrg/HandyDoc)             | 2021年01月09日 | 暂无     | 有效 |
 
 后面持续增加~
 
