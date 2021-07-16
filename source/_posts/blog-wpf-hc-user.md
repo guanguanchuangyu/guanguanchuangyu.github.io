@@ -23,11 +23,12 @@ date: 2020-07-05 12:19:40
 
 源码包含目前最新的完整代码，编译运行
 
-| 名称   | 类型   | 访问链接                                    |
-| ------ | ------ | ------------------------------------------- |
-| Github | 源码   | https://github.com/HandyOrg/HandyControl    |
-| Gitee  | 源码   | https://gitee.com/handyorg/HandyControl     |
-| Nuget  | 应用库 | https://www.nuget.org/packages/HandyControl |
+| 名称   | 类型                    | 访问链接                                                |
+| ------ | ----------------------- | ------------------------------------------------------- |
+| Github | 源码                    | https://github.com/HandyOrg/HandyControl                |
+| Gitee  | 源码                    | https://gitee.com/handyorg/HandyControl                 |
+| Nuget  | 应用库【月更新】        | https://www.nuget.org/packages/HandyControl             |
+| Myget  | 应用库【周更新-预览版】 | https://www.myget.org/F/handycontrols/api/v3/index.json |
 
 ### 文档各款清单
 
@@ -41,12 +42,13 @@ date: 2020-07-05 12:19:40
 
 ### 交流途径
 
-| 类型   | 链接地址                                                     |
-| ------ | ------------------------------------------------------------ |
-| QQ群01 | https://shang.qq.com/wpa/qunwpa?idkey=a571e5553c9d41e49c4f22f3a8b2865451497a795ff281fedf3285def247efc1 |
-| QQ群02 | https://shang.qq.com/wpa/qunwpa?idkey=5c18622a0f6ee07a6f33afa8cdb85b1f72ea50e878271dfcec919c76b55afee7 |
-| Gitter | https://gitter.im/HandyControl/Lobby                         |
-| 邮箱   | handycontrol@qq.com                                          |
+| 类型                 | 链接地址                                                     |
+| -------------------- | ------------------------------------------------------------ |
+| QQ群01【弃用】       | https://shang.qq.com/wpa/qunwpa?idkey=a571e5553c9d41e49c4f22f3a8b2865451497a795ff281fedf3285def247efc1 |
+| QQ群02【弃用】       | https://shang.qq.com/wpa/qunwpa?idkey=5c18622a0f6ee07a6f33afa8cdb85b1f72ea50e878271dfcec919c76b55afee7 |
+| Gitter               | https://gitter.im/HandyControl/Lobby                         |
+| 邮箱                 | handycontrol@qq.com                                          |
+| Slack【outlook邮箱】 | https://join.slack.com/t/handycontrol/shared_invite/zt-sw29prqd-okFmRlmETdtWhnF7C3foxA |
 
 ### 网友分享
 | 资源名称和连接                                               | 收集时间       | 更新时间 | 状态 |
