@@ -1,7 +1,276 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>GGCY - code changes life</title><meta name="keywords" content="ggcy"><meta name="author" content="guanguan"><meta name="copyright" content="guanguan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="love life,love code">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GGCY">
+<meta property="og:url" content="https://github.budbud.cn/page/2/index.html">
+<meta property="og:site_name" content="GGCY">
+<meta property="og:description" content="love life,love code">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="guanguan">
+<meta property="article:tag" content="ggcy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://github.budbud.cn/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'GGCY',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-12-11 01:35:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  include ./includes/mixins/post-ui.pug
-  #recent-posts.recent-posts
-    +postUI
-    include includes/pagination.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="GGCY" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">GGCY</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">GGCY</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2019/12/19/blog-wpf-layout/" title="WPF基础容器与布局"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WPF基础容器与布局"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/12/19/blog-wpf-layout/" title="WPF基础容器与布局">WPF基础容器与布局</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-12-19T15:18:17.000Z" title="发表于 2019-12-19 23:18:17">2019-12-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/">知识补丁</a></span></div><div class="content">WPF的xaml中进行布局设定时，少不了和布局容器打交道，合理的使用和搭配这些容器，能够让页面美观的同时，可维护性和可拓展性更高
+
+
+布局容器（面板控件）容器中的控件（子元素）理论上是建议不显式指定尺寸，不使用屏幕坐标设定控件自身的位置
+常见容器如下：
+
+
+
+控件名称
+用途
+
+
+
+DockPanel
+子级元素依靠在容器边缘，分为 顶部、底部、左侧、右侧，用于实现靠近边缘的工具栏、表单提交按钮等布局，通过在子元素中使用附加属性DockPanel.Dock进行控制，同时需要注意是否需要考虑设定LastChildFill控制容器的最后一个元素是否填充剩余空间，顶部和底部优先级高于左侧和右侧
+
+
+WrapPanel
+将每个子元素水平（默认）或垂直方向定位到另一个子元素的旁边，水平或垂直方向不满足当前元素的宽度或者高度时，元素自动换行或换列
+
+
+StackPanel
+子元素在某一方向（水平/垂直）相互之间有序靠近，子元素控件的高度或宽度决定了子元素的填充范围，操作子元素自身并不会换行或者换列
+
+
+Grid
+自带面板中最复杂的，网格布局风格，通过设定行列数以及Grid.Column、Row以及跨行 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2019/12/10/blog-learning-think/" title="技术学习的思考"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="技术学习的思考"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/12/10/blog-learning-think/" title="技术学习的思考">技术学习的思考</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-12-09T16:40:21.000Z" title="发表于 2019-12-10 00:40:21">2019-12-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/">生活杂记</a></span></div><div class="content">生活中难免因事因人牵动思绪，最近这段时间，又开始自我反思，一方面是在工作中遭遇到的问题，通过问题推导自己的不足以及对这段时间中自己的状态的分析，问题带来迷茫困扰，同时也伴随着个人的内心成长，我哪错了,我改,不断试错,不断纠错
+
+
+思索离开校园已经两年有余，最初的一个半年头，独立学习在工作中使用的技术，框架，业余弄弄自己感兴趣的技术，比如WPF、.NET Core、Node.Js、微服务等方面，每天早出晚归，白天是属于公司，晚上属于自己，几点一线的生活
+工作了，忙碌日常和校园相差甚大，也渐渐感触校园时光短暂，同时也为自己并未过于蹉跎那些日子我暗自窃喜，自己学的东西很杂，往往是自己知识树的横向过度拓展，然而每天的精力是有限的，好钢用在刀刃上，时间亦是如此，碎片化时间带来的往往是谁片化的知识记忆，一直在学，一直在遗忘，学的慢忘得反而更快，嘴上说温故而知新，又有多少能够做到，做技术的要耐得住寂寞，思索时才会寂寞，残酷的是，工作中没有那个时间留给自己去思索，时间是公平的，不会给任何人开小灶，鸡汤再多也挡不住时间和现实的摧残
+自己到底在做什么?
+自己做过啥?
+接下来做什么?
+天啦噜！惹不起这些抛问 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2019/11/24/blog-C-%E5%8F%8D%E7%BC%96%E8%AF%91%E6%8A%80%E5%B7%A7/" title="C#-查看微软内置程序集技巧"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C#-查看微软内置程序集技巧"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/24/blog-C-%E5%8F%8D%E7%BC%96%E8%AF%91%E6%8A%80%E5%B7%A7/" title="C#-查看微软内置程序集技巧">C#-查看微软内置程序集技巧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-24T14:35:28.000Z" title="发表于 2019-11-24 22:35:28">2019-11-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A/">相见恨晚</a></span></div><div class="content">Vs2019提供了反编译查看的内置功能，本来高高兴兴，使用时间一长，自己渐渐不满足，需要更好的体验，找到一种新的方式，倍加感叹，相见恨晚
+
+
+通过开启Vs2019反编译功能，本以为万事大吉，再也不用担心，自己看不到源码的困扰，事实证明我想多了，选中需要反编译的类或者函数，F12进入其中，如下：
+F12
+
+再次查看
+
+这就难受了，反编译查看只能看到半截
+这类类型，无法通过Vs2019自带的反编译工具查看到底层的源码，虽然说上层源码也能够猜测出部分功能，但是要是能够直接看到接下来的源码，当然更好，于是，找老哥，询问到一个在线源码链接referencesource:
+
+输入对应的需要查询的内容，如ItemStructList
+
+满意，个人非常满意，这个站点的具体细节需要进一步去探索
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2019/11/08/blog-shared-assembly/" title="深化学习之程序集"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深化学习之程序集"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/08/blog-shared-assembly/" title="深化学习之程序集">深化学习之程序集</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-08T14:03:06.000Z" title="发表于 2019-11-08 22:03:06">2019-11-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%BF%83%E5%A6%82%E6%AD%A2%E6%B0%B4/">心如止水</a></span></div><div class="content">开始看.NET技术的底层原理，不让自己显得那么肤浅，浮于言表，为自己添一砖加一瓦，戳戳这看似高深的段位和晦涩的理论，自我沉淀，心如止水
+
+
+强命名程序集和弱命名程序集在结构上相同，PE文件头，CLR表头，元数据，以及清单表
+弱命名程序集程序集不具有唯一性，能够被不同厂家的同名dll覆盖，不能够被共享（windows的GAC目录），仅仅能够放到项目基类路径或子目录中，程序集信息中PublicKeyToken = null使用反编译工具.NET Reflector查看：
+  
+强命名程序集含有一个发布者的公钥/私钥对，能够对称程序集进行唯一标识，实施安全策略和版本策略，从而能够将其部署到用户硬盘的任何地方，甚至是互联网上，PublicKeyToken = 末尾8位散列值，能够防止dll的版本被篡改，但不能够保护源码被反编译
+   
+生成强命名程序集1、打开当前vs的命令行工具2、输入sn查看该指令是否有效
+1sn
+
+
+
+3、切换到一个需要生成签名密钥（二进制存储的公钥密钥和私有密钥）的目录，生成密钥文件
+12cd /d 目标目录sn -k ggcy.keys
+
+
+
+4、生成公有密钥
+1sn ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2019/11/03/blog-string-Arith/" title="C#关于字符串转简单运算表达式的相关方法记录"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C#关于字符串转简单运算表达式的相关方法记录"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/03/blog-string-Arith/" title="C#关于字符串转简单运算表达式的相关方法记录">C#关于字符串转简单运算表达式的相关方法记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-02T17:32:28.000Z" title="发表于 2019-11-03 01:32:28">2019-11-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/">唐门暗器</a></span></div><div class="content">遇到一个需求，将存储在数据库中的计算表达式字符串，如“(2+4+5)/5*100.0” 转换为可以在代码中执行的计算公式，呀，以前没做过，怎么办？还能怎么办，打开浏览器，输入“C#字符串转运算符计算公式”，然后一条条筛选，
+
+
+看看有没有灵感，于是乎开始了今天的话题，关于字符串转简单运算表达式的相关方法记录
+网络搜索结果：通过COM引入JS,使用Js的Eval函数项目引用COM中的 Microsoft Script Control 1.0
+Ps：此处Microsoft.JScript.Vsa.VsaEngine用法类似，不做细究
+123456789101112131415161718//项目中添加上命名空间 MSScriptControlusing MSScriptControl;//省略非关键代码/// &lt;summary&gt;/// 通过COM方式调用JS执行字符串得到运算结果/// &lt;/summary&gt;/// &lt;param name=&quot;expression&quot;&gt;运算公式字符串&lt;/param&gt;public void Get ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2019/10/30/blog-string-Format/" title="C#中string.Format转义大括号的方式"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C#中string.Format转义大括号的方式"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/30/blog-string-Format/" title="C#中string.Format转义大括号的方式">C#中string.Format转义大括号的方式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-30T13:12:35.000Z" title="发表于 2019-10-30 21:12:35">2019-10-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/">知识补丁</a></span></div><div class="content">string.format中保留&#123;&#125;的使用方式，如果仅仅是以常规方式添加\会出转义失败，无法达到转义效果
+
+
+错误方式：1string.Format(&quot;&#123;&#123;0&#125;&#125;&quot;,value);
+
+输出：
+1&#123;0&#125;
+此时，函数不会识别&#123;的嵌套方式，通过该格式执行后，本身的函数功能也失效，但不抛出异常。
+解决方案：常用方式通过拼接字符串去解决，得到想要的输出结果
+如下：
+1&quot;&#123;&quot;+string.Format(&quot;&#123;0&#125;&quot;,value)+&quot;&#125;&quot;;
+
+输出：
+1&#123;value&#125;
+
+该方式治标不治本，本身并没有解决string.Format面临的解析问题，只是能够达到输出&#123;&#125;的目的
+标准方式使用双&#123;方式，在string.Format中识别为&#123;，同理保留&#125;也是使用双&#125;去处理，如下：
+1string.Format(&quot;&# ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2019/10/27/blog-build/" title="Hexo + Next Theme + Github 的个人托管博客搭建"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo + Next Theme + Github 的个人托管博客搭建"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/27/blog-build/" title="Hexo + Next Theme + Github 的个人托管博客搭建">Hexo + Next Theme + Github 的个人托管博客搭建</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-27T13:36:25.000Z" title="发表于 2019-10-27 21:36:25">2019-10-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/">唐门暗器</a></span></div><div class="content">作为一名码农，从校园开始就希望有一个独属于自己的博客站点，有想法不行动，拖拖拖，折腾来折腾去，无意间发现了Hexo，惊鸿一瞥，就走不动路了，心心念念开始了入坑之路
+
+
+安装Hexo的环境要求git+node.js 以下为基于windows系统的操作，安装过程请自行百度
+git和ssh key 生成 
+如果有兴趣的同学可以尝试nvm进行node.js的安装和管理
+安装Hexo Cli客户端打开cmd控制台，输入npm安装hexo客户端的指令：
+1npm install -g hexo-cli
+
+npm 为node.js的包管理工具的执行指令
+-g 代表npm全局安装hexo-cli，避免在当前计算机中进行hexo客户端的多版本的重复安装
+执行结果如下：
+
+
+安装Hexo安装好hexo-cli之后，接下来就需要在本地安装hexo，执行指令如下：
+1npm install -g hexo
+
+执行结果如下：
+
+
+初始化个人的博客本地站点安装好Hexo之后，输入hexo -v 查看是否安装成功
+1hexo -v
+
+执行结果如下：
+
+
+找到一个自己需要放博客站点的文件夹路径，此处为myblog：
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2019/10/27/Home/" title="Love Life"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Love Life"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/27/Home/" title="Love Life">Love Life</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-27T10:20:08.000Z" title="发表于 2019-10-27 18:20:08">2019-10-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/">生活杂记</a></span></div><div class="content">如果说，生活充满挑战，那看似的轻而易举，也许就是混世中的举重若轻，生活多煎熬，我有你，做梦都会笑，爱生活，拥抱此刻，憧憬下一刻。
+
+
+
+人心需要面向阳光，感受温暖，不麻木，同时时刻的提醒自己，不要忘记初心，内心的自我成长往往伴随着承受外界的鞭挞。
+风雨中，有人冒雨前行，有人暂定脚跟，在路上寻找躲雨的地点，谁也说不上对错，谁也没有高人一等，有的都是在风雨中的苦苦挣扎和寻觅。
+这是第一篇文章，本不应该如此消极沉闷，奈何胸中言语，不吐不快。
+因达不到所以才会有希望，渴望把握机会，去看看梦那边的天，有没有如头顶一般存在着北极星的指引。
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">guanguan</div><div class="author-info__description">love life,love code</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/07/05/blog-wpf-packUri/" title="外部资源的引入"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="外部资源的引入"/></a><div class="content"><a class="title" href="/2020/07/05/blog-wpf-packUri/" title="外部资源的引入">外部资源的引入</a><time datetime="2020-07-05T04:59:08.228Z" title="发表于 2020-07-05 12:59:08">2020-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/07/05/blog-wpf-IconFont/" title="字体图标的使用"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="字体图标的使用"/></a><div class="content"><a class="title" href="/2020/07/05/blog-wpf-IconFont/" title="字体图标的使用">字体图标的使用</a><time datetime="2020-07-05T04:59:08.224Z" title="发表于 2020-07-05 12:59:08">2020-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/07/05/blog-wpf-hc-user/" title="HandyControl新手引导"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HandyControl新手引导"/></a><div class="content"><a class="title" href="/2020/07/05/blog-wpf-hc-user/" title="HandyControl新手引导">HandyControl新手引导</a><time datetime="2020-07-05T04:19:40.000Z" title="发表于 2020-07-05 12:19:40">2020-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/18/blog-davinci-setup/" title="Windows中安装Davinci"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows中安装Davinci"/></a><div class="content"><a class="title" href="/2020/04/18/blog-davinci-setup/" title="Windows中安装Davinci">Windows中安装Davinci</a><time datetime="2020-04-18T13:29:48.000Z" title="发表于 2020-04-18 21:29:48">2020-04-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/18/blog-iis-intelsrv/" title="IIS服务启动提示当文件已存在时，无法创建该文件，183"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IIS服务启动提示当文件已存在时，无法创建该文件，183"/></a><div class="content"><a class="title" href="/2020/04/18/blog-iis-intelsrv/" title="IIS服务启动提示当文件已存在时，无法创建该文件，183">IIS服务启动提示当文件已存在时，无法创建该文件，183</a><time datetime="2020-04-18T04:11:40.000Z" title="发表于 2020-04-18 12:11:40">2020-04-18</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"><span class="card-category-list-name">唐门暗器</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BF%83%E5%A6%82%E6%AD%A2%E6%B0%B4/"><span class="card-category-list-name">心如止水</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"><span class="card-category-list-name">江湖秘籍</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/"><span class="card-category-list-name">生活杂记</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A/"><span class="card-category-list-name">相见恨晚</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"><span class="card-category-list-name">知识补丁</span><span class="card-category-list-count">5</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/C/" style="font-size: 1.4em; color: #99a5b6">C#</a> <a href="/tags/Components/" style="font-size: 1.2em; color: #999da3">Components</a> <a href="/tags/HandyControl/" style="font-size: 1.1em; color: #999">HandyControl</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/IIS/" style="font-size: 1.1em; color: #999">IIS</a> <a href="/tags/Life/" style="font-size: 1.2em; color: #999da3">Life</a> <a href="/tags/Tools/" style="font-size: 1.3em; color: #99a1ac">Tools</a> <a href="/tags/WPF/" style="font-size: 1.5em; color: #99a9bf">WPF</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/02/"><span class="card-archive-list-date">二月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/11/"><span class="card-archive-list-date">十一月 2019</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/10/"><span class="card-archive-list-date">十月 2019</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">18</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-12-10T17:35:21.491Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By guanguan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

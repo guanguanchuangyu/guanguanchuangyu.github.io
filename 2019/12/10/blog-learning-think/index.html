@@ -1,32 +1,165 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>技术学习的思考 | GGCY</title><meta name="keywords" content="Life"><meta name="author" content="guanguan"><meta name="copyright" content="guanguan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="生活中难免因事因人牵动思绪，最近这段时间，又开始自我反思，一方面是在工作中遭遇到的问题，通过问题推导自己的不足以及对这段时间中自己的状态的分析，问题带来迷茫困扰，同时也伴随着个人的内心成长，我哪错了,我改,不断试错,不断纠错">
+<meta property="og:type" content="article">
+<meta property="og:title" content="技术学习的思考">
+<meta property="og:url" content="https://github.budbud.cn/2019/12/10/blog-learning-think/index.html">
+<meta property="og:site_name" content="GGCY">
+<meta property="og:description" content="生活中难免因事因人牵动思绪，最近这段时间，又开始自我反思，一方面是在工作中遭遇到的问题，通过问题推导自己的不足以及对这段时间中自己的状态的分析，问题带来迷茫困扰，同时也伴随着个人的内心成长，我哪错了,我改,不断试错,不断纠错">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2019-12-09T16:40:21.000Z">
+<meta property="article:modified_time" content="2020-07-05T04:59:08.180Z">
+<meta property="article:author" content="guanguan">
+<meta property="article:tag" content="Life">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://github.budbud.cn/2019/12/10/blog-learning-think/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '技术学习的思考',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-07-05 12:59:08'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-    if theme.reward.enable
-      !=partial('includes/post/reward', {}, {cache: true})
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="GGCY" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">GGCY</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">技术学习的思考</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-12-09T16:40:21.000Z" title="发表于 2019-12-10 00:40:21">2019-12-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-05T04:59:08.180Z" title="更新于 2020-07-05 12:59:08">2020-07-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/">生活杂记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="技术学习的思考"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>生活中难免因事因人牵动思绪，最近这段时间，又开始自我反思，一方面是在工作中遭遇到的问题，通过问题推导自己的不足以及对这段时间中自己的状态的分析，问题带来迷茫困扰，同时也伴随着个人的内心成长，<code>我哪错了,我改,不断试错,不断纠错</code></p>
+<span id="more"></span>
 
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
-
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
-
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+<h2 id="思索"><a href="#思索" class="headerlink" title="思索"></a>思索</h2><p>离开校园已经两年有余，最初的一个半年头，独立学习在工作中使用的技术，框架，业余弄弄自己感兴趣的技术，比如WPF、.NET Core、Node.Js、微服务等方面，每天早出晚归，白天是属于公司，晚上属于自己，几点一线的生活</p>
+<p>工作了，忙碌日常和校园相差甚大，也渐渐感触校园时光短暂，同时也为自己并未过于蹉跎那些日子我暗自窃喜，自己学的东西很杂，往往是自己知识树的横向过度拓展，然而每天的精力是有限的，好钢用在刀刃上，时间亦是如此，碎片化时间带来的往往是谁片化的知识记忆，一直在学，一直在遗忘，学的慢忘得反而更快，嘴上说<code>温故而知新</code>，又有多少能够做到，做技术的要耐得住寂寞，思索时才会寂寞，残酷的是，工作中没有那个时间留给自己去思索，时间是公平的，不会给任何人开小灶，鸡汤再多也挡不住时间和现实的摧残</p>
+<p>自己到底在做什么?</p>
+<p>自己做过啥?</p>
+<p>接下来做什么?</p>
+<p>天啦噜！惹不起这些抛问</p>
+<p>忘记了过往的成就，看不清前路，受困于现状—应用技术和技术原理，如果将技术问题比作是<code>疾病</code>的话，<strong>应用技术</strong>在我看来是<code>特效药</code>,能够快速解决病症，<strong>技术原理</strong>则是调和五行阴阳，治疗病根的<code>药方</code></p>
+<p>如果自己还是初出茅庐时候，断然不会考虑这些问题，毕竟毕业有份合适的工作，工作中的问题，当然是考虑能够解决问题的应用技术，大众路线，先用能解决问题的技术，技术本身存在着怎么样的技术细节，直接靠工作时间怼，用到啥学啥，能解决问题的办法都是好办法，必要时，当自己不在满足于现状，希望自己有一个更好的变化时，二者之间往往需要进行权衡，找到更适合自己的方向</p>
+<h2 id="选型"><a href="#选型" class="headerlink" title="选型"></a>选型</h2><p><strong>应用技术</strong></p>
+<p>刚开始学习一门技术，一门语言时，跟着教程或者书籍，开头一句：“Hello World”，于是哒哒哒，键盘打的飞快，每每解决一个问题，都满满成就感，对这个字节的世界充满好奇，学以致用，对技术的应用体现的淋漓精致，也不是说应用技术不好，它能在必要时候解决问题的途径，只是学的多了，学的范围大了，越会觉得大海的浩渺，自己仅仅是一块入海的绵，吸收终有到极限的一天，海里随波逐流，自己浮于浅表的位置在变化，学到的东西<code>杂而不精</code>，为了解决问题而使用一门技术，这确实没有什么问题，毕竟，在公司，能够按时按量的完成工作，为公司带来产值，至少自己是一个合格的员工，工作初期，这不会有什么问题，学会解决问题的技巧，可以很快的通过网络手段把自己的时间安排下去，框架，架构，热门技术，新兴技术，现在被人所熟知的技术，也不能一味的追捧，自己学的东拼西凑的碎片技术知识，往往像是缺零件的机械一般，难以正常运作，需要花时间整合，将应用技术整合成为自己的知识结构树，各个点之间建立关联，这就是一套个人知识体系</p>
+<p><strong>底层原理</strong></p>
+<p>那反过来问，底层原理又是什么？对我来说，底层原理是设计模式，架构实现原理，以及语言技术本身的实现细节，其实这些在平时的使用中可能就是微观上的实现和宏观上的概括，微观上，出栈入栈，装箱拆箱，各类特性函数的实现细节，宏观上，一些体系上的实现思路，类库的功能构建等，看似和实际工作中没有多大关系，实则这些一直都存在着关联，只是或早或晚的被注意到，当面对不知道如何查找需要解决的问题方案时，也许就是开始正视底层原理的时候，从底层往上找问题虽然很痛苦，但是往往能够刷新自己的认知，从根本上解决问题同时给自己一种豁然开朗的感受，原来这个是这样，之前这地方的书写方式不符合底层运行的规则等等，良药苦口，能治病</p>
+<h2 id="取舍"><a href="#取舍" class="headerlink" title="取舍"></a>取舍</h2><p>应用技术和底层原理，各有各的好处与不足，应用技术能很快投产，给自己的付出很快带来收益，对于这个快节奏的工作来说，是非常合适的，但久而久之 却会使人过于在意技术使用手段，小问题能很快解决，面对错综复杂的问题，可能就会有些力不从心了</p>
+<p>底层原理，更多的是给人指导解决问题的方向和提前规避错误实现上带来的问题，越是复杂的问题，可能就是一些简单的底层细节或者简单的核心实现思路，看不懂，看不明白，往往是没有寻找到问题本身，只是学习和理解的过程往往是应用技术的数倍，过程也许是一种长时间的煎熬，需要去沉淀和思考</p>
+<p>两者互补，需要有时间去根据自己的个人情况进行合理的分析，针对现有的时间进行合理的规划，满目的新技术新框架，诱惑者求知者的心，学习原理和学习技术本身就存在着反差，对我来说，原理得学，技术也不能放过，毕竟得养活自己，满足口食之欲，见效慢也得一步步去尝试和积累必要的知识，业余时间如果分为五分，需要考虑拿出三份进行底层的了解和学习，写下此篇文章也是对自我的一种思维的梳理，自我反省的一种方式</p>
+<p>愿做河底基石，不愿做水面浮萍</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">guanguan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://github.budbud.cn/2019/12/10/blog-learning-think/">https://github.budbud.cn/2019/12/10/blog-learning-think/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://github.budbud.cn" target="_blank">GGCY</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Life/">Life</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/12/19/blog-wpf-layout/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">WPF基础容器与布局</div></div></a></div><div class="next-post pull-right"><a href="/2019/11/24/blog-C-%E5%8F%8D%E7%BC%96%E8%AF%91%E6%8A%80%E5%B7%A7/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">C#-查看微软内置程序集技巧</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2019/10/27/Home/" title="Love Life"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-10-27</div><div class="title">Love Life</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">guanguan</div><div class="author-info__description">love life,love code</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E7%B4%A2"><span class="toc-number">1.</span> <span class="toc-text">思索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">选型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%96%E8%88%8D"><span class="toc-number">3.</span> <span class="toc-text">取舍</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/07/05/blog-wpf-packUri/" title="外部资源的引入"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="外部资源的引入"/></a><div class="content"><a class="title" href="/2020/07/05/blog-wpf-packUri/" title="外部资源的引入">外部资源的引入</a><time datetime="2020-07-05T04:59:08.228Z" title="发表于 2020-07-05 12:59:08">2020-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/07/05/blog-wpf-IconFont/" title="字体图标的使用"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="字体图标的使用"/></a><div class="content"><a class="title" href="/2020/07/05/blog-wpf-IconFont/" title="字体图标的使用">字体图标的使用</a><time datetime="2020-07-05T04:59:08.224Z" title="发表于 2020-07-05 12:59:08">2020-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/07/05/blog-wpf-hc-user/" title="HandyControl新手引导"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HandyControl新手引导"/></a><div class="content"><a class="title" href="/2020/07/05/blog-wpf-hc-user/" title="HandyControl新手引导">HandyControl新手引导</a><time datetime="2020-07-05T04:19:40.000Z" title="发表于 2020-07-05 12:19:40">2020-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/18/blog-davinci-setup/" title="Windows中安装Davinci"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows中安装Davinci"/></a><div class="content"><a class="title" href="/2020/04/18/blog-davinci-setup/" title="Windows中安装Davinci">Windows中安装Davinci</a><time datetime="2020-04-18T13:29:48.000Z" title="发表于 2020-04-18 21:29:48">2020-04-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/18/blog-iis-intelsrv/" title="IIS服务启动提示当文件已存在时，无法创建该文件，183"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IIS服务启动提示当文件已存在时，无法创建该文件，183"/></a><div class="content"><a class="title" href="/2020/04/18/blog-iis-intelsrv/" title="IIS服务启动提示当文件已存在时，无法创建该文件，183">IIS服务启动提示当文件已存在时，无法创建该文件，183</a><time datetime="2020-04-18T04:11:40.000Z" title="发表于 2020-04-18 12:11:40">2020-04-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By guanguan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

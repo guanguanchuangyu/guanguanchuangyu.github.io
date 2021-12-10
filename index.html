@@ -1,7 +1,293 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>GGCY - code changes life</title><meta name="keywords" content="ggcy"><meta name="author" content="guanguan"><meta name="copyright" content="guanguan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="love life,love code">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GGCY">
+<meta property="og:url" content="https://github.budbud.cn/index.html">
+<meta property="og:site_name" content="GGCY">
+<meta property="og:description" content="love life,love code">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="guanguan">
+<meta property="article:tag" content="ggcy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://github.budbud.cn/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'GGCY',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-12-11 01:35:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  include ./includes/mixins/post-ui.pug
-  #recent-posts.recent-posts
-    +postUI
-    include includes/pagination.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="GGCY" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">GGCY</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">GGCY</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2020/07/05/blog-wpf-packUri/" title="外部资源的引入"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="外部资源的引入"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/05/blog-wpf-packUri/" title="外部资源的引入">外部资源的引入</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-05T04:59:08.228Z" title="发表于 2020-07-05 12:59:08">2020-07-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/">知识补丁</a></span></div><div class="content">在WPF项目中，作为系统嵌入引用程序集中资源，例如资源字典文件、字体库、图片等等，编译生成后，直接嵌入到应用程序集中，如果希望在xaml中使用又不希望资源嵌入，而是希望随时能够替换应用程序所在目录下的外部资源文件如何去处理？
+
+
+使用Pack URI中的外部方式源站点 Pack URI，pack://siteoforigin:,,,/XXXXXXXXX，详情请查看链接，案例如下：
+xaml中：
+12345&lt;Border Margin=&quot;10&quot;&gt;    &lt;Border.Background&gt;        &lt;ImageBrush ImageSource=&quot;pack://siteoforigin:,,,/bg.png&quot;&gt;&lt;/ImageBrush&gt;    &lt;/Border.Background&gt;&lt;/Border&gt;
+
+文件路径，图片资源与应用程序同级：
+
+效果：
+原图：
+
+替换后：
+
+
+但是需要注意的是，此类资源的是为独占类型，也就是说，当前应用程序使用时，不能允许操作对应的资源，包 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2020/07/05/blog-wpf-IconFont/" title="字体图标的使用"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="字体图标的使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/05/blog-wpf-IconFont/" title="字体图标的使用">字体图标的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-05T04:59:08.224Z" title="发表于 2020-07-05 12:59:08">2020-07-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/">知识补丁</a></span></div><div class="content">如何引入字体图标不再赘述，可参考：WPF引入字体图标，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接WPF使用阿里巴巴字体库
+
+
+xaml中使用如下：
+1234567891011&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;    &lt;StackPanel.Resources&gt;        &lt;!--仅仅用于演示--&gt;        &lt;!--引入字体库,路径#字体库名称--&gt;        &lt;FontFamily x:Key=&quot;iconfont&quot;&gt;pack://application,,,/所在命程序集名称;Component/Resources/#iconfont&lt;/FontFamily&gt;    &lt;/StackPanel.Resources&gt;        &lt;TextBlock Text=&quot;&amp;#xe8ac;      ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/07/05/blog-wpf-hc-user/" title="HandyControl新手引导"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HandyControl新手引导"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/05/blog-wpf-hc-user/" title="HandyControl新手引导">HandyControl新手引导</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-05T04:19:40.000Z" title="发表于 2020-07-05 12:19:40">2020-07-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/">江湖秘籍</a></span></div><div class="content">找不到？看不到？有说明文档不？源码在哪里？从接触HandyControl（之后文章内容简称HC）开始，这些问题，是刚入组织时，最频繁问到的问题，针对这些重复问题写了这篇新手引导
+
+
+每月一问从Nuget中查找HandyControl时，出现两个选择，带s和不带s有什么区别？其实带s的是国际友人依据HC构建的包含额外控件的衍生库，不带s的才是HC实际官方库，国际友人版本的库更新更加频繁，在使用上，可能也会有少许区别，使用的时候，需要稍加留意
+资源在哪里？源码及库包源码包含目前最新的完整代码，编译运行
+
+
+
+名称
+类型
+访问链接
+
+
+
+Github
+源码
+https://github.com/HandyOrg/HandyControl
+
+
+Gitee
+源码
+https://gitee.com/handyorg/HandyControl
+
+
+Nuget
+应用库【月更新】
+https://www.nuget.org/packages/HandyControl
+
+
+Myget
+应用库【周更新-预览版】
+https://www.myget.org/F/handycontrols/api/v3/in ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2020/04/18/blog-davinci-setup/" title="Windows中安装Davinci"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows中安装Davinci"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/18/blog-davinci-setup/" title="Windows中安装Davinci">Windows中安装Davinci</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-18T13:29:48.000Z" title="发表于 2020-04-18 21:29:48">2020-04-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/">江湖秘籍</a></span></div><div class="content">
+Davinci 是一个 DVaaS（Data Visualization as a Service）平台解决方案，面向业务人员/数据工程师/数据分析师/数据科学家，致力于提供一站式数据可视化解决方案。既可作为公有云/私有云独立部署使用，也可作为可视化插件集成到三方系统。用户只需在可视化 UI 上简单配置即可服务多种数据可视化应用，并支持高级交互/行业分析/模式探索/社交智能等可视化功能。
+
+
+
+当前教程将介绍Davinci在Windows中的环境搭建操作步骤。
+环境要求JDK≥1.8
+MySql≥5.6.28
+Mail Server 邮箱服务器
+Chrome或phantomjs支持浏览器操作
+系统发布包（不是SourceCode）
+解压软件在系统中，需要软件常用位置解压Davinci发布包，结构如下：
+
+数据库配置数据库脚本为bin下的davinci.sql
+初始化数据库在mysql中添加名称为davinci0.3的数据库，用于后续执行sql脚本使用
+
+同时确保全局环境变量JAVA_HOME以及Davinci项目解压路径对应的全局环境变量DAVINCI3_HOME正确配置
+方式一【推 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/04/18/blog-iis-intelsrv/" title="IIS服务启动提示当文件已存在时，无法创建该文件，183"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IIS服务启动提示当文件已存在时，无法创建该文件，183"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/18/blog-iis-intelsrv/" title="IIS服务启动提示当文件已存在时，无法创建该文件，183">IIS服务启动提示当文件已存在时，无法创建该文件，183</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-18T04:11:40.000Z" title="发表于 2020-04-18 12:11:40">2020-04-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/">江湖秘籍</a></span></div><div class="content">遇到一个在Windows Server2012 R2系统，IIS服务器启动问题，无论如何尝试启动IIS，始终提示“当文件已存在时，无法创建该文件”，一个令人懵比的问题，文件已存在，哪里存在了？不知道，就只能够盲人摸象，一步步排查，开始填坑，此处以Win10作为问题复现环境
+
+
+填坑记录作死流程系统中安装好IIS，在未做任何修改之前，IIS能够正常启动和访问，因为个人需要对C:\Windows\System32\inetsrv\config\schema\IIS_schema.xml文件进行部分修改配置，由于涉及到系统，所有，一般在修改前会习惯性的对文件保留一个副本，于是出现如下结构目录
+
+意外出现关闭IIS后，再次启动，出现如下错误：
+
+这是啥问题？于是将之前修改过的变更，进行还原，万能重启，还是不行，IIS这就崩了？心中无数头羊驼，在奔腾~，又不想重装系统，喝口热茶，缓解一下紧张气氛，接着找问题
+问题排查通过查阅网上资料可以知道，IIS正常启动依托至少两个服务，一个是W3SVC也就是World Wide Web Publishing Service，一个是WAS也就是Windows  ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2020/02/24/blog-wpf-BootStrapPanel/" title="自定义面板优化统计标题卡"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自定义面板优化统计标题卡"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/02/24/blog-wpf-BootStrapPanel/" title="自定义面板优化统计标题卡">自定义面板优化统计标题卡</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-02-24T10:52:56.000Z" title="发表于 2020-02-24 18:52:56">2020-02-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/">唐门暗器</a></span></div><div class="content">上篇文章WPF实现高仿统计标题卡中，实现了依据自己喜欢的统计卡片组件样式，实现过程中，发现，现有的WPF默认自带面板Grid、UniformGrid、StackPanel、DockPanel、WrapPanel以及Canvas等暂时没有满足条件的面板容器，接下来就是一个简单的容器面板我称之为BootstrapPanel，参考容器面板UniformGrid和WrapPanel两个容器的功能，项目仍然为上篇文章使用的项目为例
+
+
+
+基础面板分析UniformGrid提供功能该容器面板能够依据内部的可视子级数量，在未设置Rows、Columns、FirstColumn等属性的条件下，进行自动填充均分容器面板的各区域
+1234567&lt;ItemsControl ItemsSource=&quot;&#123;Binding Path=Data&#125;&quot; FocusVisualStyle=&quot;&#123;x:Null&#125;&quot;&gt;                &lt;ItemsControl.ItemsPanel&gt;                ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/02/20/blog-wpf-titleCard/" title="WPF实现高仿统计标题卡"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WPF实现高仿统计标题卡"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/02/20/blog-wpf-titleCard/" title="WPF实现高仿统计标题卡">WPF实现高仿统计标题卡</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-02-19T16:51:23.000Z" title="发表于 2020-02-20 00:51:23">2020-02-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/">唐门暗器</a></span></div><div class="content">飘哇~，在家数瓜子仁儿，闲来无事，看东看西，也找点儿，最近正在看看WPF动画，光看也是不行，需要带着目的去学习，整合知识碎片，恰巧，看到Github中一个基于Ant Designer设计风格的后台管理系统，看到统计标题卡，就它了，于是就开始造作
+
+
+
+动画分析原始效果
+布局卡片由外层边框块Border、内层左右布局构成，图例如下：
+
+动效触发事件鼠标进入卡片区域开始动效
+123&lt;EventTrigger RoutedEvent=&quot;MouseEnter&quot;&gt;    ......&lt;/EventTrigger&gt;
+
+鼠标离开卡片区域退出动效
+123&lt;EventTrigger RoutedEvent=&quot;MouseLeave&quot;&gt;    .......&lt;/EventTrigger&gt;
+
+动效结果左半部分外部圆形边框收缩，使用图形变换中缩放对象ScaleTransform
+12345&lt;Ellipse x:Name=&quot;Bd&quot; Stroke=&quot;#55ffffff&quot; Stroke ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2020/02/08/marker-2-0-0-1014/" title="2.0.0.1011升级为2.0.0.1014数据导入操作"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2.0.0.1011升级为2.0.0.1014数据导入操作"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/02/08/marker-2-0-0-1014/" title="2.0.0.1011升级为2.0.0.1014数据导入操作">2.0.0.1011升级为2.0.0.1014数据导入操作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-02-08T10:54:34.000Z" title="发表于 2020-02-08 18:54:34">2020-02-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/">江湖秘籍</a></span></div><div class="content">由于Marker动态壁纸桌面2.x版本处于持续迭代中，故不定期会进行版本的升级，此处为试用版本2.0.0.1011变更到2.0.0.1014的操作
+
+
+准备工作下载2.0.0.1014下载QQ交流群文件Build2.0.0.1014.7z并解压
+
+启动程序由于程序是免安装版本，通过解压直接启动程序即可使用，找到解压文件中的启动程序Marker.exe鼠标双击即可
+
+效果如下：
+
+导入2.0.0.1011数据查看顶部的菜单栏中的【本地壁纸】发现之前版本下载的壁纸资源都不可见，别急，先试试如下操作
+
+获取本地下载路径找到程序的顶部中的【设置】按钮，查看本地程序的壁纸资源下载路径
+
+设置页面中，【下载项】-【下载路径】以及【打开下载目录】明确得到对应程序的壁纸下载目录，个人自定义目录同理
+
+老版本下载的资源
+
+重新加载壁纸方式一 再次下载查阅本地资源，通过资源找到程序中【壁纸库】，找到对应的资源，进行再次下载，由于本地已经存在，因此能够很快完成下载过程，美其名曰：“秒下”
+加载【壁纸库】资源
+下载完成
+本地壁纸
+方式二 本地壁纸导入非2.0.0.1011老版本，可尝试，直接通过【本地视频】- ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/01/09/blog-tools-UTools/" title="UTools工具"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="UTools工具"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/01/09/blog-tools-UTools/" title="UTools工具">UTools工具</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-01-09T14:36:21.000Z" title="发表于 2020-01-09 22:36:21">2020-01-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A/">相见恨晚</a></span></div><div class="content">某日，被同事神神秘秘问了一句，“你知道UTools不 ? ”，“????，恩，没有”，于是赶紧浏览器搜索关键词，“UTools”，入眼第一句话：“uTools - 你的生产力工具集”，解释如下：
+
+你的生产力工具集uTools是一个极简、插件化、跨平台的现代桌面软件。通过自由选配丰富的插件，打造你得心应手的工具集合。
+当你熟悉它后，能够为你节约大量时间，让你可以更加专注地改变世界。
+
+
+
+造作于是，秉着好奇心，我安装了，很快就安装完成，默认快捷键为Alt+空格，界面非常符合个人的极简审美
+
+点击右端图标，显示插件中心
+
+可以看到，主要包括【插件中心】、【已安装】、【设置】以及【账号与数据】几个功能模块，【插件中心】中有不少开发过程中会使用到的插件工具，例如：在线翻译，本地搜索，压缩图片，图床等，同时能够支持本地应用导入，具体的细节可以访问官网进行进一步了解https://u.tools/
+
+通过下载使用其中的内网穿透插件，我成功被安利了，通过这些功能，能够减少部分鼠标的使用，例如通过快捷键显示出搜索框进行本地应用程序的查找和启动
+
+部分插件内网穿透
+Todo
+在线文档
+人生进度条
+更多 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2019/12/29/blog-dependenct/" title="依赖属性基础巩固"><img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="依赖属性基础巩固"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/12/29/blog-dependenct/" title="依赖属性基础巩固">依赖属性基础巩固</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-12-28T16:35:25.000Z" title="发表于 2019-12-29 00:35:25">2019-12-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/">知识补丁</a></span></div><div class="content">依赖属性是何物？
+
+Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的属性的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性
+
+
+
+
+简单的来说就是在WPF中有别于面向对象中普通属性是其专属属性，依赖于WPF属性系统，对于依赖属性，并不像普通类类型属性那般进行实例化操作，而是依靠DependencyProperty进行类型函数建立静态实例，这样又可以说依赖属性为DependencyProperty支持的属性，依赖属性的自定义过程如下：
+123456789101112131415161718192021222324252627/// &lt;summary&gt;/// 依赖属性案例类/// 创建依赖对象/// &lt;/summary&gt;public class DependencyCase:DependencyObject&#123;    //声明静态只读属性    public static readonly DependencyProperty CaseProperty ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">guanguan</div><div class="author-info__description">love life,love code</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/07/05/blog-wpf-packUri/" title="外部资源的引入"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="外部资源的引入"/></a><div class="content"><a class="title" href="/2020/07/05/blog-wpf-packUri/" title="外部资源的引入">外部资源的引入</a><time datetime="2020-07-05T04:59:08.228Z" title="发表于 2020-07-05 12:59:08">2020-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/07/05/blog-wpf-IconFont/" title="字体图标的使用"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="字体图标的使用"/></a><div class="content"><a class="title" href="/2020/07/05/blog-wpf-IconFont/" title="字体图标的使用">字体图标的使用</a><time datetime="2020-07-05T04:59:08.224Z" title="发表于 2020-07-05 12:59:08">2020-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/07/05/blog-wpf-hc-user/" title="HandyControl新手引导"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HandyControl新手引导"/></a><div class="content"><a class="title" href="/2020/07/05/blog-wpf-hc-user/" title="HandyControl新手引导">HandyControl新手引导</a><time datetime="2020-07-05T04:19:40.000Z" title="发表于 2020-07-05 12:19:40">2020-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/18/blog-davinci-setup/" title="Windows中安装Davinci"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows中安装Davinci"/></a><div class="content"><a class="title" href="/2020/04/18/blog-davinci-setup/" title="Windows中安装Davinci">Windows中安装Davinci</a><time datetime="2020-04-18T13:29:48.000Z" title="发表于 2020-04-18 21:29:48">2020-04-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/18/blog-iis-intelsrv/" title="IIS服务启动提示当文件已存在时，无法创建该文件，183"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IIS服务启动提示当文件已存在时，无法创建该文件，183"/></a><div class="content"><a class="title" href="/2020/04/18/blog-iis-intelsrv/" title="IIS服务启动提示当文件已存在时，无法创建该文件，183">IIS服务启动提示当文件已存在时，无法创建该文件，183</a><time datetime="2020-04-18T04:11:40.000Z" title="发表于 2020-04-18 12:11:40">2020-04-18</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"><span class="card-category-list-name">唐门暗器</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BF%83%E5%A6%82%E6%AD%A2%E6%B0%B4/"><span class="card-category-list-name">心如止水</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"><span class="card-category-list-name">江湖秘籍</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/"><span class="card-category-list-name">生活杂记</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A/"><span class="card-category-list-name">相见恨晚</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"><span class="card-category-list-name">知识补丁</span><span class="card-category-list-count">5</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/C/" style="font-size: 1.4em; color: #99a5b6">C#</a> <a href="/tags/Components/" style="font-size: 1.2em; color: #999da3">Components</a> <a href="/tags/HandyControl/" style="font-size: 1.1em; color: #999">HandyControl</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/IIS/" style="font-size: 1.1em; color: #999">IIS</a> <a href="/tags/Life/" style="font-size: 1.2em; color: #999da3">Life</a> <a href="/tags/Tools/" style="font-size: 1.3em; color: #99a1ac">Tools</a> <a href="/tags/WPF/" style="font-size: 1.5em; color: #99a9bf">WPF</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/02/"><span class="card-archive-list-date">二月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/11/"><span class="card-archive-list-date">十一月 2019</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/10/"><span class="card-archive-list-date">十月 2019</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">18</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-12-10T17:35:21.491Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By guanguan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,32 +1,247 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>WPF基础容器与布局 | GGCY</title><meta name="keywords" content="WPF"><meta name="author" content="guanguan"><meta name="copyright" content="guanguan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="WPF的xaml中进行布局设定时，少不了和布局容器打交道，合理的使用和搭配这些容器，能够让页面美观的同时，可维护性和可拓展性更高">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WPF基础容器与布局">
+<meta property="og:url" content="https://github.budbud.cn/2019/12/19/blog-wpf-layout/index.html">
+<meta property="og:site_name" content="GGCY">
+<meta property="og:description" content="WPF的xaml中进行布局设定时，少不了和布局容器打交道，合理的使用和搭配这些容器，能够让页面美观的同时，可维护性和可拓展性更高">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2019-12-19T15:18:17.000Z">
+<meta property="article:modified_time" content="2020-07-05T04:59:08.224Z">
+<meta property="article:author" content="guanguan">
+<meta property="article:tag" content="WPF">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://github.budbud.cn/2019/12/19/blog-wpf-layout/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'WPF基础容器与布局',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-07-05 12:59:08'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-    if theme.reward.enable
-      !=partial('includes/post/reward', {}, {cache: true})
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="GGCY" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">GGCY</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">WPF基础容器与布局</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-12-19T15:18:17.000Z" title="发表于 2019-12-19 23:18:17">2019-12-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-05T04:59:08.224Z" title="更新于 2020-07-05 12:59:08">2020-07-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/">知识补丁</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="WPF基础容器与布局"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><code>WPF</code>的<code>xaml</code>中进行布局设定时，少不了和布局容器打交道，合理的使用和搭配这些容器，能够让页面美观的同时，可维护性和可拓展性更高</p>
+<span id="more"></span>
 
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
+<h1 id="布局容器（面板控件）"><a href="#布局容器（面板控件）" class="headerlink" title="布局容器（面板控件）"></a>布局容器（面板控件）</h1><p>容器中的控件（子元素）理论上是建议不显式指定尺寸，不使用屏幕坐标设定控件自身的位置</p>
+<p>常见容器如下：</p>
+<table>
+<thead>
+<tr>
+<th>控件名称</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DockPanel</td>
+<td>子级元素依靠在容器边缘，分为 顶部、底部、左侧、右侧，用于实现靠近边缘的工具栏、表单提交按钮等布局，通过在子元素中使用附加属性DockPanel.Dock进行控制，同时需要注意是否需要考虑设定LastChildFill控制容器的最后一个元素是否填充剩余空间，顶部和底部优先级高于左侧和右侧</td>
+</tr>
+<tr>
+<td>WrapPanel</td>
+<td>将每个子元素水平（默认）或垂直方向定位到另一个子元素的旁边，水平或垂直方向不满足当前元素的宽度或者高度时，元素自动换行或换列</td>
+</tr>
+<tr>
+<td>StackPanel</td>
+<td>子元素在某一方向（水平/垂直）相互之间有序靠近，子元素控件的高度或宽度决定了子元素的填充范围，操作子元素自身并不会换行或者换列</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>自带面板中最复杂的，网格布局风格，通过设定行列数以及Grid.Column、Row以及跨行跨列数附加型依赖属性，能够灵活的控制子元素的布局，几乎能够实现其他常用布局容器的大部分功能</td>
+</tr>
+<tr>
+<td>UniformGrid</td>
+<td>等比网格，比起grid使用上更简单，不需要为子元素设定位子，相邻元素一次排列，通过显式或者默认的行列数量，决定行列均匀分布的网格布局</td>
+</tr>
+<tr>
+<td>Canvas</td>
+<td>不会默认做任何事，而是允许你把控件放在它的内部，然后显式地给这些控件定位，用于绘制图案，作为画布使用，同时内部控件使用相对位置定位，Canvas.Top、Canvas.Left、Canvas.Right、Canvas.Bottom控制子元素的位置，其中Z轴决定多个图层间的上下层排列顺序</td>
+</tr>
+<tr>
+<td>InkCanvas</td>
+<td>手写板，用于进行三方笔触手写，不同模式拥有不同的手写或者操作功能，能够实现粘贴复制等功能</td>
+</tr>
+</tbody></table>
+<h2 id="容器嵌套"><a href="#容器嵌套" class="headerlink" title="容器嵌套"></a>容器嵌套</h2><p>各个容器的特性不同，可以通过各个容器的组合实现符合业务需求的页面布局效果，例如一个上下结构的页面，效果如下：</p>
+<p><img src="https://ggcy-static-01.oss-cn-hangzhou.aliyuncs.com/ggcyblog/blog-wpf-layout/blog-wpf-layout-case01.png" alt="blog-wpf-layout-case01"></p>
+<p>xaml代码如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">DockPanel</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Border</span> <span class="attr">Height</span>=<span class="string">&quot;70&quot;</span> <span class="attr">hc:WindowAttach.IsDragElement</span>=<span class="string">&quot;True&quot;</span> <span class="attr">BorderThickness</span>=<span class="string">&quot;0,0,0,1&quot;</span> <span class="attr">BorderBrush</span>=<span class="string">&quot;&#123;DynamicResource BorderBrush&#125;&quot;</span> <span class="attr">DockPanel.Dock</span>=<span class="string">&quot;Top&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">DockPanel</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">UniformGrid</span> <span class="attr">DockPanel.Dock</span>=<span class="string">&quot;Right&quot;</span> <span class="attr">Rows</span>=<span class="string">&quot;1&quot;</span> <span class="attr">Margin</span>=<span class="string">&quot;0,0,50,0&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Content</span>=<span class="string">&quot;登录&quot;</span> <span class="attr">Margin</span>=<span class="string">&quot;5&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Content</span>=<span class="string">&quot;注册&quot;</span> <span class="attr">Margin</span>=<span class="string">&quot;5&quot;</span> <span class="attr">Style</span>=<span class="string">&quot;&#123;DynamicResource BtnSuccess&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">UniformGrid</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">DockPanel</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Image</span> <span class="attr">Width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">Height</span>=<span class="string">&quot;50&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">Image</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">&quot;NgxMarker&quot;</span> <span class="attr">VerticalAlignment</span>=<span class="string">&quot;Center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">TextBlock</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">Orientation</span>=<span class="string">&quot;Horizontal&quot;</span> <span class="attr">DockPanel.Dock</span>=<span class="string">&quot;Right&quot;</span> <span class="attr">Margin</span>=<span class="string">&quot;40,0,0,0&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">DockPanel</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">DockPanel</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Border</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Grid</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;0.45*&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;*&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;0.7*&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Grid.ColumnDefinitions</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ColumnDefinition</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ColumnDefinition</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Grid.ColumnDefinitions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">VerticalAlignment</span>=<span class="string">&quot;Top&quot;</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;1&quot;</span> <span class="attr">HorizontalAlignment</span>=<span class="string">&quot;Left&quot;</span> <span class="attr">Margin</span>=<span class="string">&quot;90,0&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">&quot;你的文档，你的笑&quot;</span> <span class="attr">FontSize</span>=<span class="string">&quot;50&quot;</span> <span class="attr">FontWeight</span>=<span class="string">&quot;Bold&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">&quot;与团队一起编写文档，极致体验，高效协同,在微笑中构建自己的专属知识库&quot;</span></span></span><br><span class="line"><span class="tag">                       <span class="attr">Margin</span>=<span class="string">&quot;0,30&quot;</span></span></span><br><span class="line"><span class="tag">                       <span class="attr">LineHeight</span>=<span class="string">&quot;30&quot;</span> <span class="attr">Foreground</span>=<span class="string">&quot;&#123;DynamicResource SecondaryTextBrush&#125;&quot;</span> <span class="attr">TextWrapping</span>=<span class="string">&quot;Wrap&quot;</span> <span class="attr">FontSize</span>=<span class="string">&quot;18&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">TextBlock</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Margin</span>=<span class="string">&quot;0,16&quot;</span> <span class="attr">Content</span>=<span class="string">&quot;开始Marker&quot;</span> <span class="attr">HorizontalAlignment</span>=<span class="string">&quot;Left&quot;</span> <span class="attr">Padding</span>=<span class="string">&quot;30,12&quot;</span> <span class="attr">Style</span>=<span class="string">&quot;&#123;DynamicResource BtnSuccess&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">DockPanel</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
 
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+
+<h2 id="网格拆分器"><a href="#网格拆分器" class="headerlink" title="网格拆分器"></a>网格拆分器</h2><p><code>GridSplitter</code>能够允许用户手动<code>Grid</code>调整单元格行或者列的尺寸大小</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;Grid&gt;</span><br><span class="line">    &lt;Grid.ColumnDefinitions&gt;</span><br><span class="line">        &lt;ColumnDefinition Width=&quot;*&quot;&gt;&lt;/ColumnDefinition&gt;</span><br><span class="line">        &lt;ColumnDefinition Width=&quot;Auto&quot;&gt;&lt;/ColumnDefinition&gt;</span><br><span class="line">        &lt;ColumnDefinition Width=&quot;*&quot;&gt;&lt;/ColumnDefinition&gt;</span><br><span class="line">    &lt;/Grid.ColumnDefinitions&gt;</span><br><span class="line">    &lt;Button Content=&quot;左侧&quot;&gt;&lt;/Button&gt;</span><br><span class="line">    &lt;GridSplitter Grid.Column=&quot;1&quot; Width=&quot;1&quot; HorizontalAlignment=&quot;Stretch&quot;&gt;&lt;/GridSplitter&gt;</span><br><span class="line">    &lt;Button Content=&quot;右侧&quot; Grid.Column=&quot;2&quot;&gt;&lt;/Button&gt;</span><br><span class="line">&lt;/Grid&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://ggcy-static-01.oss-cn-hangzhou.aliyuncs.com/ggcyblog/blog-wpf-layout/blog-wpf-layout-splitter01.png" alt="blog-wpf-layout-splitter01"></p>
+<p><img src="https://ggcy-static-01.oss-cn-hangzhou.aliyuncs.com/ggcyblog/blog-wpf-layout/blog-wpf-layout-splitter02.png" alt="blog-wpf-layout-splitter02"></p>
+<p>其中的<strong>ResizeDirection</strong> 属性可以设定分割器的行列模式</p>
+<h2 id="布局舍入"><a href="#布局舍入" class="headerlink" title="布局舍入"></a>布局舍入</h2><p><code>UseLayoutRounding</code>属性设置为<code>True</code>时，能够对布局中的显示部分进行尺寸舍入，保证控件的清晰度</p>
+<p>案例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Border BorderThickness=&quot;1.4&quot; BorderBrush=&quot;Black&quot; Margin=&quot;10&quot;&gt;&lt;/Border&gt;</span><br><span class="line">&lt;Border BorderThickness=&quot;1.4&quot; BorderBrush=&quot;Black&quot; Margin=&quot;10&quot; UseLayoutRounding=&quot;True&quot;&gt;&lt;/Border&gt;</span><br><span class="line">&lt;Border BorderThickness=&quot;1&quot; BorderBrush=&quot;Black&quot; Margin=&quot;10&quot;&gt;&lt;/Border&gt;</span><br><span class="line">&lt;Border BorderThickness=&quot;1&quot; BorderBrush=&quot;Black&quot; Margin=&quot;10&quot; UseLayoutRounding=&quot;True&quot;&gt;&lt;/Border&gt;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="https://ggcy-static-01.oss-cn-hangzhou.aliyuncs.com/ggcyblog/blog-wpf-layout/blog-wpf-layout-UseLayoutRound01.png" alt="blog-wpf-layout-UseLayoutRound01"></p>
+<p><img src="https://ggcy-static-01.oss-cn-hangzhou.aliyuncs.com/ggcyblog/blog-wpf-layout/blog-wpf-layout-UseLayoutRound02.png" alt="blog-wpf-layout-UseLayoutRound02"></p>
+<h1 id="自定义布局容器"><a href="#自定义布局容器" class="headerlink" title="自定义布局容器"></a>自定义布局容器</h1><p>通过查看<a href="">微软文档</a>知道，容器的父类为<code>Panel</code>类型如下：</p>
+<ul>
+<li><p>继承</p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.object?view=netframework-4.8">Object</a> </p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.threading.dispatcherobject?view=netframework-4.8">DispatcherObject</a> </p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.dependencyobject?view=netframework-4.8">DependencyObject</a> </p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.media.visual?view=netframework-4.8">Visual</a> </p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.uielement?view=netframework-4.8">UIElement</a> </p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement?view=netframework-4.8">FrameworkElement</a> </p>
+</li>
+</ul>
+<p>Panel</p>
+<ul>
+<li><p>派生</p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.canvas?view=netframework-4.8">System.Windows.Controls.Canvas</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.dockpanel?view=netframework-4.8">System.Windows.Controls.DockPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.grid?view=netframework-4.8">System.Windows.Controls.Grid</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.stackpanel?view=netframework-4.8">System.Windows.Controls.StackPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.virtualizingpanel?view=netframework-4.8">System.Windows.Controls.VirtualizingPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.wrappanel?view=netframework-4.8">System.Windows.Controls.WrapPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.primitives.tabpanel?view=netframework-4.8">System.Windows.Controls.Primitives.TabPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.primitives.toolbaroverflowpanel?view=netframework-4.8">System.Windows.Controls.Primitives.ToolBarOverflowPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.primitives.uniformgrid?view=netframework-4.8">System.Windows.Controls.Primitives.UniformGrid</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.ribbon.primitives.ribboncontextualtabgroupspanel?view=netframework-4.8">System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.ribbon.primitives.ribbongallerycategoriespanel?view=netframework-4.8">System.Windows.Controls.Ribbon.Primitives.RibbonGalleryCategoriesPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.ribbon.primitives.ribbongalleryitemspanel?view=netframework-4.8">System.Windows.Controls.Ribbon.Primitives.RibbonGalleryItemsPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.ribbon.primitives.ribbongroupitemspanel?view=netframework-4.8">System.Windows.Controls.Ribbon.Primitives.RibbonGroupItemsPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.ribbon.primitives.ribbonquickaccesstoolbaroverflowpanel?view=netframework-4.8">System.Windows.Controls.Ribbon.Primitives.RibbonQuickAccessToolBarOverflowPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.ribbon.primitives.ribbontabheaderspanel?view=netframework-4.8">System.Windows.Controls.Ribbon.Primitives.RibbonTabHeadersPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.ribbon.primitives.ribbontabspanel?view=netframework-4.8">System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.ribbon.primitives.ribbontitlepanel?view=netframework-4.8">System.Windows.Controls.Ribbon.Primitives.RibbonTitlePanel</a></p>
+</li>
+</ul>
+<p>通过了解<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel?view=netframework-4.8">Panel-.Net 4.8</a>、<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel?view=netcore-3.1">Panel-core3.1</a>类相关的函数</p>
+<p>正如文档所说：</p>
+<blockquote>
+<p>WPF provides a comprehensive suite of derived <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel?view=netcore-3.1">Panel</a> implementations, enabling many complex layouts. If you want to implement new layout containers, use the <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement.measureoverride?view=netcore-3.1">MeasureOverride</a> and <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement.arrangeoverride?view=netcore-3.1">ArrangeOverride</a> methods. For a demonstration of how to use these methods, see <a target="_blank" rel="noopener" href="https://go.microsoft.com/fwlink/?LinkID=159979">Create a Custom Content-Wrapping Panel Sample</a>.</p>
+</blockquote>
+<blockquote>
+<p>WPF提供了一套全面的<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.controls.panel?view=netframework-4.8">Panel</a>派生实现, 从而实现了很多复杂的布局。 如果要实现新的<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement.measureoverride?view=netframework-4.8">MeasureOverride</a>布局容器, 请使用和<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.frameworkelement.arrangeoverride?view=netframework-4.8">ArrangeOverride</a>方法。 有关如何使用这些方法的演示, 请参阅<a target="_blank" rel="noopener" href="https://go.microsoft.com/fwlink/?LinkID=159979">创建自定义内容换行面板示例</a>。(来源于微软文档)</p>
+</blockquote>
+<p>也就是说，构建自己的容器可以继承<code>Panel</code>，重写函数<code>MeasureOverride</code>和<code>ArrangeOverride</code>实现，<code>MeasureOverride</code>函数用于测量子元素期望的布局尺寸，<code>ArrangeOverride</code>函数用于设定子元素在容器中的位置和布局大小，那么开始自定义容器之旅吧！</p>
+<p>简单实现一个自定义<code>Panel</code>，容器内的元素水平均分布局：</p>
+<p>自定义<code>MarkPanel.cs</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[System.Windows.Localizability(System.Windows.LocalizationCategory.Ignore)]</span><br><span class="line">[System.Windows.Markup.ContentProperty(nameof(Children))]</span><br><span class="line">public class MakerPanel:Panel</span><br><span class="line">&#123;</span><br><span class="line">    //用来安排子元素在容器中的布局</span><br><span class="line">    protected override Size ArrangeOverride(Size finalSize)</span><br><span class="line">    &#123;</span><br><span class="line">        int count = Children.Count;</span><br><span class="line">        double width = finalSize.Width / count;</span><br><span class="line">        for (int i = 0; i &lt; count; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            Children[i].Arrange(new Rect(new Point(i*width,0),new Size(width,finalSize.Height)));</span><br><span class="line">        &#125;</span><br><span class="line">        return finalSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //用来测量子元素期望的布局尺寸</span><br><span class="line">    protected override Size MeasureOverride(Size availableSize)</span><br><span class="line">    &#123;</span><br><span class="line">        int count = Children.Count;</span><br><span class="line">        for (int i = 0; i &lt; count; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            Children[i].Measure(availableSize);</span><br><span class="line">        &#125;</span><br><span class="line">        return availableSize;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>xaml</code>引用对应自定义所在的命名空间：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmlns:local=&quot;clr-namespace:Blog.CasePanel&quot;</span><br></pre></td></tr></table></figure>
+
+<p><code>xaml</code>：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">local:MakerPanel</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Border</span> <span class="attr">Background</span>=<span class="string">&quot;LightBlue&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">TextBox</span> <span class="attr">Text</span>=<span class="string">&quot;&#123;Binding RelativeSource=&#123;RelativeSource Mode=Self&#125;,Path=FontSize&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">TextBox</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Border</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Border</span> <span class="attr">Background</span>=<span class="string">&quot;Yellow&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">Border</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Border</span> <span class="attr">Background</span>=<span class="string">&quot;LightGray&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">Border</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Border</span> <span class="attr">Background</span>=<span class="string">&quot;LightGreen&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">Border</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">local:MakerPanel</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>效果：</p>
+<p><img src="https://ggcy-static-01.oss-cn-hangzhou.aliyuncs.com/ggcyblog/blog-wpf-layout/blog-wpf-layout-definePanel.png" alt="blog-wpf-layout-definePanel"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">guanguan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://github.budbud.cn/2019/12/19/blog-wpf-layout/">https://github.budbud.cn/2019/12/19/blog-wpf-layout/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://github.budbud.cn" target="_blank">GGCY</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/WPF/">WPF</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/12/29/blog-dependenct/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">依赖属性基础巩固</div></div></a></div><div class="next-post pull-right"><a href="/2019/12/10/blog-learning-think/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">技术学习的思考</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2019/12/29/blog-dependenct/" title="依赖属性基础巩固"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-12-29</div><div class="title">依赖属性基础巩固</div></div></a></div><div><a href="/2020/02/24/blog-wpf-BootStrapPanel/" title="自定义面板优化统计标题卡"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-24</div><div class="title">自定义面板优化统计标题卡</div></div></a></div><div><a href="/2020/07/05/blog-wpf-IconFont/" title="字体图标的使用"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-07-05</div><div class="title">字体图标的使用</div></div></a></div><div><a href="/2020/07/05/blog-wpf-packUri/" title="外部资源的引入"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-07-05</div><div class="title">外部资源的引入</div></div></a></div><div><a href="/2020/02/20/blog-wpf-titleCard/" title="WPF实现高仿统计标题卡"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-20</div><div class="title">WPF实现高仿统计标题卡</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">guanguan</div><div class="author-info__description">love life,love code</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8%EF%BC%88%E9%9D%A2%E6%9D%BF%E6%8E%A7%E4%BB%B6%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">布局容器（面板控件）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E5%B5%8C%E5%A5%97"><span class="toc-number">1.1.</span> <span class="toc-text">容器嵌套</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E6%A0%BC%E6%8B%86%E5%88%86%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">网格拆分器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E5%B1%80%E8%88%8D%E5%85%A5"><span class="toc-number">1.3.</span> <span class="toc-text">布局舍入</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">自定义布局容器</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/07/05/blog-wpf-packUri/" title="外部资源的引入"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="外部资源的引入"/></a><div class="content"><a class="title" href="/2020/07/05/blog-wpf-packUri/" title="外部资源的引入">外部资源的引入</a><time datetime="2020-07-05T04:59:08.228Z" title="发表于 2020-07-05 12:59:08">2020-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/07/05/blog-wpf-IconFont/" title="字体图标的使用"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="字体图标的使用"/></a><div class="content"><a class="title" href="/2020/07/05/blog-wpf-IconFont/" title="字体图标的使用">字体图标的使用</a><time datetime="2020-07-05T04:59:08.224Z" title="发表于 2020-07-05 12:59:08">2020-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/07/05/blog-wpf-hc-user/" title="HandyControl新手引导"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HandyControl新手引导"/></a><div class="content"><a class="title" href="/2020/07/05/blog-wpf-hc-user/" title="HandyControl新手引导">HandyControl新手引导</a><time datetime="2020-07-05T04:19:40.000Z" title="发表于 2020-07-05 12:19:40">2020-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/18/blog-davinci-setup/" title="Windows中安装Davinci"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows中安装Davinci"/></a><div class="content"><a class="title" href="/2020/04/18/blog-davinci-setup/" title="Windows中安装Davinci">Windows中安装Davinci</a><time datetime="2020-04-18T13:29:48.000Z" title="发表于 2020-04-18 21:29:48">2020-04-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/18/blog-iis-intelsrv/" title="IIS服务启动提示当文件已存在时，无法创建该文件，183"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IIS服务启动提示当文件已存在时，无法创建该文件，183"/></a><div class="content"><a class="title" href="/2020/04/18/blog-iis-intelsrv/" title="IIS服务启动提示当文件已存在时，无法创建该文件，183">IIS服务启动提示当文件已存在时，无法创建该文件，183</a><time datetime="2020-04-18T04:11:40.000Z" title="发表于 2020-04-18 12:11:40">2020-04-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By guanguan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
