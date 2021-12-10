@@ -101,7 +101,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/guanguanchuangyu/guanguanchuangyu.github.io.git
+  repo: git@github.com:guanguanchuangyu/guanguanchuangyu.github.io.git
   branch: master
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount
