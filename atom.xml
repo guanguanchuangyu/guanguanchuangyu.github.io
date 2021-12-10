@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>GGCY</title>
-  <icon>/icon.png</icon>
+  <icon>https://github.budbud.cn/icon.png</icon>
   <subtitle>code changes life</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="/"/>
+  <link href="https://github.budbud.cn/"/>
   <updated>2020-07-05T04:59:08.228Z</updated>
-  <id>/</id>
+  <id>https://github.budbud.cn/</id>
   
   <author>
     <name>guanguan</name>
     
   </author>
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
     <title>外部资源的引入</title>
-    <link href="/2020/07/05/blog-wpf-packUri/"/>
-    <id>/2020/07/05/blog-wpf-packUri/</id>
+    <link href="https://github.budbud.cn/2020/07/05/blog-wpf-packUri/"/>
+    <id>https://github.budbud.cn/2020/07/05/blog-wpf-packUri/</id>
     <published>2020-07-05T04:59:08.228Z</published>
     <updated>2020-07-05T04:59:08.228Z</updated>
     
@@ -30,59 +30,68 @@
     </summary>
     
     
-      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
+      <category term="知识补丁" scheme="https://github.budbud.cn/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
     
     
-      <category term="WPF" scheme="/tags/WPF/"/>
+      <category term="WPF" scheme="https://github.budbud.cn/tags/WPF/"/>
     
   </entry>
   
   <entry>
     <title>字体图标的使用</title>
-    <link href="/2020/07/05/blog-wpf-IconFont/"/>
-    <id>/2020/07/05/blog-wpf-IconFont/</id>
+    <link href="https://github.budbud.cn/2020/07/05/blog-wpf-IconFont/"/>
+    <id>https://github.budbud.cn/2020/07/05/blog-wpf-IconFont/</id>
     <published>2020-07-05T04:59:08.224Z</published>
     <updated>2020-07-05T04:59:08.224Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;如何&lt;code&gt;引入字体图标&lt;/code&gt;不再赘述，可参考：&lt;a href=&quot;https://blog.csdn.net/songyi160/article/details/54894233&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WPF引入字体图标&lt;/a&gt;，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接&lt;a href=&quot;https://www.iconfont.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WPF使用阿里巴巴字体库&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;如何&lt;code&gt;引入字体图标&lt;/code&gt;不再赘述，可参考：&lt;a href=&quot;https://blog.csdn.net/songyi160/article/details/54894233&quot;&gt;WPF引入字体图标&lt;/a&gt;，引入字体时，需要注意的是，如果希望字体通过后台或者后端进行传递字体字符串时，对应字体的参数格式会有所不同，此处以阿里巴巴开源字体库为例，参考链接&lt;a href=&quot;https://www.iconfont.cn/&quot;&gt;WPF使用阿里巴巴字体库&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
     
-      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
+      <category term="知识补丁" scheme="https://github.budbud.cn/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
     
     
-      <category term="WPF" scheme="/tags/WPF/"/>
+      <category term="WPF" scheme="https://github.budbud.cn/tags/WPF/"/>
     
   </entry>
   
   <entry>
     <title>HandyControl新手引导</title>
-    <link href="/2020/07/05/blog-wpf-hc-user/"/>
-    <id>/2020/07/05/blog-wpf-hc-user/</id>
+    <link href="https://github.budbud.cn/2020/07/05/blog-wpf-hc-user/"/>
+    <id>https://github.budbud.cn/2020/07/05/blog-wpf-hc-user/</id>
     <published>2020-07-05T04:19:40.000Z</published>
     <updated>2021-07-16T14:33:10.247Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;找不到？看不到？有说明文档不？源码在哪里？从接触&lt;code&gt;HandyControl&lt;/code&gt;（之后文章内容简称&lt;code&gt;HC&lt;/code&gt;）开始，这些问题，是刚入组织时，最频繁问到的问题，针对这些重复问题写了这篇新手引导&lt;/p&gt;
+      
+      
+        
+        
+          &lt;p&gt;找不到？看不到？有说明文档不？源码在哪里？从接触&lt;code&gt;HandyControl&lt;/code&gt;（之后文章内容简称&lt;code&gt;HC&lt;/code&gt;）开始，这些问题，是刚入组织时，最频繁问到的问题，针对这些重复问题写了这篇新手引导&lt;/p&gt;
+&lt;!---more---&gt;
+
+&lt;h2
+        
+      
     
     </summary>
     
     
-      <category term="江湖秘籍" scheme="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"/>
+      <category term="江湖秘籍" scheme="https://github.budbud.cn/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"/>
     
     
-      <category term="HandyControl" scheme="/tags/HandyControl/"/>
+      <category term="HandyControl" scheme="https://github.budbud.cn/tags/HandyControl/"/>
     
   </entry>
   
   <entry>
     <title>Windows中安装Davinci</title>
-    <link href="/2020/04/18/blog-davinci-setup/"/>
-    <id>/2020/04/18/blog-davinci-setup/</id>
+    <link href="https://github.budbud.cn/2020/04/18/blog-davinci-setup/"/>
+    <id>https://github.budbud.cn/2020/04/18/blog-davinci-setup/</id>
     <published>2020-04-18T13:29:48.000Z</published>
     <updated>2020-07-05T04:59:08.168Z</updated>
     
@@ -95,17 +104,17 @@
     </summary>
     
     
-      <category term="江湖秘籍" scheme="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"/>
+      <category term="江湖秘籍" scheme="https://github.budbud.cn/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"/>
     
     
-      <category term="Tools" scheme="/tags/Tools/"/>
+      <category term="Tools" scheme="https://github.budbud.cn/tags/Tools/"/>
     
   </entry>
   
   <entry>
     <title>IIS服务启动提示当文件已存在时，无法创建该文件，183</title>
-    <link href="/2020/04/18/blog-iis-intelsrv/"/>
-    <id>/2020/04/18/blog-iis-intelsrv/</id>
+    <link href="https://github.budbud.cn/2020/04/18/blog-iis-intelsrv/"/>
+    <id>https://github.budbud.cn/2020/04/18/blog-iis-intelsrv/</id>
     <published>2020-04-18T04:11:40.000Z</published>
     <updated>2020-07-05T04:59:08.176Z</updated>
     
@@ -116,65 +125,65 @@
     </summary>
     
     
-      <category term="江湖秘籍" scheme="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"/>
+      <category term="江湖秘籍" scheme="https://github.budbud.cn/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"/>
     
     
-      <category term="IIS" scheme="/tags/IIS/"/>
+      <category term="IIS" scheme="https://github.budbud.cn/tags/IIS/"/>
     
   </entry>
   
   <entry>
     <title>自定义面板优化统计标题卡</title>
-    <link href="/2020/02/24/blog-wpf-BootStrapPanel/"/>
-    <id>/2020/02/24/blog-wpf-BootStrapPanel/</id>
+    <link href="https://github.budbud.cn/2020/02/24/blog-wpf-BootStrapPanel/"/>
+    <id>https://github.budbud.cn/2020/02/24/blog-wpf-BootStrapPanel/</id>
     <published>2020-02-24T10:52:56.000Z</published>
     <updated>2020-07-05T04:59:08.196Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;上篇文章&lt;a href=&quot;https://github.budbud.cn/2020/02/20/blog-wpf-titleCard&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WPF实现高仿统计标题卡&lt;/a&gt;中，实现了依据自己喜欢的统计卡片组件样式，实现过程中，发现，现有的&lt;code&gt;WPF&lt;/code&gt;默认自带面板&lt;code&gt;Grid&lt;/code&gt;、&lt;code&gt;UniformGrid&lt;/code&gt;、&lt;code&gt;StackPanel&lt;/code&gt;、&lt;code&gt;DockPanel&lt;/code&gt;、&lt;code&gt;WrapPanel&lt;/code&gt;以及&lt;code&gt;Canvas&lt;/code&gt;等暂时没有满足条件的面板容器，接下来就是一个简单的容器面板我称之为&lt;code&gt;BootstrapPanel&lt;/code&gt;，参考容器面板&lt;code&gt;UniformGrid&lt;/code&gt;和&lt;code&gt;WrapPanel&lt;/code&gt;两个容器的功能，&lt;strong&gt;项目仍然为上篇文章使用的项目为例&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;上篇文章&lt;a href=&quot;https://github.budbud.cn/2020/02/20/blog-wpf-titleCard&quot;&gt;WPF实现高仿统计标题卡&lt;/a&gt;中，实现了依据自己喜欢的统计卡片组件样式，实现过程中，发现，现有的&lt;code&gt;WPF&lt;/code&gt;默认自带面板&lt;code&gt;Grid&lt;/code&gt;、&lt;code&gt;UniformGrid&lt;/code&gt;、&lt;code&gt;StackPanel&lt;/code&gt;、&lt;code&gt;DockPanel&lt;/code&gt;、&lt;code&gt;WrapPanel&lt;/code&gt;以及&lt;code&gt;Canvas&lt;/code&gt;等暂时没有满足条件的面板容器，接下来就是一个简单的容器面板我称之为&lt;code&gt;BootstrapPanel&lt;/code&gt;，参考容器面板&lt;code&gt;UniformGrid&lt;/code&gt;和&lt;code&gt;WrapPanel&lt;/code&gt;两个容器的功能，&lt;strong&gt;项目仍然为上篇文章使用的项目为例&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://file.budbud.cn/ggcyblog/blog-wpf-BootStrapPanel/blog-wpf-panel.png&quot; alt=&quot;blog-wpf-panel&quot;&gt;&lt;/p&gt;
     
     </summary>
     
     
-      <category term="唐门暗器" scheme="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"/>
+      <category term="唐门暗器" scheme="https://github.budbud.cn/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"/>
     
     
-      <category term="WPF" scheme="/tags/WPF/"/>
+      <category term="WPF" scheme="https://github.budbud.cn/tags/WPF/"/>
     
-      <category term="Components" scheme="/tags/Components/"/>
+      <category term="Components" scheme="https://github.budbud.cn/tags/Components/"/>
     
   </entry>
   
   <entry>
     <title>WPF实现高仿统计标题卡</title>
-    <link href="/2020/02/20/blog-wpf-titleCard/"/>
-    <id>/2020/02/20/blog-wpf-titleCard/</id>
+    <link href="https://github.budbud.cn/2020/02/20/blog-wpf-titleCard/"/>
+    <id>https://github.budbud.cn/2020/02/20/blog-wpf-titleCard/</id>
     <published>2020-02-19T16:51:23.000Z</published>
     <updated>2020-07-05T04:59:08.228Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;飘哇&lt;del&gt;~&lt;/del&gt;，在家数瓜子仁儿，闲来无事，看东看西，也找点儿，最近正在看看WPF动画，光看也是不行，需要带着目的去学习，整合知识碎片，恰巧，看到&lt;code&gt;Github&lt;/code&gt;中一个基于&lt;code&gt;Ant Designer&lt;/code&gt;设计风格的&lt;a href=&quot;https://github.com/liuguanhua/react-antd-admin&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;后台管理系统&lt;/a&gt;，看到统计标题卡，就它了，于是就开始造作&lt;/p&gt;
+      &lt;p&gt;飘哇&lt;del&gt;~&lt;/del&gt;，在家数瓜子仁儿，闲来无事，看东看西，也找点儿，最近正在看看WPF动画，光看也是不行，需要带着目的去学习，整合知识碎片，恰巧，看到&lt;code&gt;Github&lt;/code&gt;中一个基于&lt;code&gt;Ant Designer&lt;/code&gt;设计风格的&lt;a href=&quot;https://github.com/liuguanhua/react-antd-admin&quot;&gt;后台管理系统&lt;/a&gt;，看到统计标题卡，就它了，于是就开始造作&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://file.budbud.cn/ggcyblog/blog-wpf-titleCard/wpf-titleCard.png&quot; alt=&quot;image-20200219203826827&quot;&gt;&lt;/p&gt;
     
     </summary>
     
     
-      <category term="唐门暗器" scheme="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"/>
+      <category term="唐门暗器" scheme="https://github.budbud.cn/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"/>
     
     
-      <category term="WPF" scheme="/tags/WPF/"/>
+      <category term="WPF" scheme="https://github.budbud.cn/tags/WPF/"/>
     
-      <category term="Components" scheme="/tags/Components/"/>
+      <category term="Components" scheme="https://github.budbud.cn/tags/Components/"/>
     
   </entry>
   
   <entry>
     <title>2.0.0.1011升级为2.0.0.1014数据导入操作</title>
-    <link href="/2020/02/08/marker-2-0-0-1014/"/>
-    <id>/2020/02/08/marker-2-0-0-1014/</id>
+    <link href="https://github.budbud.cn/2020/02/08/marker-2-0-0-1014/"/>
+    <id>https://github.budbud.cn/2020/02/08/marker-2-0-0-1014/</id>
     <published>2020-02-08T10:54:34.000Z</published>
     <updated>2020-07-05T04:59:08.240Z</updated>
     
@@ -185,42 +194,44 @@
     </summary>
     
     
-      <category term="江湖秘籍" scheme="/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"/>
+      <category term="江湖秘籍" scheme="https://github.budbud.cn/categories/%E6%B1%9F%E6%B9%96%E7%A7%98%E7%B1%8D/"/>
     
     
-      <category term="Tools" scheme="/tags/Tools/"/>
+      <category term="Tools" scheme="https://github.budbud.cn/tags/Tools/"/>
     
   </entry>
   
   <entry>
     <title>UTools工具</title>
-    <link href="/2020/01/09/blog-tools-UTools/"/>
-    <id>/2020/01/09/blog-tools-UTools/</id>
+    <link href="https://github.budbud.cn/2020/01/09/blog-tools-UTools/"/>
+    <id>https://github.budbud.cn/2020/01/09/blog-tools-UTools/</id>
     <published>2020-01-09T14:36:21.000Z</published>
     <updated>2020-07-05T04:59:08.188Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;某日，被同事神神秘秘问了一句，“你知道UTools不 ? ”，“????，恩，没有”，于是赶紧浏览器搜索关键词，“UTools”，入眼第一句话：“&lt;a href=&quot;https://u.tools/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;uTools - 你的生产力工具集&lt;/a&gt;”，解释如下：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h1 id=&quot;你的生产力工具集&quot;&gt;&lt;a href=&quot;#你的生产力工具集&quot; class=&quot;headerlink&quot; title=&quot;你的生产力工具集&quot;&gt;&lt;/a&gt;你的生产力工具集&lt;/h1&gt;&lt;p&gt;uTools是一个极简、插件化、跨平台的现代桌面软件。通过自由选配丰富的插件，打造你得心应手的工具集合。&lt;/p&gt;
-&lt;p&gt;当你熟悉它后，能够为你节约大量时间，让你可以更加专注地改变世界。&lt;/p&gt;
-&lt;/blockquote&gt;
+      
+      
+        
+        
+          &lt;p&gt;某日，被同事神神秘秘问了一句，“你知道UTools不 ? ”，“????，恩，没有”，于是赶紧浏览器搜索关键词，“UTools”，入眼第一句话：“&lt;a href=&quot;https://u.tools/&quot;&gt;uTools -
+        
+      
     
     </summary>
     
     
-      <category term="相见恨晚" scheme="/categories/%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A/"/>
+      <category term="相见恨晚" scheme="https://github.budbud.cn/categories/%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A/"/>
     
     
-      <category term="Tools" scheme="/tags/Tools/"/>
+      <category term="Tools" scheme="https://github.budbud.cn/tags/Tools/"/>
     
   </entry>
   
   <entry>
     <title>依赖属性基础巩固</title>
-    <link href="/2019/12/29/blog-dependenct/"/>
-    <id>/2019/12/29/blog-dependenct/</id>
+    <link href="https://github.budbud.cn/2019/12/29/blog-dependenct/"/>
+    <id>https://github.budbud.cn/2019/12/29/blog-dependenct/</id>
     <published>2019-12-28T16:35:25.000Z</published>
     <updated>2020-07-05T04:59:08.176Z</updated>
     
@@ -228,23 +239,23 @@
     
       &lt;p&gt;依赖属性是何物？&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的&lt;a href=&quot;https://docs.microsoft.com/zh-cn/dotnet/standard/base-types/common-type-system#Properties&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;属性&lt;/a&gt;的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性&lt;/p&gt;
+&lt;p&gt;Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的&lt;a href=&quot;https://docs.microsoft.com/zh-cn/dotnet/standard/base-types/common-type-system#Properties&quot;&gt;属性&lt;/a&gt;的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
     
     
-      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
+      <category term="知识补丁" scheme="https://github.budbud.cn/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
     
     
-      <category term="WPF" scheme="/tags/WPF/"/>
+      <category term="WPF" scheme="https://github.budbud.cn/tags/WPF/"/>
     
   </entry>
   
   <entry>
     <title>WPF基础容器与布局</title>
-    <link href="/2019/12/19/blog-wpf-layout/"/>
-    <id>/2019/12/19/blog-wpf-layout/</id>
+    <link href="https://github.budbud.cn/2019/12/19/blog-wpf-layout/"/>
+    <id>https://github.budbud.cn/2019/12/19/blog-wpf-layout/</id>
     <published>2019-12-19T15:18:17.000Z</published>
     <updated>2020-07-05T04:59:08.224Z</updated>
     
@@ -255,17 +266,17 @@
     </summary>
     
     
-      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
+      <category term="知识补丁" scheme="https://github.budbud.cn/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
     
     
-      <category term="WPF" scheme="/tags/WPF/"/>
+      <category term="WPF" scheme="https://github.budbud.cn/tags/WPF/"/>
     
   </entry>
   
   <entry>
     <title>技术学习的思考</title>
-    <link href="/2019/12/10/blog-learning-think/"/>
-    <id>/2019/12/10/blog-learning-think/</id>
+    <link href="https://github.budbud.cn/2019/12/10/blog-learning-think/"/>
+    <id>https://github.budbud.cn/2019/12/10/blog-learning-think/</id>
     <published>2019-12-09T16:40:21.000Z</published>
     <updated>2020-07-05T04:59:08.180Z</updated>
     
@@ -276,17 +287,17 @@
     </summary>
     
     
-      <category term="生活杂记" scheme="/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/"/>
+      <category term="生活杂记" scheme="https://github.budbud.cn/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/"/>
     
     
-      <category term="Life" scheme="/tags/Life/"/>
+      <category term="Life" scheme="https://github.budbud.cn/tags/Life/"/>
     
   </entry>
   
   <entry>
     <title>C#-查看微软内置程序集技巧</title>
-    <link href="/2019/11/24/blog-C-%E5%8F%8D%E7%BC%96%E8%AF%91%E6%8A%80%E5%B7%A7/"/>
-    <id>/2019/11/24/blog-C-反编译技巧/</id>
+    <link href="https://github.budbud.cn/2019/11/24/blog-C-%E5%8F%8D%E7%BC%96%E8%AF%91%E6%8A%80%E5%B7%A7/"/>
+    <id>https://github.budbud.cn/2019/11/24/blog-C-%E5%8F%8D%E7%BC%96%E8%AF%91%E6%8A%80%E5%B7%A7/</id>
     <published>2019-11-24T14:35:28.000Z</published>
     <updated>2020-07-05T04:59:08.160Z</updated>
     
@@ -297,17 +308,17 @@
     </summary>
     
     
-      <category term="相见恨晚" scheme="/categories/%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A/"/>
+      <category term="相见恨晚" scheme="https://github.budbud.cn/categories/%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A/"/>
     
     
-      <category term="C#" scheme="/tags/C/"/>
+      <category term="C#" scheme="https://github.budbud.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>深化学习之程序集</title>
-    <link href="/2019/11/08/blog-shared-assembly/"/>
-    <id>/2019/11/08/blog-shared-assembly/</id>
+    <link href="https://github.budbud.cn/2019/11/08/blog-shared-assembly/"/>
+    <id>https://github.budbud.cn/2019/11/08/blog-shared-assembly/</id>
     <published>2019-11-08T14:03:06.000Z</published>
     <updated>2020-07-05T04:59:08.180Z</updated>
     
@@ -318,17 +329,17 @@
     </summary>
     
     
-      <category term="心如止水" scheme="/categories/%E5%BF%83%E5%A6%82%E6%AD%A2%E6%B0%B4/"/>
+      <category term="心如止水" scheme="https://github.budbud.cn/categories/%E5%BF%83%E5%A6%82%E6%AD%A2%E6%B0%B4/"/>
     
     
-      <category term="C#" scheme="/tags/C/"/>
+      <category term="C#" scheme="https://github.budbud.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>C#关于字符串转简单运算表达式的相关方法记录</title>
-    <link href="/2019/11/03/blog-string-Arith/"/>
-    <id>/2019/11/03/blog-string-Arith/</id>
+    <link href="https://github.budbud.cn/2019/11/03/blog-string-Arith/"/>
+    <id>https://github.budbud.cn/2019/11/03/blog-string-Arith/</id>
     <published>2019-11-02T17:32:28.000Z</published>
     <updated>2020-07-05T04:59:08.184Z</updated>
     
@@ -339,38 +350,38 @@
     </summary>
     
     
-      <category term="唐门暗器" scheme="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"/>
+      <category term="唐门暗器" scheme="https://github.budbud.cn/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"/>
     
     
-      <category term="C#" scheme="/tags/C/"/>
+      <category term="C#" scheme="https://github.budbud.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>C#中string.Format转义大括号的方式</title>
-    <link href="/2019/10/30/blog-string-Format/"/>
-    <id>/2019/10/30/blog-string-Format/</id>
+    <link href="https://github.budbud.cn/2019/10/30/blog-string-Format/"/>
+    <id>https://github.budbud.cn/2019/10/30/blog-string-Format/</id>
     <published>2019-10-30T13:12:35.000Z</published>
     <updated>2020-07-05T04:59:08.188Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;code&gt;string.format&lt;/code&gt;中保留&lt;code&gt;{}&lt;/code&gt;的使用方式，如果仅仅是以常规方式添加&lt;code&gt;\&lt;/code&gt;会出转义失败，无法达到转义效果&lt;/p&gt;
+      &lt;p&gt;&lt;code&gt;string.format&lt;/code&gt;中保留&lt;code&gt;&amp;#123;&amp;#125;&lt;/code&gt;的使用方式，如果仅仅是以常规方式添加&lt;code&gt;\&lt;/code&gt;会出转义失败，无法达到转义效果&lt;/p&gt;
     
     </summary>
     
     
-      <category term="知识补丁" scheme="/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
+      <category term="知识补丁" scheme="https://github.budbud.cn/categories/%E7%9F%A5%E8%AF%86%E8%A1%A5%E4%B8%81/"/>
     
     
-      <category term="C#" scheme="/tags/C/"/>
+      <category term="C#" scheme="https://github.budbud.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>Hexo + Next Theme + Github 的个人托管博客搭建</title>
-    <link href="/2019/10/27/blog-build/"/>
-    <id>/2019/10/27/blog-build/</id>
+    <link href="https://github.budbud.cn/2019/10/27/blog-build/"/>
+    <id>https://github.budbud.cn/2019/10/27/blog-build/</id>
     <published>2019-10-27T13:36:25.000Z</published>
     <updated>2021-01-09T06:11:49.386Z</updated>
     
@@ -381,17 +392,17 @@
     </summary>
     
     
-      <category term="唐门暗器" scheme="/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"/>
+      <category term="唐门暗器" scheme="https://github.budbud.cn/categories/%E5%94%90%E9%97%A8%E6%9A%97%E5%99%A8/"/>
     
     
-      <category term="Hexo" scheme="/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://github.budbud.cn/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Love Life</title>
-    <link href="/2019/10/27/Home/"/>
-    <id>/2019/10/27/Home/</id>
+    <link href="https://github.budbud.cn/2019/10/27/Home/"/>
+    <id>https://github.budbud.cn/2019/10/27/Home/</id>
     <published>2019-10-27T10:20:08.000Z</published>
     <updated>2020-07-05T04:59:08.156Z</updated>
     
@@ -402,10 +413,10 @@
     </summary>
     
     
-      <category term="生活杂记" scheme="/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/"/>
+      <category term="生活杂记" scheme="https://github.budbud.cn/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/"/>
     
     
-      <category term="Life" scheme="/tags/Life/"/>
+      <category term="Life" scheme="https://github.budbud.cn/tags/Life/"/>
     
   </entry>
   
